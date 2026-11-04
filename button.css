@@ -1,0 +1,47 @@
+:is(button, a).mc-button{
+    display: inline-block;
+    transition: background-color 0.12s;
+    box-sizing: border-box;
+    min-height: var(--mc-row);
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+    background: none;
+    border: 0;
+    border-radius: var(--mc-radius);
+    box-shadow: inset 0 0 0 1px var(--mc-border);
+    padding: var(--mc-pad);
+    cursor: pointer;
+}
+
+:is(button, a).mc-button:hover{
+    background: var(--mc-hover);
+}
+
+:is(button, a).mc-button:active{
+    transform: translateY(1px);
+}
+
+:is(button, a).mc-button:disabled{
+    opacity: 0.5;
+    cursor: default;
+}
+
+:is(button, a).mc-button.mc-primary{
+    color: var(--mc-bg);
+    background: var(--mc-accent);
+    box-shadow: none;
+}
+
+:is(button, a).mc-button.mc-primary:hover{
+    box-shadow: inset 0 0 0 99em var(--mc-hover);
+}
+
+:is(button, a).mc-button:focus-visible{
+    outline: var(--mc-focus);
+    outline-offset: 2px;
+}
+
+:is(button, a).mc-button.mc-danger{
+    --mc-accent: var(--mc-danger);
+}

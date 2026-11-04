@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="levi.css">
+	<link rel="icon" href="data:,">
+	<title>Atlas: Files</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><span>Atlas</span></summary>
+			<nav>
+				<ul class="mc-tree">
+					<li>
+						<details open>
+							<summary>Web app</summary>
+							<ul>
+								<li>
+									<details open>
+										<summary aria-current="page">src</summary>
+										<ul>
+											<li>main.css</li>
+											<li>index.html</li>
+										</ul>
+									</details>
+								</li>
+								<li>package.json</li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>Mobile app</summary>
+							<ul>
+								<li>app</li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>Orion</summary>
+							<ul>
+								<li>website</li>
+							</ul>
+						</details>
+					</li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+	<main class="mc-dashboard">
+		<header>
+			<nav class="mc-breadcrumb" aria-label="Breadcrumb">
+				<ol>
+					<li><a href="#">Atlas</a></li>
+					<li><a href="#">Web app</a></li>
+					<li aria-current="page">src</li>
+				</ol>
+			</nav>
+			<div>
+				<h1>src</h1>
+				<menu class="mc-toolbar">
+					<li><button class="mc-button">Upload</button></li>
+					<li><button class="mc-button mc-primary">New file</button></li>
+				</menu>
+			</div>
+		</header>
+
+		<menu class="mc-toolbar">
+			<li><input class="mc-input" type="search" placeholder="Search files" aria-label="Search files"></li>
+			<li><button class="mc-button">Filter</button></li>
+		</menu>
+
+		<table class="mc-table">
+			<thead>
+				<tr>
+					<th scope="col">Name</th>
+					<th scope="col">Modified</th>
+					<th scope="col">Size</th>
+					<th scope="col">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr aria-selected="true"><td>main.css</td><td>Today, 09:41</td><td>12 KB</td><td data-status="ok">Synced</td></tr>
+				<tr><td>index.html</td><td>Today, 08:15</td><td>4 KB</td><td data-status="warn">Editing</td></tr>
+				<tr><td>components.css</td><td>Yesterday</td><td>31 KB</td><td data-status="ok">Synced</td></tr>
+				<tr><td>theme.css</td><td>Mon, 14:02</td><td>2 KB</td><td data-status="ok">Synced</td></tr>
+				<tr><td>legacy.css</td><td>Last week</td><td>58 KB</td><td data-status="danger">Conflict</td></tr>
+				<tr><td>README.md</td><td>Last week</td><td>1 KB</td><td data-status="ok">Synced</td></tr>
+				<tr><td>reset.css</td><td>Oct 28</td><td>3 KB</td><td data-status="ok">Synced</td></tr>
+				<tr><td>print.css</td><td>Oct 21</td><td>6 KB</td><td data-status="warn">Editing</td></tr>
+				<tr><td>fonts.css</td><td>Oct 12</td><td>2 KB</td><td data-status="ok">Synced</td></tr>
+				<tr><td>notes.md</td><td>Oct 3</td><td>1 KB</td><td data-status="ok">Synced</td></tr>
+			</tbody>
+		</table>
+	</main>
+
+</body>
+</html>

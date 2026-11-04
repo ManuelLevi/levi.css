@@ -1,0 +1,46 @@
+.mc-tabs > nav{
+    display: inline-flex;
+    padding: 0.2em;
+    background: var(--mc-surface);
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 1px var(--mc-border);
+}
+
+.mc-tabs > nav label{
+    box-sizing: border-box;
+    min-height: var(--mc-row);
+    padding: var(--mc-pad-block) 1em;
+    color: var(--mc-muted);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.12s, color 0.12s;
+}
+
+.mc-tabs > nav label:has(input:checked){
+    color: var(--mc-text);
+    background: var(--mc-raised);
+    box-shadow: 0 0 0 1px var(--mc-border), 0 1px 2px #0000001a;
+}
+
+.mc-tabs > nav label:has(input:focus-visible){
+    outline: var(--mc-focus);
+}
+
+.mc-tabs > nav input{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mc-tabs > section{
+    display: none;
+    margin-block-start: var(--mc-space);
+}
+
+.mc-tabs:has(nav label:nth-child(1) input:checked) > section:nth-of-type(1),
+.mc-tabs:has(nav label:nth-child(2) input:checked) > section:nth-of-type(2),
+.mc-tabs:has(nav label:nth-child(3) input:checked) > section:nth-of-type(3),
+.mc-tabs:has(nav label:nth-child(4) input:checked) > section:nth-of-type(4),
+.mc-tabs:has(nav label:nth-child(5) input:checked) > section:nth-of-type(5){
+    display: block;
+}

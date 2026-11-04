@@ -1,0 +1,24 @@
+nav.mc-breadcrumb ol{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--mc-muted);
+}
+
+nav.mc-breadcrumb li + li::before{
+    content: "/";
+    margin-inline-end: 0.5em;
+    opacity: 0.5;
+}
+
+nav.mc-breadcrumb a{
+    color: inherit;
+    text-decoration: none;
+}
+
+nav.mc-breadcrumb a:hover, nav.mc-breadcrumb [aria-current]{
+    color: var(--mc-text);
+}

@@ -1,0 +1,90 @@
+body:has(> aside.mc-sidebar){
+    display: flex;
+    margin: 0;
+}
+
+body:has(> aside.mc-sidebar) > main{
+    padding: var(--mc-space);
+}
+
+aside.mc-sidebar{
+    flex: none;
+    width: 12rem;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--mc-surface);
+    border-inline-end: 1px solid var(--mc-border);
+}
+
+aside.mc-sidebar:has(> details:not([open])){
+    width: 2rem;
+}
+
+aside.mc-sidebar > details > summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--mc-row);
+    padding-inline-start: calc(0.5rem + var(--mc-pad-inline));
+    font-weight: bold;
+}
+
+aside.mc-sidebar > details > summary::before{
+    display: none;
+}
+
+aside.mc-sidebar > details > summary::after{
+    content: "";
+    width: 1em;
+    height: 2px;
+    margin-inline: var(--mc-pad-inline);
+    background: currentColor;
+    box-shadow: 0 -0.3em 0 currentColor, 0 0.3em 0 currentColor;
+}
+
+aside.mc-sidebar > details:not([open]) > summary{
+    justify-content: center;
+    padding-inline-start: 0;
+}
+
+aside.mc-sidebar > details:not([open]) > summary > span{
+    display: none;
+}
+
+aside.mc-sidebar nav{
+    padding: 0.5rem;
+}
+
+@media (max-width: 40rem){
+    body:has(> aside.mc-sidebar){
+        flex-direction: column;
+    }
+
+    aside.mc-sidebar nav > ul{
+        display: flex;
+        overflow-x: auto;
+        mask-image: linear-gradient(to right, #000 85%, transparent);
+    }
+
+    aside.mc-sidebar nav > ul > li{
+        flex: none;
+        white-space: nowrap;
+    }
+
+    aside.mc-sidebar nav li > ul{
+        display: none;
+    }
+
+    aside.mc-sidebar, aside.mc-sidebar:has(> details:not([open])){
+        position: sticky;
+        z-index: 1;
+        align-self: stretch;
+        width: auto;
+        height: auto;
+        border-inline-end: none;
+        border-block-end: 1px solid var(--mc-border);
+    }
+}

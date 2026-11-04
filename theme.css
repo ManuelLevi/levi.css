@@ -1,0 +1,77 @@
+.mc-theme{
+    color-scheme: light dark;
+    --mc-bg: light-dark(#fff, #111);
+    --mc-surface: light-dark(#f5f5f7, #1c1c1e);
+    --mc-text: light-dark(#1d1d1f, #f5f5f7);
+    --mc-muted: light-dark(#6e6e73, #98989d);
+    --mc-border: light-dark(#d9d9de, #3a3a3c);
+    --mc-raised: light-dark(#fff, #2c2c2e);
+    --mc-ok: light-dark(#1a7f37, #3fb950);
+    --mc-warn: light-dark(#b36b00, #d29922);
+    --mc-danger: light-dark(#c62828, #ff6961);
+    --mc-hover: light-dark(#0000000d, #ffffff14);
+    --mc-accent: light-dark(crimson, #ff6b81);
+    --mc-pad-block: 0.25em;
+    --mc-pad-inline: 0.5em;
+    --mc-pad: var(--mc-pad-block) var(--mc-pad-inline);
+    --mc-row: calc(1.5em + 2 * var(--mc-pad-block));
+    --mc-indent: 1em;
+    --mc-slot: 1.25em;
+    --mc-radius: 0.35em;
+    --mc-space: 2rem;
+    --mc-card: 1.25rem;
+    --mc-focus: 2px solid var(--mc-accent);
+    background: var(--mc-bg);
+    color: var(--mc-text);
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+}
+
+.mc-navy{
+    --mc-accent: light-dark(#1e3a8a, #8ab4ff);
+}
+
+.mc-emerald{
+    --mc-accent: light-dark(#047857, #34d399);
+}
+
+.mc-theme h1{
+    font-size: 3.5rem;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.mc-theme h2{
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+}
+
+.mc-theme h3{
+    font-size: 1.1rem;
+}
+
+.mc-theme p{
+    color: var(--mc-muted);
+}
+
+.mc-theme a{
+    color: var(--mc-accent);
+}
+
+.mc-theme input{
+    accent-color: var(--mc-accent);
+}
+
+.mc-light{
+    color-scheme: light;
+}
+
+.mc-dark{
+    color-scheme: dark;
+}
+
+.mc-light, .mc-dark{
+    color: var(--mc-text);
+}

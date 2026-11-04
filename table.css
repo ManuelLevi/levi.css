@@ -1,0 +1,70 @@
+table.mc-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.mc-table caption{
+    caption-side: bottom;
+    padding-block-start: 0.75em;
+    font-size: 0.85em;
+    text-align: start;
+    color: var(--mc-muted);
+}
+
+table.mc-table th{
+    text-align: start;
+    font-weight: normal;
+    color: var(--mc-muted);
+}
+
+table.mc-table th, table.mc-table td{
+    padding: var(--mc-pad);
+    box-shadow: inset 0 -1px 0 var(--mc-border);
+}
+
+table.mc-table tbody tr:last-child td{
+    box-shadow: none;
+}
+
+table.mc-table tbody tr:hover{
+    background: var(--mc-hover);
+    box-shadow: -0.5em 0 0 var(--mc-hover), 0.5em 0 0 var(--mc-hover);
+}
+
+table.mc-table td{
+    white-space: nowrap;
+}
+
+table.mc-table td[data-status]::before{
+    content: "";
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-inline-end: 0.5em;
+    border-radius: 50%;
+    background: var(--status, var(--mc-muted));
+}
+
+table.mc-table td[data-status="ok"]{
+    --status: var(--mc-ok);
+}
+
+table.mc-table td[data-status="warn"]{
+    --status: var(--mc-warn);
+}
+
+table.mc-table td[data-status="danger"]{
+    --status: var(--mc-danger);
+}
+
+table.mc-table :is(th, td):first-child{
+    padding-inline-start: 0;
+}
+
+table.mc-table :is(th, td):last-child{
+    padding-inline-end: 0;
+}
+
+table.mc-table tr[aria-selected="true"]{
+    background: var(--mc-hover);
+}

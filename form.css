@@ -1,0 +1,9 @@
+form.mc-form{
+    display: grid;
+    gap: 1.25em;
+    max-width: 24rem;
+}
+
+form.mc-form > button{
+    justify-self: start;
+}

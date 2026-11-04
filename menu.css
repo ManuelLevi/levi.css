@@ -1,0 +1,23 @@
+[popover].mc-menu{
+    position-area: block-end span-inline-end;
+    min-width: 12rem;
+    margin: 0.25rem 0 0;
+    padding: 0.25rem;
+    color: inherit;
+    background: var(--mc-raised);
+    border: 0;
+    border-radius: var(--mc-radius);
+    box-shadow: 0 0 0 1px var(--mc-border), 0 0.75rem 2rem #00000026;
+    opacity: 0;
+    transition: opacity 0.12s, display 0.12s allow-discrete, overlay 0.12s allow-discrete;
+}
+
+[popover].mc-menu:popover-open{
+    opacity: 1;
+}
+
+@starting-style{
+    [popover].mc-menu:popover-open{
+        opacity: 0;
+    }
+}

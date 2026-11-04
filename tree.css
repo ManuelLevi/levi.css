@@ -1,0 +1,80 @@
+ul.mc-tree, ul.mc-tree ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.mc-tree{
+    --mc-slot: 1.5em;
+    --mc-step: 0.75em;
+    --mc-selected: color-mix(in srgb, var(--mc-accent) 8%, transparent);
+    --mc-selected-hover: color-mix(in srgb, var(--mc-accent) 12%, transparent);
+    --mc-selected-focus: color-mix(in srgb, var(--mc-accent) 20%, transparent);
+    --mc-focused: color-mix(in srgb, var(--mc-text) 12%, transparent);
+}
+
+ul.mc-tree.mc-compact{
+    --mc-pad-block: 0.1em;
+    --mc-pad: var(--mc-pad-block) var(--mc-pad-inline);
+    --mc-row: calc(1.5em + 2 * var(--mc-pad-block));
+    --mc-step: 0.6em;
+}
+
+ul.mc-tree.mc-comfortable{
+    --mc-pad-block: 0.5em;
+    --mc-pad: var(--mc-pad-block) var(--mc-pad-inline);
+    --mc-row: calc(1.5em + 2 * var(--mc-pad-block));
+    --mc-step: 1em;
+}
+
+ul.mc-tree ul{ --depth: 1; }
+ul.mc-tree ul ul{ --depth: 2; }
+ul.mc-tree ul ul ul{ --depth: 3; }
+ul.mc-tree ul ul ul ul{ --depth: 4; }
+ul.mc-tree ul ul ul ul ul{ --depth: 5; }
+ul.mc-tree ul ul ul ul ul ul{ --depth: 6; }
+
+ul.mc-tree summary, ul.mc-tree li:not(:has(> details)){
+    padding: var(--mc-pad);
+    padding-inline-start: calc(var(--mc-pad-inline) + var(--depth, 0) * var(--mc-step));
+    border-radius: var(--mc-radius);
+    transition: background-color 0.12s;
+}
+
+ul.mc-tree li:not(:has(> details))::before{
+    content: "";
+    display: inline-block;
+    width: var(--mc-slot);
+}
+
+ul.mc-tree summary::before{
+    color: var(--mc-muted);
+}
+
+ul.mc-tree summary:hover, ul.mc-tree li:not(:has(> details)):hover{
+    background: var(--mc-hover);
+}
+
+ul.mc-tree summary:focus-visible, ul.mc-tree li:focus-visible{
+    outline: none;
+    background: var(--mc-focused);
+}
+
+ul.mc-tree :is(summary, li:not(:has(> details)))[aria-current]{
+    background: var(--mc-selected);
+}
+
+ul.mc-tree :is(summary, li:not(:has(> details)))[aria-current]:hover{
+    background: var(--mc-selected-hover);
+}
+
+ul.mc-tree :is(summary, li:not(:has(> details)))[aria-current]:focus-visible{
+    background: var(--mc-selected-focus);
+}
+
+ul.mc-tree [aria-disabled="true"]{
+    opacity: 0.38;
+    background: none;
+    cursor: auto;
+    pointer-events: none;
+}

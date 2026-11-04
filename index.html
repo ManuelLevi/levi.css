@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<link rel="stylesheet" href="levi.css">
+	<link rel="stylesheet" href="demo.css">
+	<link rel="icon" href="data:,">
+	<title>Levi: CSS for the HTML you already write</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><span>Levi<span class="mark">.css</span></span></summary>
+			<nav>
+				<ul class="mc-list">
+					<li class="group">Start</li>
+					<li><a href="#getting-started">Getting started</a></li>
+					<li><a href="#composed">Put together</a></li>
+					<li class="group">Components</li>
+					<li><a href="#dashboards">Dashboards</a></li>
+					<li><a href="#buttons">Buttons</a></li>
+					<li><a href="#tabs">Tabs</a></li>
+					<li><a href="#parts">Navigation and feedback</a></li>
+					<li><a href="#forms">Forms</a></li>
+					<li><a href="#progress">Progress</a></li>
+					<li><a href="#popups">Popups</a></li>
+					<li class="group">Data</li>
+					<li><a href="#tables">Tables</a></li>
+					<li><a href="#lists">Lists</a>
+						<ul>
+							<li><a href="#list">List</a></li>
+							<li><a href="#numbered-list">Numbered list</a></li>
+						</ul>
+					</li>
+					<li><a href="#trees">Trees</a></li>
+					<li><a href="#density">Density</a></li>
+					<li class="group">System</li>
+					<li><a href="#sidebar">Sidebar</a></li>
+					<li><a href="#theming">Theming</a></li>
+					<li><a href="#schemes">Light and dark</a></li>
+					<li><a href="#alternatives">Why another one</a></li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+	<main>
+		<header>
+			<h1>Levi<span class="mark">.css</span></h1>
+			<p class="lead">CSS for the HTML you already write.</p>
+			<p>Plain HTML in, an application UI out. About 750 lines of CSS, no JavaScript, no build step.</p>
+			<div class="row">
+				<a class="mc-button mc-primary" href="#getting-started">Getting started</a>
+				<a class="mc-button" href="#buttons">Components</a>
+				<fieldset class="swatches">
+					<legend>Accent</legend>
+					<label><input type="radio" name="accent" id="a-crimson" checked> Crimson</label>
+					<label><input type="radio" name="accent" id="a-navy"> Navy</label>
+					<label><input type="radio" name="accent" id="a-emerald"> Emerald</label>
+				</fieldset>
+			</div>
+			<div class="mc-tabs hero-card">
+				<nav>
+					<label><input type="radio" name="hero" checked> Light and dark</label>
+					<label><input type="radio" name="hero"> Dashboard</label>
+					<label><input type="radio" name="hero"> Files</label>
+				</nav>
+				<section class="split">
+					<iframe src="dashboard.html" data-accent="crimson" data-mode="light" title="The dashboard in light, crimson"></iframe>
+					<iframe src="dashboard-navy.html" data-accent="navy" data-mode="light" title="The dashboard in light, navy"></iframe>
+					<iframe src="dashboard-emerald.html" data-accent="emerald" data-mode="light" title="The dashboard in light, emerald"></iframe>
+					<iframe src="dashboard-dark.html" data-accent="crimson" data-mode="dark" title="The same dashboard in dark, crimson"></iframe>
+					<iframe src="dashboard-navy-dark.html" data-accent="navy" data-mode="dark" title="The same dashboard in dark, navy"></iframe>
+					<iframe src="dashboard-emerald-dark.html" data-accent="emerald" data-mode="dark" title="The same dashboard in dark, emerald"></iframe>
+				</section>
+				<section class="stage">
+					<iframe src="dashboard.html" title="The same dashboard with Levi"></iframe>
+					<iframe src="dashboard-navy.html" title="The same dashboard with Levi in navy"></iframe>
+					<iframe src="dashboard-emerald.html" title="The same dashboard with Levi in emerald"></iframe>
+				</section>
+				<section><iframe src="workspace.html" title="A files workspace with Levi"></iframe></section>
+			</div>
+			<dl class="mc-stats proof">
+				<div><dt>Lines of CSS</dt><dd>750</dd></div>
+				<div><dt>KB gzipped</dt><dd>4</dd></div>
+				<div><dt>JavaScript</dt><dd>0</dd></div>
+				<div><dt>Build steps</dt><dd>0</dd></div>
+			</dl>
+		</header>
+
+			<div class="principles">
+		<div>
+			<h3>Native first</h3>
+			<p>Plain <code>ul</code>, <code>table</code>, <code>details</code>. One class on the outer element, nothing on the inside.</p>
+		</div>
+		<div>
+			<h3>One standard</h3>
+			<p>Only the CSS spec. No prefixes, no hacks, no web fonts. If a browser disagrees with the spec, that is the browser's bug.</p>
+		</div>
+		<div>
+			<h3>Quiet by design</h3>
+			<p>Hairlines, soft grays, one accent. Rows are the same height in tables, lists and trees.</p>
+		</div>
+	</div>
+	<section id="getting-started">
+		<h2>Getting started</h2>
+		<p>One link tag and one class on the body. That is the whole setup.</p>
+		<div class="mc-group">
+<pre><code>&lt;link rel="stylesheet" href="levi.css"&gt;
+&lt;body class="mc-theme"&gt;</code></pre>
+		</div>
+	</section>
+
+	<section id="composed">
+		<h2>Put together</h2>
+		<p>Nothing here is a special case. A settings page is tabs, a form, a progress bar, an alert and two buttons.</p>
+		<div class="mc-group">
+			<div class="mc-tabs">
+			  <nav>
+			    <label><input type="radio" name="settings" checked> General</label>
+			    <label><input type="radio" name="settings"> Billing</label>
+			    <label><input type="radio" name="settings"> Team</label>
+			  </nav>
+			  <section>
+			    <p class="mc-alert" role="status" data-status="warn">Your trial ends in three days. Add a payment method to keep your projects.</p>
+			    <div class="cols">
+			      <form class="mc-form">
+			        <label>Project name <input class="mc-input" type="text" value="Atlas"></label>
+			        <label>Owner <input class="mc-input" type="email" value="ada@example.com"></label>
+			        <fieldset class="mc-fieldset">
+			          <legend>Notifications</legend>
+			          <label><input type="checkbox" role="switch" checked> Weekly summary</label>
+			          <label><input type="checkbox" role="switch"> Billing emails</label>
+			        </fieldset>
+			      </form>
+			      <div class="mc-form">
+			        <label>Storage <progress class="mc-progress" max="100" value="72"></progress></label>
+			        <table class="mc-table">
+			          <thead><tr><th scope="col">Member</th><th scope="col">Role</th></tr></thead>
+			          <tbody>
+			            <tr><td>Alex Morgan</td><td data-status="ok">Owner</td></tr>
+			            <tr><td>Jamie Lee</td><td data-status="warn">Invited</td></tr>
+			            <tr><td>Sam Rivera</td><td data-status="ok">Editor</td></tr>
+			            <tr><td>Priya Nair</td><td data-status="ok">Editor</td></tr>
+			            <tr><td>Chen Wei</td><td data-status="warn">Invited</td></tr>
+			          </tbody>
+			        </table>
+			      </div>
+			    </div>
+			    <menu class="mc-toolbar">
+			      <li><button class="mc-button mc-primary">Save changes</button></li>
+			      <li><button class="mc-button">Cancel</button></li>
+			    </menu>
+			  </section>
+			  <section>Invoices and payment methods.</section>
+			  <section>Everyone with access to this project.</section>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;div class="mc-tabs"&gt;
+  &lt;nav&gt;
+    &lt;label&gt;&lt;input type="radio" name="settings" checked&gt; General&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="settings"&gt; Billing&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="settings"&gt; Team&lt;/label&gt;
+  &lt;/nav&gt;
+  &lt;section&gt;
+    &lt;p class="mc-alert" role="status" data-status="warn"&gt;Your trial ends in three days. Add a payment method to keep your projects.&lt;/p&gt;
+    &lt;div class="cols"&gt;
+      &lt;form class="mc-form"&gt;
+        &lt;label&gt;Project name &lt;input class="mc-input" type="text" value="Atlas"&gt;&lt;/label&gt;
+        &lt;label&gt;Owner &lt;input class="mc-input" type="email" value="ada@example.com"&gt;&lt;/label&gt;
+        &lt;fieldset class="mc-fieldset"&gt;
+          &lt;legend&gt;Notifications&lt;/legend&gt;
+          &lt;label&gt;&lt;input type="checkbox" role="switch" checked&gt; Weekly summary&lt;/label&gt;
+          &lt;label&gt;&lt;input type="checkbox" role="switch"&gt; Billing emails&lt;/label&gt;
+        &lt;/fieldset&gt;
+      &lt;/form&gt;
+      &lt;div class="mc-form"&gt;
+        &lt;label&gt;Storage &lt;progress class="mc-progress" max="100" value="72"&gt;&lt;/progress&gt;&lt;/label&gt;
+        &lt;table class="mc-table"&gt;
+          &lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Member&lt;/th&gt;&lt;th scope="col"&gt;Role&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;&lt;td&gt;Alex Morgan&lt;/td&gt;&lt;td data-status="ok"&gt;Owner&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Jamie Lee&lt;/td&gt;&lt;td data-status="warn"&gt;Invited&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Sam Rivera&lt;/td&gt;&lt;td data-status="ok"&gt;Editor&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Priya Nair&lt;/td&gt;&lt;td data-status="ok"&gt;Editor&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Chen Wei&lt;/td&gt;&lt;td data-status="warn"&gt;Invited&lt;/td&gt;&lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;menu class="mc-toolbar"&gt;
+      &lt;li&gt;&lt;button class="mc-button mc-primary"&gt;Save changes&lt;/button&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;button class="mc-button"&gt;Cancel&lt;/button&gt;&lt;/li&gt;
+    &lt;/menu&gt;
+  &lt;/section&gt;
+  &lt;section&gt;Invoices and payment methods.&lt;/section&gt;
+  &lt;section&gt;Everyone with access to this project.&lt;/section&gt;
+&lt;/div&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<div class="chapter">
+		<h2>Components</h2>
+		<p>Each one does a single job, and each is one class on the element that already means it.</p>
+	</div>
+
+	<section id="dashboards">
+		<h2>Dashboards</h2>
+		<p>The page layout for applications. A sidebar on the left. On the right, breadcrumbs, a title with its actions, a row of stats and your sections. The live one is at the top of this page.</p>
+		<div class="mc-group">
+			<div class="frame"><iframe src="dashboard.html" title="The dashboard"></iframe></div>
+			<a class="mc-button mc-primary" href="dashboard.html">Open the full dashboard</a>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;main class="mc-dashboard"&gt;
+  &lt;header&gt;
+    &lt;nav class="mc-breadcrumb" aria-label="Breadcrumb"&gt;
+      &lt;ol&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+        &lt;li aria-current="page"&gt;Overview&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/nav&gt;
+    &lt;div&gt;
+      &lt;h1&gt;Overview&lt;/h1&gt;
+      &lt;menu class="mc-toolbar"&gt;
+        &lt;li&gt;&lt;button class="mc-button"&gt;Export&lt;/button&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button class="mc-button mc-primary"&gt;Invite&lt;/button&gt;&lt;/li&gt;
+      &lt;/menu&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;dl class="mc-stats"&gt;
+    &lt;div&gt;&lt;dt&gt;Revenue&lt;/dt&gt;&lt;dd&gt;$48,200&lt;/dd&gt;&lt;/div&gt;
+  &lt;/dl&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Recent activity&lt;/h2&gt;
+    ...
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+<div class="pair">
+	<section id="buttons">
+		<h2>Buttons</h2>
+		<p>One primary action per view. Everything else stays quiet.</p>
+		<div class="mc-group">
+			<div class="row">
+			  <button class="mc-button mc-primary">Save changes</button>
+			  <button class="mc-button">Cancel</button>
+			  <button class="mc-button mc-primary mc-danger">Delete</button>
+			  <button class="mc-button" disabled>Disabled</button>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;button class="mc-button mc-primary"&gt;Save changes&lt;/button&gt;
+&lt;button class="mc-button"&gt;Cancel&lt;/button&gt;
+&lt;button class="mc-button" disabled&gt;Disabled&lt;/button&gt;
+&lt;button class="mc-button mc-primary mc-danger"&gt;Delete&lt;/button&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="tabs">
+		<h2>Tabs</h2>
+		<p>Pills in a quiet track. Radio buttons hold the state, so there is no JavaScript. Up to five tabs.</p>
+		<div class="mc-group">
+			<div class="mc-tabs">
+			  <nav>
+			    <label><input type="radio" name="view" checked> Overview</label>
+			    <label><input type="radio" name="view"> Activity</label>
+			    <label><input type="radio" name="view"> Settings</label>
+			  </nav>
+			  <section>Everything at a glance.</section>
+			  <section>What changed, and when.</section>
+			  <section>Preferences for this project.</section>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;div class="mc-tabs"&gt;
+  &lt;nav&gt;
+    &lt;label&gt;&lt;input type="radio" name="view" checked&gt; Overview&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="view"&gt; Activity&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="view"&gt; Settings&lt;/label&gt;
+  &lt;/nav&gt;
+  &lt;section&gt;Everything at a glance.&lt;/section&gt;
+  &lt;section&gt;What changed, and when.&lt;/section&gt;
+  &lt;section&gt;Preferences for this project.&lt;/section&gt;
+&lt;/div&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+</div>
+	<section id="parts">
+		<h2>Navigation and feedback</h2>
+		<p>A breadcrumb, a toolbar, a menu and an alert. Each is one class on the element that already means it.</p>
+		<div class="mc-group">
+			<div class="cols">
+			  <div>
+			    <nav class="mc-breadcrumb" aria-label="Breadcrumb">
+			      <ol>
+			        <li><a href="#">Projects</a></li>
+			        <li><a href="#">Atlas</a></li>
+			        <li aria-current="page">Overview</li>
+			      </ol>
+			    </nav>
+			    <menu class="mc-toolbar">
+			      <li><input class="mc-input" type="search" placeholder="Search" aria-label="Search"></li>
+			      <li><button class="mc-button" popovertarget="actions">Actions</button></li>
+			      <li><button class="mc-button mc-primary">New</button></li>
+			    </menu>
+			    <div class="mc-menu" id="actions" popover>
+			      <ul class="mc-list">
+			        <li><a href="#">Rename</a></li>
+			        <li><a href="#">Duplicate</a></li>
+			        <li><a href="#">Archive</a></li>
+			      </ul>
+			    </div>
+			  </div>
+			  <div>
+			    <p class="mc-alert" role="status" data-status="ok">Changes saved.</p>
+			    <p class="mc-alert" role="status" data-status="warn">Your trial ends in three days.</p>
+			    <p class="mc-alert" role="alert" data-status="danger">The payment failed.</p>
+			  </div>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;nav class="mc-breadcrumb" aria-label="Breadcrumb"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+    &lt;li aria-current="page"&gt;Overview&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;menu class="mc-toolbar"&gt;
+  &lt;li&gt;&lt;input class="mc-input" type="search" aria-label="Search"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class="mc-button" popovertarget="actions"&gt;Actions&lt;/button&gt;&lt;/li&gt;
+&lt;/menu&gt;
+&lt;div class="mc-menu" id="actions" popover&gt;
+  &lt;ul class="mc-list"&gt;&lt;li&gt;&lt;a href="#"&gt;Rename&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p class="mc-alert" role="status" data-status="ok"&gt;Changes saved.&lt;/p&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="forms">
+		<h2>Forms</h2>
+		<p>Labels wrap their fields, so there is no <code>for</code> and no <code>id</code>. Fields are as tall as every other row.</p>
+		<div class="mc-group">
+			<div class="cols">
+			<form class="mc-form">
+			  <label>Name <input class="mc-input" type="text" placeholder="Ada Lovelace"></label>
+			  <label>Email <input class="mc-input" type="email" value="ada@example" aria-invalid="true"><small>Enter a full address.</small></label>
+			  <label>Workspace <input class="mc-input" type="text" value="atlas" disabled></label>
+			  <label>Plan
+			    <select class="mc-input">
+			      <option>Personal</option>
+			      <option>Team</option>
+			    </select>
+			  </label>
+			</form>
+			<form class="mc-form">
+			  <label>Message <textarea class="mc-input" rows="3"></textarea></label>
+			  <fieldset class="mc-fieldset">
+			    <legend>Updates</legend>
+			    <label><input type="radio" name="updates" checked> Weekly</label>
+			    <label><input type="radio" name="updates"> Monthly</label>
+			    <label><input type="checkbox" role="switch" checked> Product news</label>
+			  </fieldset>
+			  <button class="mc-button mc-primary">Send</button>
+			</form>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;form class="mc-form"&gt;
+  &lt;label&gt;Name &lt;input class="mc-input" type="text" placeholder="Ada Lovelace"&gt;&lt;/label&gt;
+  &lt;label&gt;Email &lt;input class="mc-input" type="email" value="ada@example" aria-invalid="true"&gt;&lt;small&gt;Enter a full address.&lt;/small&gt;&lt;/label&gt;
+  &lt;label&gt;Workspace &lt;input class="mc-input" type="text" value="atlas" disabled&gt;&lt;/label&gt;
+  &lt;label&gt;Plan
+    &lt;select class="mc-input"&gt;
+      &lt;option&gt;Personal&lt;/option&gt;
+      &lt;option&gt;Team&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/label&gt;
+  &lt;label&gt;Message &lt;textarea class="mc-input" rows="3"&gt;&lt;/textarea&gt;&lt;/label&gt;
+  &lt;fieldset class="mc-fieldset"&gt;
+    &lt;legend&gt;Updates&lt;/legend&gt;
+    &lt;label&gt;&lt;input type="radio" name="updates" checked&gt; Weekly&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="updates"&gt; Monthly&lt;/label&gt;
+    &lt;label&gt;&lt;input type="checkbox" role="switch" checked&gt; Product news&lt;/label&gt;
+  &lt;/fieldset&gt;
+  &lt;button class="mc-button mc-primary"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+<div class="pair">
+	<section id="progress">
+		<h2>Progress</h2>
+		<p>The native <code>progress</code> element, in the accent color. A switch is a checkbox with <code>role="switch"</code>.</p>
+		<div class="mc-group">
+			<p><label>Storage <progress class="mc-progress" max="100" value="64"></progress></label></p>
+			<p><label>Bandwidth <progress class="mc-progress" max="100" value="28"></progress></label></p>
+			<p><label>Seats <progress class="mc-progress" max="100" value="90"></progress></label></p>
+			<p><label><input type="checkbox" role="switch" checked> Notifications</label></p>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;progress class="mc-progress" max="100" value="64"&gt;&lt;/progress&gt;
+&lt;label&gt;&lt;input type="checkbox" role="switch" checked&gt; Notifications&lt;/label&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="popups">
+		<h2>Popups</h2>
+		<p>The browser's own modal dialog. A button opens it, Escape or a click outside closes it, and a form inside closes it on submit. No JavaScript.</p>
+		<div class="mc-group">
+			<div class="stage">
+			<dialog class="mc-popup" open aria-label="Preview">
+			  <form method="dialog">
+			    <h3>Delete this project?</h3>
+			    <p>This can't be undone.</p>
+			    <footer>
+			      <button class="mc-button">Cancel</button>
+			      <button class="mc-button mc-primary mc-danger">Delete</button>
+			    </footer>
+			  </form>
+			</dialog>
+			</div>
+			<button class="mc-button" command="show-modal" commandfor="confirm">Open it for real</button>
+			<dialog class="mc-popup" id="confirm" closedby="any">
+			  <form method="dialog">
+			    <h3>Delete this project?</h3>
+			    <p>This can't be undone.</p>
+			    <footer>
+			      <button class="mc-button">Cancel</button>
+			      <button class="mc-button mc-primary mc-danger">Delete</button>
+			    </footer>
+			  </form>
+			</dialog>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;button class="mc-button" command="show-modal" commandfor="confirm"&gt;Delete project&lt;/button&gt;
+&lt;dialog class="mc-popup" id="confirm" closedby="any"&gt;
+  &lt;form method="dialog"&gt;
+    &lt;h3&gt;Delete this project?&lt;/h3&gt;
+    &lt;p&gt;This can't be undone.&lt;/p&gt;
+    &lt;footer&gt;
+      &lt;button class="mc-button"&gt;Cancel&lt;/button&gt;
+      &lt;button class="mc-button mc-primary mc-danger"&gt;Delete&lt;/button&gt;
+    &lt;/footer&gt;
+  &lt;/form&gt;
+&lt;/dialog&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+</div>
+	<div class="chapter">
+		<h2>Data</h2>
+		<p>Tables, lists and trees are the same row in three arrangements.</p>
+	</div>
+
+	<section id="tables">
+		<h2>Tables</h2>
+		<p>A header, rows and a caption. Nothing else.</p>
+		<div class="mc-group">
+			<table class="mc-table">
+			  <caption>The team, as of this quarter.</caption>
+			  <thead>
+			    <tr>
+			      <th scope="col">Name</th>
+			      <th scope="col">Role</th>
+			      <th scope="col">Status</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>Alex Morgan</td>
+			      <td>Designer</td>
+			      <td data-status="ok">Active</td>
+			    </tr>
+			    <tr>
+			      <td>Jamie Lee</td>
+			      <td>Developer</td>
+			      <td data-status="warn">Pending</td>
+			    </tr>
+			    <tr>
+			      <td>Sam Rivera</td>
+			      <td>Writer</td>
+			      <td data-status="ok">Active</td>
+			    </tr>
+			  </tbody>
+			</table>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;table class="mc-table"&gt;
+  &lt;caption&gt;The team, as of this quarter.&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Name&lt;/th&gt;
+      &lt;th scope="col"&gt;Role&lt;/th&gt;
+      &lt;th scope="col"&gt;Status&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alex Morgan&lt;/td&gt;
+      &lt;td&gt;Designer&lt;/td&gt;
+      &lt;td data-status="ok"&gt;Active&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jamie Lee&lt;/td&gt;
+      &lt;td&gt;Developer&lt;/td&gt;
+      &lt;td data-status="warn"&gt;Pending&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sam Rivera&lt;/td&gt;
+      &lt;td&gt;Writer&lt;/td&gt;
+      &lt;td data-status="ok"&gt;Active&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="lists">
+		<h2>Lists</h2>
+		<p>Nested lists indent at any depth. Put the class on the outer list only.</p>
+		<div class="cols">
+		<div class="mc-group">
+			<h3 id="list">List</h3>
+			<ul class="mc-list">
+			  <li>Fruit
+			    <ul>
+			      <li>Citrus
+			        <ul>
+			          <li>Lemon</li>
+			          <li>Orange</li>
+			        </ul>
+			      </li>
+			      <li>Berries</li>
+			    </ul>
+			  </li>
+			  <li>Vegetables</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-list"&gt;
+  &lt;li&gt;Fruit
+    &lt;ul&gt;
+      &lt;li&gt;Citrus
+        &lt;ul&gt;
+          &lt;li&gt;Lemon&lt;/li&gt;
+          &lt;li&gt;Orange&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Berries&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vegetables&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+		<div class="mc-group">
+			<h3 id="numbered-list">Numbered list</h3>
+			<ol class="mc-list">
+			  <li>Fruit
+			    <ol>
+			      <li>Citrus
+			        <ol>
+			          <li>Lemon</li>
+			          <li>Orange</li>
+			        </ol>
+			      </li>
+			      <li>Berries</li>
+			    </ol>
+			  </li>
+			  <li>Vegetables</li>
+			</ol>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ol class="mc-list"&gt;
+  &lt;li&gt;Fruit
+    &lt;ol&gt;
+      &lt;li&gt;Citrus
+        &lt;ol&gt;
+          &lt;li&gt;Lemon&lt;/li&gt;
+          &lt;li&gt;Orange&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Berries&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vegetables&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+			</details>
+		</div>
+		</div>
+	</section>
+
+	<section id="trees">
+		<h2>Trees</h2>
+		<p>Folders are details, files are list items. Rows run the full width, indent one chevron per level, and a current row takes the accent tint. The browser handles opening and closing.</p>
+		<div class="mc-group">
+			<ul class="mc-tree">
+			  <li>
+			    <details open>
+			      <summary>src</summary>
+			      <ul>
+			        <li>
+			          <details open>
+			            <summary>components</summary>
+			            <ul>
+			              <li>table.css</li>
+			              <li aria-current="true">list.css</li>
+			              <li>tree.css</li>
+			              <li aria-disabled="true">legacy.css</li>
+			            </ul>
+			          </details>
+			        </li>
+			        <li>
+			          <details>
+			            <summary>docs</summary>
+			            <ul>
+			              <li>index.html</li>
+			            </ul>
+			          </details>
+			        </li>
+			        <li>levi.css</li>
+			      </ul>
+			    </details>
+			  </li>
+			  <li>README.md</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-tree"&gt;
+  &lt;li&gt;
+    &lt;details open&gt;
+      &lt;summary&gt;src&lt;/summary&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;details open&gt;
+            &lt;summary&gt;components&lt;/summary&gt;
+            &lt;ul&gt;
+              &lt;li&gt;table.css&lt;/li&gt;
+              &lt;li aria-current="true"&gt;list.css&lt;/li&gt;
+              &lt;li&gt;tree.css&lt;/li&gt;
+              &lt;li aria-disabled="true"&gt;legacy.css&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/details&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;details&gt;
+            &lt;summary&gt;docs&lt;/summary&gt;
+            &lt;ul&gt;
+              &lt;li&gt;index.html&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/details&gt;
+        &lt;/li&gt;
+        &lt;li&gt;levi.css&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/details&gt;
+  &lt;/li&gt;
+  &lt;li&gt;README.md&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="density">
+		<h2>Density</h2>
+		<p>Add <code>mc-compact</code> or <code>mc-comfortable</code> to a tree. Rows, spacing and indentation follow.</p>
+		<div class="cols">
+		<div class="mc-group">
+			<h3>mc-compact</h3>
+			<ul class="mc-tree mc-compact">
+			  <li>
+			    <details open>
+			      <summary>src</summary>
+			      <ul>
+			        <li aria-current="true">main.css</li>
+			        <li>index.html</li>
+			      </ul>
+			    </details>
+			  </li>
+			  <li>README.md</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-tree mc-compact"&gt;
+  &lt;li&gt;
+    &lt;details open&gt;
+      &lt;summary&gt;src&lt;/summary&gt;
+      &lt;ul&gt;
+        &lt;li aria-current="true"&gt;main.css&lt;/li&gt;
+        &lt;li&gt;index.html&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/details&gt;
+  &lt;/li&gt;
+  &lt;li&gt;README.md&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+		<div class="mc-group">
+			<h3>Default</h3>
+			<ul class="mc-tree">
+			  <li>
+			    <details open>
+			      <summary>src</summary>
+			      <ul>
+			        <li aria-current="true">main.css</li>
+			        <li>index.html</li>
+			      </ul>
+			    </details>
+			  </li>
+			  <li>README.md</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-tree"&gt;
+  &lt;li&gt;
+    &lt;details open&gt;
+      &lt;summary&gt;src&lt;/summary&gt;
+      &lt;ul&gt;
+        &lt;li aria-current="true"&gt;main.css&lt;/li&gt;
+        &lt;li&gt;index.html&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/details&gt;
+  &lt;/li&gt;
+  &lt;li&gt;README.md&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+		<div class="mc-group">
+			<h3>mc-comfortable</h3>
+			<ul class="mc-tree mc-comfortable">
+			  <li>
+			    <details open>
+			      <summary>src</summary>
+			      <ul>
+			        <li aria-current="true">main.css</li>
+			        <li>index.html</li>
+			      </ul>
+			    </details>
+			  </li>
+			  <li>README.md</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-tree mc-comfortable"&gt;
+  &lt;li&gt;
+    &lt;details open&gt;
+      &lt;summary&gt;src&lt;/summary&gt;
+      &lt;ul&gt;
+        &lt;li aria-current="true"&gt;main.css&lt;/li&gt;
+        &lt;li&gt;index.html&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/details&gt;
+  &lt;/li&gt;
+  &lt;li&gt;README.md&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+		</div>
+	</section>
+
+	<div class="chapter">
+		<h2>System</h2>
+		<p>Layout, theming and the reasoning behind both.</p>
+	</div>
+
+	<section id="sidebar">
+		<h2>Sidebar</h2>
+		<p>You are looking at it. It is a <code>details</code>, so the browser collapses it. Nest a tree inside and it becomes a file explorer.</p>
+		<div class="mc-group">
+			<div class="frame"><iframe src="workspace.html" title="A files workspace"></iframe></div>
+			<a class="mc-button" href="workspace.html">Open the workspace</a>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;aside class="mc-sidebar"&gt;
+  &lt;details open&gt;
+    &lt;summary&gt;&lt;span&gt;Atlas&lt;/span&gt;&lt;/summary&gt;
+    &lt;nav&gt;
+      &lt;ul class="mc-list"&gt;
+        &lt;li&gt;&lt;a href="#buttons"&gt;Buttons&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/details&gt;
+&lt;/aside&gt;
+
+&lt;main&gt;...&lt;/main&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="theming" class="showcase">
+		<h2>Theming</h2>
+		<p>Three accents ship with Levi: crimson by default, navy and emerald. Add a class to <code>mc-theme</code>, or to any container. Everything else is a variable.</p>
+		<div class="mc-group quiet">
+			<div class="specimens">
+			<div class="specimen mc-light mc-crimson">
+			  <h3>Crimson</h3>
+			  <p><a href="#">A link in the accent</a></p>
+			  <div class="row">
+			    <button class="mc-button mc-primary">Save</button>
+			    <button class="mc-button">Cancel</button>
+			  </div>
+			  <progress class="mc-progress" max="100" value="72" aria-label="Crimson"></progress>
+			  <label><input type="checkbox" role="switch" checked> Notifications</label>
+			</div>
+			<div class="specimen mc-light mc-navy">
+			  <h3>Navy</h3>
+			  <p><a href="#">A link in the accent</a></p>
+			  <div class="row">
+			    <button class="mc-button mc-primary">Save</button>
+			    <button class="mc-button">Cancel</button>
+			  </div>
+			  <progress class="mc-progress" max="100" value="48" aria-label="Navy"></progress>
+			  <label><input type="checkbox" role="switch" checked> Notifications</label>
+			</div>
+			<div class="specimen mc-light mc-emerald">
+			  <h3>Emerald</h3>
+			  <p><a href="#">A link in the accent</a></p>
+			  <div class="row">
+			    <button class="mc-button mc-primary">Save</button>
+			    <button class="mc-button">Cancel</button>
+			  </div>
+			  <progress class="mc-progress" max="100" value="86" aria-label="Emerald"></progress>
+			  <label><input type="checkbox" role="switch" checked> Notifications</label>
+			</div>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;body class="mc-theme mc-emerald"&gt;
+
+.mc-theme{
+  --mc-accent: rebeccapurple;
+}</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="schemes">
+		<h2>Light and dark</h2>
+		<p>Both come from the same tokens and follow the system on their own. Force either one with a class.</p>
+		<div class="cols">
+			<div class="mc-group mc-light pane">
+				<h3>mc-light</h3>
+				<input class="mc-input" placeholder="Search" aria-label="Search">
+				<div class="row"><button class="mc-button mc-primary">Save</button><button class="mc-button">Cancel</button></div>
+			</div>
+			<div class="mc-group mc-dark pane">
+				<h3>mc-dark</h3>
+				<input class="mc-input" placeholder="Search" aria-label="Search">
+				<div class="row"><button class="mc-button mc-primary">Save</button><button class="mc-button">Cancel</button></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="alternatives">
+		<h2>Why another one</h2>
+		<p>I tried the alternatives first. This is what I did not like.</p>
+		<div class="mc-group">
+			<table class="mc-table">
+				<thead>
+					<tr><th scope="col">Alternative</th><th scope="col">What I did not like</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>Bootstrap</td><td>Blocky, chunky and huge.</td></tr>
+					<tr><td>shadcn/ui</td><td>It needs React.</td></tr>
+					<tr><td>Pico, Sugar, Chota, BeerCSS, KelpUI</td><td>The right idea, in a design I could not live with.</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<section id="left-out">
+		<h2>Left out on purpose</h2>
+		<p>If the browser has an element for it, or nearly every application needs it, it is in. Everything else is filler.</p>
+		<div class="mc-group">
+		<ul class="mc-list">
+			<li>Grid systems. CSS grid is already there.</li>
+			<li>Carousels. Scroll snap does it.</li>
+			<li>Badges. A status dot is enough.</li>
+			<li>Tooltips. The <code>title</code> attribute and <code>popover</code> exist.</li>
+		</ul>
+		</div>
+	</section>
+
+	<footer class="mc-dark">
+		<h2>One file. One link.</h2>
+		<pre><code>&lt;link rel="stylesheet" href="levi.css"&gt;
+&lt;body class="mc-theme"&gt;</code></pre>
+		<div class="row">
+			<a class="mc-button mc-primary" href="dashboard.html">Open the dashboard</a>
+			<a class="mc-button" href="#buttons">Browse components</a>
+		</div>
+		<p>About 750 lines of CSS, no JavaScript, no dependencies.</p>
+	</footer>
+	</main>
+
+</body>
+</html>

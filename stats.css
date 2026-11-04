@@ -1,0 +1,73 @@
+dl.mc-stats{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: var(--mc-space);
+    margin: 0;
+}
+
+dl.mc-stats > div{
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+}
+
+dl.mc-stats > div + div{
+    padding-inline-start: var(--mc-space);
+    border-inline-start: 1px solid var(--mc-border);
+}
+
+dl.mc-stats dt{
+    font-size: 0.85rem;
+    color: var(--mc-muted);
+}
+
+dl.mc-stats dd{
+    margin: 0.25rem 0 0;
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+}
+
+@media (max-width: 40rem){
+    dl.mc-stats{
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+        row-gap: 1.25rem;
+    }
+
+    dl.mc-stats > div{
+        grid-row: auto;
+        grid-template-rows: none;
+    }
+
+    dl.mc-stats > div + div{
+        padding-inline-start: 0;
+        border-inline-start: 0;
+    }
+}
+
+dl.mc-stats dd small{
+    display: block;
+    margin-block-start: 0.25rem;
+    font-size: 0.85rem;
+    letter-spacing: 0;
+    color: var(--mc-muted);
+}
+
+dl.mc-stats dd small[data-trend="up"]{
+    color: var(--mc-ok);
+}
+
+dl.mc-stats dd small[data-trend="down"]{
+    color: var(--mc-danger);
+}
+
+dl.mc-stats dd small[data-trend="up"]::before{
+    content: "↑ ";
+}
+
+dl.mc-stats dd small[data-trend="down"]::before{
+    content: "↓ ";
+}

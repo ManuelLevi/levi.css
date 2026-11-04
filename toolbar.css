@@ -1,0 +1,13 @@
+menu.mc-toolbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+menu.mc-toolbar > li:has(> .mc-input){
+    flex: 1;
+}

@@ -1,0 +1,11 @@
+:is(progress, meter).mc-progress{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 0.6em;
+    accent-color: var(--mc-accent);
+}
+
+table.mc-table td:has(> .mc-progress){
+    width: 8rem;
+}

@@ -1,0 +1,34 @@
+.mc-theme summary{
+    list-style: none;
+    cursor: pointer;
+    padding: var(--mc-pad);
+    border-radius: var(--mc-radius);
+    transition: background-color 0.12s;
+}
+
+.mc-theme summary:focus-visible{
+    outline: var(--mc-focus);
+    outline-offset: -2px;
+}
+
+.mc-theme summary:hover{
+    background: var(--mc-hover);
+}
+
+.mc-theme summary::before{
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    width: 0.4em;
+    height: 0.4em;
+    margin-inline: calc((var(--mc-slot) - 0.4em) / 2);
+    vertical-align: middle;
+    border-inline-end: 1.5px solid;
+    border-block-end: 1.5px solid;
+    transform: rotate(-45deg);
+    transition: transform 0.15s;
+}
+
+.mc-theme details[open] > summary::before{
+    transform: translateY(-0.15em) rotate(45deg);
+}

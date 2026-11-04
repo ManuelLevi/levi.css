@@ -1,0 +1,38 @@
+dialog.mc-popup{
+    box-sizing: border-box;
+    width: min(24rem, 90vw);
+    padding: var(--mc-card);
+    color: inherit;
+    background: var(--mc-raised);
+    border: 0;
+    border-radius: var(--mc-radius);
+    box-shadow: 0 0 0 1px var(--mc-border), 0 1.25rem 3rem #0000002e;
+    opacity: 0;
+    transition: opacity 0.15s, display 0.15s allow-discrete, overlay 0.15s allow-discrete;
+}
+
+dialog.mc-popup[open]{
+    opacity: 1;
+}
+
+@starting-style{
+    dialog.mc-popup[open]{
+        opacity: 0;
+    }
+}
+
+dialog.mc-popup::backdrop{
+    background: #00000033;
+    backdrop-filter: blur(0.15em);
+}
+
+dialog.mc-popup h3{
+    margin-block-start: 0;
+}
+
+dialog.mc-popup footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5em;
+    margin-block-start: var(--mc-space);
+}

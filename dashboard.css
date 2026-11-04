@@ -1,0 +1,64 @@
+main.mc-dashboard{
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding: var(--mc-space) calc(var(--mc-space) * 1.5);
+}
+
+main.mc-dashboard > header{
+    display: grid;
+    gap: 0.75rem;
+    margin-block-end: var(--mc-space);
+    padding-block-end: var(--mc-space);
+    border-block-end: 1px solid var(--mc-border);
+}
+
+main.mc-dashboard > header > div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--mc-space);
+}
+
+main.mc-dashboard > header h1{
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: -0.03em;
+}
+
+main.mc-dashboard > section{
+    margin-block-start: calc(var(--mc-space) * 1.5);
+}
+
+main.mc-dashboard > section > h2{
+    margin-block: 0 0.75rem;
+    font-size: 1.25rem;
+}
+
+main.mc-dashboard > menu,
+main.mc-dashboard .mc-tabs section > menu{
+    margin-block-end: 0.75rem;
+}
+
+main.mc-dashboard > .mc-tabs{
+    margin-block-start: calc(var(--mc-space) * 1.5);
+}
+
+@media (max-width: 40rem){
+    main.mc-dashboard{
+        padding-inline: 1rem;
+    }
+
+    main.mc-dashboard > header > div{
+        gap: 0.75rem;
+    }
+
+    main.mc-dashboard table{
+        display: block;
+        overflow-x: auto;
+    }
+}
