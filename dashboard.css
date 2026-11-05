@@ -3,8 +3,6 @@ main.mc-dashboard{
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    max-width: 72rem;
-    margin-inline: auto;
     padding: var(--mc-space) calc(var(--mc-space) * 1.5);
 }
 

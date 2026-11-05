@@ -65,9 +65,9 @@ dl.mc-stats dd small[data-trend="down"]{
 }
 
 dl.mc-stats dd small[data-trend="up"]::before{
-    content: "↑ ";
+    content: "\2191\a0";
 }
 
 dl.mc-stats dd small[data-trend="down"]::before{
-    content: "↓ ";
+    content: "\2193\a0";
 }
