@@ -51,7 +51,7 @@
 		<header>
 			<h1>Levi<span class="mark">.css</span></h1>
 			<p class="lead">CSS for the HTML you already write.</p>
-			<p>Plain HTML in, an application UI out. About 750 lines of CSS, no JavaScript, no build step.</p>
+			<p>Plain HTML in, an application UI out. About 800 lines of CSS, no JavaScript, no build step.</p>
 			<div class="row">
 				<a class="mc-button mc-primary" href="#getting-started">Getting started</a>
 				<a class="mc-button" href="#buttons">Components</a>
@@ -84,7 +84,7 @@
 				<section><iframe src="workspace.html" title="A files workspace with Levi"></iframe></section>
 			</div>
 			<dl class="mc-stats proof">
-				<div><dt>Lines of CSS</dt><dd>750</dd></div>
+				<div><dt>Lines of CSS</dt><dd>800</dd></div>
 				<div><dt>KB gzipped</dt><dd>4</dd></div>
 				<div><dt>JavaScript</dt><dd>0</dd></div>
 				<div><dt>Build steps</dt><dd>0</dd></div>
@@ -268,7 +268,7 @@
 
 	<section id="tabs">
 		<h2>Tabs</h2>
-		<p>Pills in a quiet track. Radio buttons hold the state, so there is no JavaScript. Up to five tabs.</p>
+		<p>Pills in a quiet track. Radio buttons hold the state, so there is no JavaScript. Up to five tabs. A date range, two native date fields, sits on the same line and keeps the same height.</p>
 		<div class="mc-group">
 			<div class="mc-tabs">
 			  <nav>
@@ -276,6 +276,10 @@
 			    <label><input type="radio" name="view"> Activity</label>
 			    <label><input type="radio" name="view"> Settings</label>
 			  </nav>
+			  <div class="mc-daterange" role="group" aria-label="Date range">
+			    <label>From <input type="date" value="2026-10-01"></label>
+			    <label>To <input type="date" value="2026-10-31"></label>
+			  </div>
 			  <section>Everything at a glance.</section>
 			  <section>What changed, and when.</section>
 			  <section>Preferences for this project.</section>
@@ -288,6 +292,10 @@
     &lt;label&gt;&lt;input type="radio" name="view"&gt; Activity&lt;/label&gt;
     &lt;label&gt;&lt;input type="radio" name="view"&gt; Settings&lt;/label&gt;
   &lt;/nav&gt;
+  &lt;div class="mc-daterange" role="group" aria-label="Date range"&gt;
+    &lt;label&gt;From &lt;input type="date" value="2026-10-01"&gt;&lt;/label&gt;
+    &lt;label&gt;To &lt;input type="date" value="2026-10-31"&gt;&lt;/label&gt;
+  &lt;/div&gt;
   &lt;section&gt;Everything at a glance.&lt;/section&gt;
   &lt;section&gt;What changed, and when.&lt;/section&gt;
   &lt;section&gt;Preferences for this project.&lt;/section&gt;
@@ -907,7 +915,7 @@
 			<a class="mc-button mc-primary" href="dashboard.html">Open the dashboard</a>
 			<a class="mc-button" href="#buttons">Browse components</a>
 		</div>
-		<p>About 750 lines of CSS, no JavaScript, no dependencies.</p>
+		<p>About 800 lines of CSS, no JavaScript, no dependencies.</p>
 	</footer>
 	</main>
 

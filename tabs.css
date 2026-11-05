@@ -44,3 +44,16 @@
 .mc-tabs:has(nav label:nth-child(5) input:checked) > section:nth-of-type(5){
     display: block;
 }
+
+.mc-tabs:has(> .mc-daterange){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.mc-tabs:has(> .mc-daterange) > section{
+    flex: 0 0 100%;
+    min-width: 0;
+}
