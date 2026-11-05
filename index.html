@@ -36,6 +36,7 @@
 						</ul>
 					</li>
 					<li><a href="#trees">Trees</a></li>
+					<li><a href="#expandable-tables">Expandable tables</a></li>
 					<li><a href="#density">Density</a></li>
 					<li class="group">System</li>
 					<li><a href="#sidebar">Sidebar</a></li>
@@ -51,7 +52,7 @@
 		<header>
 			<h1>Levi<span class="mark">.css</span></h1>
 			<p class="lead">CSS for the HTML you already write.</p>
-			<p>Plain HTML in, an application UI out. About 800 lines of CSS, no JavaScript, no build step.</p>
+			<p>Plain HTML in, an application UI out. About 850 lines of CSS, no JavaScript, no build step.</p>
 			<div class="row">
 				<a class="mc-button mc-primary" href="#getting-started">Getting started</a>
 				<a class="mc-button" href="#buttons">Components</a>
@@ -84,7 +85,7 @@
 				<section><iframe src="workspace.html" title="A files workspace with Levi"></iframe></section>
 			</div>
 			<dl class="mc-stats proof">
-				<div><dt>Lines of CSS</dt><dd>800</dd></div>
+				<div><dt>Lines of CSS</dt><dd>850</dd></div>
 				<div><dt>KB gzipped</dt><dd>4</dd></div>
 				<div><dt>JavaScript</dt><dd>0</dd></div>
 				<div><dt>Build steps</dt><dd>0</dd></div>
@@ -687,6 +688,60 @@
 		</div>
 	</section>
 
+	<section id="expandable-tables">
+		<h2>Expandable tables</h2>
+		<p>A real table whose rows open. Add <code>mc-expandable</code>, give each group its own <code>tbody</code>, and put a checkbox in the first row. The rows below it appear when it is checked. No JavaScript.</p>
+		<div class="mc-group">
+			<table class="mc-table mc-expandable">
+			  <thead>
+			    <tr><th>Name</th><th>Owner</th><th>Status</th><th>Budget</th></tr>
+			  </thead>
+			  <tbody>
+			    <tr><td><label><input type="checkbox" checked aria-label="Expand"> Atlas</label></td><td>Ada Lovelace</td><td data-status="ok">Active</td><td>$48,200</td></tr>
+			    <tr><td>Web app</td><td>Sam Rivera</td><td data-status="ok">Active</td><td>$31,000</td></tr>
+			    <tr><td>Mobile app</td><td>Priya Nair</td><td data-status="warn">Delayed</td><td>$17,200</td></tr>
+			  </tbody>
+			  <tbody>
+			    <tr><td><label><input type="checkbox" aria-label="Expand"> Orion</label></td><td>Chen Wei</td><td data-status="warn">Review</td><td>$22,500</td></tr>
+			    <tr><td>Website</td><td>Chen Wei</td><td data-status="ok">Active</td><td>$9,500</td></tr>
+			    <tr><td>Billing</td><td>Jamie Lee</td><td data-status="danger">Blocked</td><td>$13,000</td></tr>
+			  </tbody>
+			  <tbody>
+			    <tr><td><label><input type="checkbox" aria-label="Expand"> Nova</label></td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
+			    <tr><td>Dashboard</td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
+			  </tbody>
+			  <tbody>
+			    <tr><td>Archive</td><td>Jamie Lee</td><td>Closed</td><td>$0</td></tr>
+			  </tbody>
+			</table>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;table class="mc-table mc-expandable"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Owner&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Budget&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;label&gt;&lt;input type="checkbox" checked aria-label="Expand"&gt; Atlas&lt;/label&gt;&lt;/td&gt;&lt;td&gt;Ada Lovelace&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$48,200&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Web app&lt;/td&gt;&lt;td&gt;Sam Rivera&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$31,000&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Mobile app&lt;/td&gt;&lt;td&gt;Priya Nair&lt;/td&gt;&lt;td data-status="warn"&gt;Delayed&lt;/td&gt;&lt;td&gt;$17,200&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;label&gt;&lt;input type="checkbox" aria-label="Expand"&gt; Orion&lt;/label&gt;&lt;/td&gt;&lt;td&gt;Chen Wei&lt;/td&gt;&lt;td data-status="warn"&gt;Review&lt;/td&gt;&lt;td&gt;$22,500&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Website&lt;/td&gt;&lt;td&gt;Chen Wei&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$9,500&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Billing&lt;/td&gt;&lt;td&gt;Jamie Lee&lt;/td&gt;&lt;td data-status="danger"&gt;Blocked&lt;/td&gt;&lt;td&gt;$13,000&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;label&gt;&lt;input type="checkbox" aria-label="Expand"&gt; Nova&lt;/label&gt;&lt;/td&gt;&lt;td&gt;Alex Morgan&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$8,400&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Dashboard&lt;/td&gt;&lt;td&gt;Alex Morgan&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$8,400&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Archive&lt;/td&gt;&lt;td&gt;Jamie Lee&lt;/td&gt;&lt;td&gt;Closed&lt;/td&gt;&lt;td&gt;$0&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
 	<section id="density">
 		<h2>Density</h2>
 		<p>Add <code>mc-compact</code> or <code>mc-comfortable</code> to a tree. Rows, spacing and indentation follow.</p>
@@ -915,7 +970,7 @@
 			<a class="mc-button mc-primary" href="dashboard.html">Open the dashboard</a>
 			<a class="mc-button" href="#buttons">Browse components</a>
 		</div>
-		<p>About 800 lines of CSS, no JavaScript, no dependencies.</p>
+		<p>About 850 lines of CSS, no JavaScript, no dependencies.</p>
 	</footer>
 	</main>
 

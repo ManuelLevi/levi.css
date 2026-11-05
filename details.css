@@ -15,7 +15,7 @@
     background: var(--mc-hover);
 }
 
-.mc-theme summary::before{
+.mc-theme :is(summary, :where(table.mc-expandable input))::before{
     content: "";
     display: inline-block;
     box-sizing: border-box;
@@ -29,6 +29,6 @@
     transition: transform 0.15s;
 }
 
-.mc-theme details[open] > summary::before{
+.mc-theme :is(details[open] > summary, :where(table.mc-expandable input:checked))::before{
     transform: translateY(-0.15em) rotate(45deg);
 }

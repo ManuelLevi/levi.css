@@ -68,3 +68,46 @@ table.mc-table :is(th, td):last-child{
 table.mc-table tr[aria-selected="true"]{
     background: var(--mc-hover);
 }
+
+table.mc-table.mc-expandable tbody:not(:last-child) tr:last-child td{
+    box-shadow: inset 0 -1px 0 var(--mc-border);
+}
+
+table.mc-table.mc-expandable tbody > tr:not(:first-child){
+    display: none;
+}
+
+table.mc-table.mc-expandable tbody:has(> tr:first-child input:checked) > tr{
+    display: table-row;
+}
+
+table.mc-table.mc-expandable th:first-child{
+    padding-inline-start: var(--mc-slot);
+}
+
+table.mc-table.mc-expandable tbody > tr:not(:first-child) > td:first-child,
+table.mc-table.mc-expandable tbody > tr:first-child:not(:has(input)) > td:first-child{
+    padding-inline-start: var(--mc-slot);
+}
+
+table.mc-table.mc-expandable tbody > tr:not(:first-child) > td:first-child{
+    padding-inline-start: calc(2 * var(--mc-slot));
+}
+
+table.mc-table.mc-expandable label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+table.mc-table.mc-expandable label:has(input:focus-visible){
+    outline: var(--mc-focus);
+    outline-offset: 2px;
+    border-radius: var(--mc-radius);
+}
+
+table.mc-table.mc-expandable input{
+    appearance: none;
+    margin: 0;
+    color: var(--mc-muted);
+}
