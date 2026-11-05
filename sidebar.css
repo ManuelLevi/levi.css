@@ -11,9 +11,9 @@ aside.mc-sidebar{
     flex: none;
     width: 12rem;
     position: sticky;
-    top: 0;
+    top: var(--mc-nav, 0px);
     align-self: flex-start;
-    height: 100vh;
+    height: calc(100vh - var(--mc-nav, 0px));
     overflow-y: auto;
     background: var(--mc-surface);
     border-inline-end: 1px solid var(--mc-border);
@@ -80,6 +80,7 @@ aside.mc-sidebar nav{
 
     aside.mc-sidebar, aside.mc-sidebar:has(> details:not([open])){
         position: sticky;
+        top: 0;
         z-index: 1;
         align-self: stretch;
         width: auto;

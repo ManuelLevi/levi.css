@@ -24,6 +24,7 @@
 					<li><a href="#buttons">Buttons</a></li>
 					<li><a href="#tabs">Tabs</a></li>
 					<li><a href="#parts">Navigation and feedback</a></li>
+					<li><a href="#navbar">Navbar</a></li>
 					<li><a href="#forms">Forms</a></li>
 					<li><a href="#progress">Progress</a></li>
 					<li><a href="#charts">Charts</a></li>
@@ -53,7 +54,7 @@
 		<header>
 			<h1>Levi<span class="mark">.css</span></h1>
 			<p class="lead">CSS for the HTML you already write.</p>
-			<p>Plain HTML in, an application UI out. About 1050 lines of CSS, no JavaScript, no build step.</p>
+			<p>Plain HTML in, an application UI out. About 1100 lines of CSS, no JavaScript, no build step.</p>
 			<div class="row">
 				<a class="mc-button mc-primary" href="#getting-started">Getting started</a>
 				<a class="mc-button" href="#buttons">Components</a>
@@ -86,7 +87,7 @@
 				<section><iframe src="workspace.html" title="A files workspace with Levi"></iframe></section>
 			</div>
 			<dl class="mc-stats proof">
-				<div><dt>Lines of CSS</dt><dd>1050</dd></div>
+				<div><dt>Lines of CSS</dt><dd>1100</dd></div>
 				<div><dt>KB gzipped</dt><dd>5</dd></div>
 				<div><dt>JavaScript</dt><dd>0</dd></div>
 				<div><dt>Build steps</dt><dd>0</dd></div>
@@ -357,6 +358,40 @@
 &lt;/div&gt;
 
 &lt;p class="mc-alert" role="status" data-status="ok"&gt;Changes saved.&lt;/p&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="navbar">
+		<h2>Navbar</h2>
+		<p>A bar across the top of the page. The brand sits on the left and the controls on the right, at the same height as every other row. In a page with a sidebar it stays on top and the sidebar sits beneath it.</p>
+		<div class="mc-group">
+			<header class="mc-navbar">
+			  <strong>Atlas</strong>
+			  <form>
+			    <label>Acting as
+			      <select class="mc-input">
+			        <option>Ada Lovelace</option>
+			        <option>Sam Rivera</option>
+			      </select>
+			    </label>
+			    <button class="mc-button mc-primary">Switch</button>
+			  </form>
+			</header>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;body class="mc-theme"&gt;
+  &lt;header class="mc-navbar"&gt;
+    &lt;strong&gt;Atlas&lt;/strong&gt;
+    &lt;form&gt;
+      &lt;label&gt;Acting as
+        &lt;select class="mc-input"&gt;…&lt;/select&gt;
+      &lt;/label&gt;
+    &lt;/form&gt;
+  &lt;/header&gt;
+  &lt;aside class="mc-sidebar"&gt;…&lt;/aside&gt;
+  &lt;main class="mc-dashboard"&gt;…&lt;/main&gt;
+&lt;/body&gt;</code></pre>
 			</details>
 		</div>
 	</section>
@@ -1105,7 +1140,7 @@
 			<a class="mc-button mc-primary" href="dashboard.html">Open the dashboard</a>
 			<a class="mc-button" href="#buttons">Browse components</a>
 		</div>
-		<p>About 1050 lines of CSS, no JavaScript, no dependencies.</p>
+		<p>About 1100 lines of CSS, no JavaScript, no dependencies.</p>
 	</footer>
 	</main>
 
