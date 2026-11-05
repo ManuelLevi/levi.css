@@ -670,13 +670,13 @@ body:has(#a-emerald:checked) .split iframe[data-accent="emerald"]{
     }
 }
 
-body :is(#composed, #forms, #tables, #trees) .mc-group{
+body :is(#composed, #forms, #tables, #trees, #charts) .mc-group{
     padding: 2rem;
     background: var(--mc-bg);
     box-shadow: 0 0 0 1px var(--mc-border), 0 0.25rem 0.5rem #0000000d, 0 1.5rem 4rem #00000026;
 }
 
-body :is(#composed, #forms, #tables, #trees) .mc-group > details{
+body :is(#composed, #forms, #tables, #trees, #charts) .mc-group > details{
     margin-block-start: 2rem;
 }
 
@@ -757,4 +757,16 @@ body main > section.showcase .mc-group.quiet{
 
 .specimen{
     box-shadow: 0 0 0 1px var(--mc-border);
+}
+
+#charts .cols + .cols{
+    margin-block-start: 1rem;
+}
+
+#charts ul.mc-split + ul.mc-split{
+    margin-block-start: 1.5rem;
+}
+
+#charts .cols > .mc-group:only-child{
+    grid-column: 1 / -1;
 }

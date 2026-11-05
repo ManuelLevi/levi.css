@@ -11,6 +11,14 @@
     --mc-danger: light-dark(#c62828, #ff6961);
     --mc-hover: light-dark(#0000000d, #ffffff14);
     --mc-accent: light-dark(crimson, #ff6b81);
+    --mc-c1: light-dark(#2a78d6, #5d9cf0);
+    --mc-c2: light-dark(#eb6834, #f58a5c);
+    --mc-c3: light-dark(#1baf7a, #3fcf9a);
+    --mc-c4: light-dark(#eda100, #f7bd3a);
+    --mc-c5: light-dark(#e87ba4, #f29cbd);
+    --mc-c6: light-dark(#008300, #3dae3d);
+    --mc-c7: light-dark(#6250d6, #8f80f0);
+    --mc-c8: light-dark(#e34948, #f27371);
     --mc-pad-block: 0.25em;
     --mc-pad-inline: 0.5em;
     --mc-pad: var(--mc-pad-block) var(--mc-pad-inline);
