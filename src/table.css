@@ -137,3 +137,12 @@ table.mc-table.mc-expandable input{
 table.mc-table.mc-expandable tr[hidden]{
     display: none;
 }
+
+table.mc-table tr[data-changed]{
+    background: color-mix(in srgb, var(--mc-primary) 8%, transparent);
+}
+
+table.mc-table td > .mc-input{
+    width: auto;
+    min-width: 6rem;
+}

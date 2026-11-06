@@ -114,9 +114,49 @@
 		</div>
 	</section>
 
+	<section id="entity">
+		<h2>Fieldset for one thing</h2>
+		<p>For a main entity: <code>mc-title</code> makes the legend stronger, a <code>small</code> in it is the count, a toolbar with <code>mc-end</code> puts its actions on the right, and a paragraph is capped at 70 characters. A table inside a form takes the full width, a select in a cell keeps its size, and <code>data-changed</code> marks a row that is not saved yet.</p>
+		<div class="mc-group">
+			<form class="mc-form">
+			<fieldset class="mc-fieldset mc-title">
+			  <legend>Atlas <small>2 groups</small></legend>
+			  <menu class="mc-toolbar mc-end"><li><button class="mc-button mc-primary mc-danger" type="button">Delete</button></li></menu>
+			  <p>A group with the role Editor can change the workflows of this workspace. Readers can only look at them.</p>
+			  <table class="mc-table">
+			    <thead><tr><th scope="col">Group</th><th scope="col">Role</th></tr></thead>
+			    <tbody>
+			      <tr><td>Analysts</td><td><select class="mc-input" aria-label="Role"><option>Reader</option><option>Editor</option></select></td></tr>
+			      <tr data-changed><td>Admins</td><td><select class="mc-input" aria-label="Role"><option>Editor</option><option>Reader</option></select></td></tr>
+			    </tbody>
+			  </table>
+			</fieldset>
+			  <footer><button class="mc-button" type="button">Cancel</button><button class="mc-button mc-primary">Save</button></footer>
+			</form>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;form class="mc-form"&gt;
+&lt;fieldset class="mc-fieldset mc-title"&gt;
+  &lt;legend&gt;Atlas &lt;small&gt;2 groups&lt;/small&gt;&lt;/legend&gt;
+  &lt;menu class="mc-toolbar mc-end"&gt;&lt;li&gt;&lt;button class="mc-button mc-primary mc-danger" type="button"&gt;Delete&lt;/button&gt;&lt;/li&gt;&lt;/menu&gt;
+  &lt;p&gt;A group with the role Editor can change the workflows of this workspace. Readers can only look at them.&lt;/p&gt;
+  &lt;table class="mc-table"&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Group&lt;/th&gt;&lt;th scope="col"&gt;Role&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;Analysts&lt;/td&gt;&lt;td&gt;&lt;select class="mc-input" aria-label="Role"&gt;&lt;option&gt;Reader&lt;/option&gt;&lt;option&gt;Editor&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr data-changed&gt;&lt;td&gt;Admins&lt;/td&gt;&lt;td&gt;&lt;select class="mc-input" aria-label="Role"&gt;&lt;option&gt;Editor&lt;/option&gt;&lt;option&gt;Reader&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/fieldset&gt;
+  &lt;footer&gt;&lt;button class="mc-button" type="button"&gt;Cancel&lt;/button&gt;&lt;button class="mc-button mc-primary"&gt;Save&lt;/button&gt;&lt;/footer&gt;
+&lt;/form&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
 	<footer class="end">
 		<nav class="mc-pagination" aria-label="Pages"><a href="../form/" rel="prev">&larr; Form</a><a href="../group/" rel="next">Group &rarr;</a></nav>
-		<p><a href="../">Levi.css</a> &middot; About 1550 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
+		<p><a href="../">Levi.css</a> &middot; About 1600 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
 	</footer>
 </main>
 

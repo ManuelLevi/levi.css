@@ -191,9 +191,37 @@
 		</div>
 	</section>
 
+	<section id="list-actions">
+		<h2>List with actions</h2>
+		<p>A <code>mc-button</code> at the end of an item goes to the right of the row. Nested lists indent by depth.</p>
+		<div class="mc-group">
+			<ul class="mc-list">
+			  <li><a href="#">Finance</a><button class="mc-button" type="button">Rename</button>
+			    <ul>
+			      <li><a href="#">Invoices</a><button class="mc-button" type="button">Rename</button></li>
+			      <li><a href="#">Expenses</a><button class="mc-button" type="button">Rename</button></li>
+			    </ul>
+			  </li>
+			  <li><a href="#">Support</a><button class="mc-button" type="button">Rename</button></li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-list"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Finance&lt;/a&gt;&lt;button class="mc-button" type="button"&gt;Rename&lt;/button&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Invoices&lt;/a&gt;&lt;button class="mc-button" type="button"&gt;Rename&lt;/button&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Expenses&lt;/a&gt;&lt;button class="mc-button" type="button"&gt;Rename&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Support&lt;/a&gt;&lt;button class="mc-button" type="button"&gt;Rename&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
 	<footer class="end">
 		<nav class="mc-pagination" aria-label="Pages"><a href="../expandable-table/" rel="prev">&larr; Expandable table</a><a href="../tree/" rel="next">Tree &rarr;</a></nav>
-		<p><a href="../">Levi.css</a> &middot; About 1550 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
+		<p><a href="../">Levi.css</a> &middot; About 1600 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
 	</footer>
 </main>
 

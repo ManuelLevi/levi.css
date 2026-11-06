@@ -7,3 +7,7 @@ form.mc-form{
 form.mc-form > button{
     justify-self: start;
 }
+
+form.mc-form:has(table.mc-table){
+    max-width: none;
+}

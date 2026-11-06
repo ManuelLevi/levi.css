@@ -22,3 +22,24 @@ fieldset.mc-fieldset > :is(ul.mc-list, ul.mc-tree, table.mc-table){
     margin-inline: calc(var(--mc-pad-inline) * -1);
     width: calc(100% + 2 * var(--mc-pad-inline));
 }
+
+fieldset.mc-fieldset > fieldset.mc-fieldset:not(:last-child){
+    margin-block-end: var(--mc-card);
+}
+
+fieldset.mc-fieldset > p{
+    max-width: 70ch;
+}
+
+fieldset.mc-fieldset.mc-title > legend{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--mc-text);
+}
+
+fieldset.mc-fieldset legend small{
+    margin-inline-start: 0.5em;
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: var(--mc-muted);
+}

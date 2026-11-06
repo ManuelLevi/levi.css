@@ -4,12 +4,12 @@
     padding: 0;
 }
 
-:is(ul, ol).mc-list :is(a, button, li:not(:has(> :is(a, button)))){
+:is(ul, ol).mc-list :is(a, button:not(.mc-button), li:not(:has(> :is(a, button)))){
     padding-inline: var(--mc-pad-inline);
     line-height: var(--mc-row);
 }
 
-:is(ul, ol).mc-list :is(a, button){
+:is(ul, ol).mc-list :is(a, button:not(.mc-button)){
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -29,12 +29,12 @@
     background: linear-gradient(var(--mc-primary), var(--mc-primary)) left / 0.15em 60% no-repeat, var(--mc-hover);
 }
 
-:is(ul, ol).mc-list :is(a, button):focus-visible{
+:is(ul, ol).mc-list :is(a, button:not(.mc-button)):focus-visible{
     outline: var(--mc-focus);
     outline-offset: -2px;
 }
 
-:is(ul, ol).mc-list :is(a, button):hover{
+:is(ul, ol).mc-list :is(a, button:not(.mc-button)):hover{
     background: var(--mc-hover);
 }
 
@@ -103,4 +103,28 @@ ol.mc-list li:has(> data)::before{
 
 :is(ul, ol).mc-list li:has(> :is(ul, ol)) > :not(ul, ol){
     padding-inline: var(--mc-pad-inline);
+}
+
+
+:is(ul, ol).mc-list li:has(> .mc-button){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--mc-space);
+}
+
+:is(ul, ol).mc-list li > .mc-button{
+    margin-inline-start: auto;
+}
+
+:is(ul, ol).mc-list li:has(> .mc-button) > :is(a, button:not(.mc-button)){
+    flex: 1;
+    min-width: 0;
+    width: auto;
+}
+
+
+:is(ul, ol).mc-list li:has(> .mc-button) > :is(ul, ol){
+    box-sizing: border-box;
+    flex: 0 0 100%;
 }

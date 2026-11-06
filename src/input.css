@@ -82,3 +82,12 @@ form.mc-form label small{
 form.mc-form label:has(> [aria-invalid="true"]) small{
     color: var(--mc-danger);
 }
+
+select.mc-input:not([multiple]){
+    appearance: none;
+    padding-inline-end: 2em;
+    background-image: linear-gradient(45deg, transparent 50%, var(--mc-muted) 50%), linear-gradient(135deg, var(--mc-muted) 50%, transparent 50%);
+    background-position: calc(100% - 1.1em) 55%, calc(100% - 0.8em) 55%;
+    background-size: 0.3em 0.3em;
+    background-repeat: no-repeat;
+}
