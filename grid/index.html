@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A page container and a row of twelve columns, like the ones you know. mc-container centers the page at a readable width (mc-fluid makes it full width). mc-row holds mc-col (equal width) or mc-col-1 to mc-col-12, and mc-offset-1 to mc-offset-11 pushes one. There is one breakpoint, at 40rem: below it every column takes the full width.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Grid · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary aria-label="Menu"><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-tree mc-compact">
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li>
+						<details open>
+							<summary>Components</summary>
+							<ul>
+								<li><a href="../dashboard/">Dashboard</a></li>
+								<li><a href="../navbar/">Navbar</a></li>
+								<li><a href="../sidebar/">Sidebar</a></li>
+								<li><a href="../breadcrumb/">Breadcrumb</a></li>
+								<li><a href="../toolbar/">Toolbar</a></li>
+								<li><a href="../menu/">Menu</a></li>
+								<li><a href="../tabs/">Tabs</a></li>
+								<li><a href="../daterange/">Date range</a></li>
+								<li><a href="../button/">Button</a></li>
+								<li><a href="../input/">Input</a></li>
+								<li><a href="../form/">Form</a></li>
+								<li><a href="../fieldset/">Fieldset</a></li>
+								<li><a href="../group/">Group</a></li>
+								<li><a href="../grid/" aria-current="page">Grid</a></li>
+								<li><a href="../popup/">Popup</a></li>
+								<li><a href="../alert/">Alert</a></li>
+								<li><a href="../pill/">Pill</a></li>
+								<li><a href="../progress/">Progress</a></li>
+								<li><a href="../stats/">Stats</a></li>
+								<li><a href="../chart/">Chart</a></li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>Data</summary>
+							<ul>
+								<li><a href="../table/">Table</a></li>
+								<li><a href="../expandable-table/">Expandable table</a></li>
+								<li><a href="../list/">List</a></li>
+								<li><a href="../tree/">Tree</a></li>
+								<li><a href="../facts/">Facts</a></li>
+								<li><a href="../empty/">Empty state</a></li>
+								<li><a href="../pagination/">Pagination</a></li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>System</summary>
+							<ul>
+								<li><a href="../theme/">Theme</a></li>
+								<li><a href="../color/">Color</a></li>
+							</ul>
+						</details>
+					</li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="grid">
+		<h1>Grid</h1>
+		<p>A page container and a row of twelve columns, like the ones you know. <code>mc-container</code> centers the page at a readable width (<code>mc-fluid</code> makes it full width). <code>mc-row</code> holds <code>mc-col</code> (equal width) or <code>mc-col-1</code> to <code>mc-col-12</code>, and <code>mc-offset-1</code> to <code>mc-offset-11</code> pushes one. There is one breakpoint, at 40rem: below it every column takes the full width.</p>
+		<div class="mc-group">
+			<div class="grid-demo">
+			<div class="mc-row">
+			  <div class="mc-col"><div class="cell">1 of 3</div></div>
+			  <div class="mc-col"><div class="cell">2 of 3</div></div>
+			  <div class="mc-col"><div class="cell">3 of 3</div></div>
+			</div>
+			<div class="mc-row">
+			  <div class="mc-col-4"><div class="cell">4</div></div>
+			  <div class="mc-col-8"><div class="cell">8</div></div>
+			</div>
+			<div class="mc-row">
+			  <div class="mc-col-3"><div class="cell">3</div></div>
+			  <div class="mc-col-3 mc-offset-3"><div class="cell">3, offset 3</div></div>
+			  <div class="mc-col-3"><div class="cell">3</div></div>
+			</div>
+			<div class="mc-row">
+			  <div class="mc-col-6"><div class="cell">6, with a row inside
+			<div class="mc-row"><div class="mc-col"><div class="cell">a</div></div><div class="mc-col"><div class="cell">b</div></div></div></div></div>
+			  <div class="mc-col-6"><div class="cell">6</div></div>
+			</div>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;div class="mc-container"&gt;
+&lt;div class="mc-row"&gt;
+  &lt;div class="mc-col"&gt;1 of 3&lt;/div&gt;
+  &lt;div class="mc-col"&gt;2 of 3&lt;/div&gt;
+  &lt;div class="mc-col"&gt;3 of 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="mc-row"&gt;
+  &lt;div class="mc-col-4"&gt;4&lt;/div&gt;
+  &lt;div class="mc-col-8"&gt;8&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="mc-row"&gt;
+  &lt;div class="mc-col-3"&gt;3&lt;/div&gt;
+  &lt;div class="mc-col-3 mc-offset-3"&gt;3, offset 3&lt;/div&gt;
+  &lt;div class="mc-col-3"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<footer class="end">
+		<nav class="mc-pagination" aria-label="Pages"><a href="../group/" rel="prev">&larr; Group</a><a href="../popup/" rel="next">Popup &rarr;</a></nav>
+		<p><a href="../">Levi.css</a> &middot; About 1450 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
+	</footer>
+</main>
+
+</body>
+</html>

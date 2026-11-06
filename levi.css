@@ -852,6 +852,81 @@ form.mc-form > button{
     box-shadow: inset 0 0 0 1px var(--mc-border);
 }
 
+.mc-container{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: var(--mc-space);
+}
+
+.mc-container.mc-fluid{
+    max-width: none;
+}
+
+.mc-row{
+    --mc-gap: var(--mc-space);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--mc-gap);
+    align-items: flex-start;
+}
+
+.mc-row > *{
+    min-width: 0;
+}
+
+.mc-row > .mc-col{
+    flex: 1 1 0;
+}
+
+.mc-row > .mc-col-auto{
+    flex: 0 0 auto;
+}
+
+.mc-row > :is(.mc-col-1, .mc-col-2, .mc-col-3, .mc-col-4, .mc-col-5, .mc-col-6, .mc-col-7, .mc-col-8, .mc-col-9, .mc-col-10, .mc-col-11, .mc-col-12){
+    flex: 0 0 calc((100% - 11 * var(--mc-gap)) / 12 * var(--n) + (var(--n) - 1) * var(--mc-gap));
+}
+
+.mc-row > :is(.mc-offset-1, .mc-offset-2, .mc-offset-3, .mc-offset-4, .mc-offset-5, .mc-offset-6, .mc-offset-7, .mc-offset-8, .mc-offset-9, .mc-offset-10, .mc-offset-11){
+    margin-inline-start: calc((100% - 11 * var(--mc-gap)) / 12 * var(--o) + var(--o) * var(--mc-gap));
+}
+
+.mc-col-1{ --n: 1; }
+.mc-col-2{ --n: 2; }
+.mc-col-3{ --n: 3; }
+.mc-col-4{ --n: 4; }
+.mc-col-5{ --n: 5; }
+.mc-col-6{ --n: 6; }
+.mc-col-7{ --n: 7; }
+.mc-col-8{ --n: 8; }
+.mc-col-9{ --n: 9; }
+.mc-col-10{ --n: 10; }
+.mc-col-11{ --n: 11; }
+.mc-col-12{ --n: 12; }
+
+.mc-offset-1{ --o: 1; }
+.mc-offset-2{ --o: 2; }
+.mc-offset-3{ --o: 3; }
+.mc-offset-4{ --o: 4; }
+.mc-offset-5{ --o: 5; }
+.mc-offset-6{ --o: 6; }
+.mc-offset-7{ --o: 7; }
+.mc-offset-8{ --o: 8; }
+.mc-offset-9{ --o: 9; }
+.mc-offset-10{ --o: 10; }
+.mc-offset-11{ --o: 11; }
+
+@media (max-width: 40rem){
+    .mc-row > :is(.mc-col, .mc-col-auto, .mc-col-1, .mc-col-2, .mc-col-3, .mc-col-4, .mc-col-5, .mc-col-6, .mc-col-7, .mc-col-8, .mc-col-9, .mc-col-10, .mc-col-11, .mc-col-12){
+        flex: 0 0 100%;
+    }
+
+    .mc-row > :is(.mc-offset-1, .mc-offset-2, .mc-offset-3, .mc-offset-4, .mc-offset-5, .mc-offset-6, .mc-offset-7, .mc-offset-8, .mc-offset-9, .mc-offset-10, .mc-offset-11){
+        margin-inline-start: 0;
+    }
+}
+
 :is(dialog.mc-popup, form.mc-form) > footer,
 dialog.mc-popup footer{
     display: flex;
