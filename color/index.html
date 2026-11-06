@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Every color is a variable on mc-theme, with one value for light and one for dark. The ratio is each color against the page background of its own mode.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Color · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary aria-label="Menu"><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-tree mc-compact">
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li>
+						<details>
+							<summary>Components</summary>
+							<ul>
+								<li><a href="../dashboard/">Dashboard</a></li>
+								<li><a href="../navbar/">Navbar</a></li>
+								<li><a href="../sidebar/">Sidebar</a></li>
+								<li><a href="../breadcrumb/">Breadcrumb</a></li>
+								<li><a href="../toolbar/">Toolbar</a></li>
+								<li><a href="../menu/">Menu</a></li>
+								<li><a href="../tabs/">Tabs</a></li>
+								<li><a href="../daterange/">Date range</a></li>
+								<li><a href="../button/">Button</a></li>
+								<li><a href="../input/">Input</a></li>
+								<li><a href="../form/">Form</a></li>
+								<li><a href="../fieldset/">Fieldset</a></li>
+								<li><a href="../group/">Group</a></li>
+								<li><a href="../popup/">Popup</a></li>
+								<li><a href="../alert/">Alert</a></li>
+								<li><a href="../pill/">Pill</a></li>
+								<li><a href="../progress/">Progress</a></li>
+								<li><a href="../stats/">Stats</a></li>
+								<li><a href="../chart/">Chart</a></li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>Data</summary>
+							<ul>
+								<li><a href="../table/">Table</a></li>
+								<li><a href="../expandable-table/">Expandable table</a></li>
+								<li><a href="../list/">List</a></li>
+								<li><a href="../tree/">Tree</a></li>
+								<li><a href="../facts/">Facts</a></li>
+								<li><a href="../empty/">Empty state</a></li>
+								<li><a href="../pagination/">Pagination</a></li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details open>
+							<summary>System</summary>
+							<ul>
+								<li><a href="../theme/">Theme</a></li>
+								<li><a href="../color/" aria-current="page">Color</a></li>
+							</ul>
+						</details>
+					</li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="color">
+		<h1>Color</h1>
+		<p>Every color is a variable on <code>mc-theme</code>, with one value for light and one for dark. The ratio is each color against the page background of its own mode.</p>
+		<div class="cols">
+		<div class="mc-group mc-light swatches-panel">
+			<h3 class="mode">Light</h3>
+			<h3>Surfaces and text</h3>
+			<ul class="tokens">
+				<li><i style="background:var(--mc-bg)"></i><b>--mc-bg</b><code>#fff</code><span></span></li>
+				<li><i style="background:var(--mc-surface)"></i><b>--mc-surface</b><code>#f5f5f7</code><span></span></li>
+				<li><i style="background:var(--mc-raised)"></i><b>--mc-raised</b><code>#fff</code><span></span></li>
+				<li><i style="background:var(--mc-border)"></i><b>--mc-border</b><code>#d9d9de</code><span></span></li>
+				<li><i style="background:var(--mc-text)"></i><b>--mc-text</b><code>#1d1d1f</code><span>16.83:1</span></li>
+				<li><i style="background:var(--mc-muted)"></i><b>--mc-muted</b><code>#6e6e73</code><span>5.07:1</span></li>
+				<li><i style="background:var(--mc-hover)"></i><b>--mc-hover</b><code>#0000000d</code><span></span></li>
+				<li><i style="background:var(--mc-shadow)"></i><b>--mc-shadow</b><code>#00000026</code><span></span></li>
+			</ul>
+			<h3>Status</h3>
+			<p>One word on the element, <code>data-status</code>, and the dot, the text or the number takes the color.</p>
+			<ul class="tokens">
+				<li><i style="background:var(--mc-ok)"></i><b>--mc-ok  ok</b><code>#1a7f37</code><span>5.08:1</span></li>
+				<li><i style="background:var(--mc-warn)"></i><b>--mc-warn  warn</b><code>#b36b00</code><span>4.18:1</span></li>
+				<li><i style="background:var(--mc-danger)"></i><b>--mc-danger  danger</b><code>#c62828</code><span>5.62:1</span></li>
+				<li><i style="background:var(--mc-muted)"></i><b>--mc-muted  muted</b><code>#6e6e73</code><span>5.07:1</span></li>
+			</ul>
+			<h3>Accent</h3>
+			<p>Crimson by default. <code>mc-navy</code> and <code>mc-emerald</code> on the theme swap it.</p>
+			<ul class="tokens">
+				<li><i style="background:var(--mc-accent)"></i><b>--mc-accent  crimson</b><code>#dc143c</code><span>4.99:1</span></li>
+				<li><i style="background:#1e3a8a"></i><b>--mc-accent  mc-navy</b><code>#1e3a8a</code><span>10.36:1</span></li>
+				<li><i style="background:#047857"></i><b>--mc-accent  mc-emerald</b><code>#047857</code><span>5.48:1</span></li>
+			</ul>
+			<h3>Chart palette</h3>
+			<p>Eight hues for <code>mc-categorical</code>.</p>
+			<ul class="tokens">
+				<li><i style="background:var(--mc-c1)"></i><b>--mc-c1</b><code>#2a78d6</code><span>4.42:1</span></li>
+				<li><i style="background:var(--mc-c2)"></i><b>--mc-c2</b><code>#eb6834</code><span>3.20:1</span></li>
+				<li><i style="background:var(--mc-c3)"></i><b>--mc-c3</b><code>#1baf7a</code><span>2.82:1</span></li>
+				<li><i style="background:var(--mc-c4)"></i><b>--mc-c4</b><code>#eda100</code><span>2.17:1</span></li>
+				<li><i style="background:var(--mc-c5)"></i><b>--mc-c5</b><code>#e87ba4</code><span>2.69:1</span></li>
+				<li><i style="background:var(--mc-c6)"></i><b>--mc-c6</b><code>#008300</code><span>4.95:1</span></li>
+				<li><i style="background:var(--mc-c7)"></i><b>--mc-c7</b><code>#6250d6</code><span>5.77:1</span></li>
+				<li><i style="background:var(--mc-c8)"></i><b>--mc-c8</b><code>#e34948</code><span>3.95:1</span></li>
+			</ul>
+		</div>
+		<div class="mc-group mc-dark swatches-panel">
+			<h3 class="mode">Dark</h3>
+			<h3>Surfaces and text</h3>
+			<ul class="tokens">
+				<li><i style="background:var(--mc-bg)"></i><b>--mc-bg</b><code>#111</code><span></span></li>
+				<li><i style="background:var(--mc-surface)"></i><b>--mc-surface</b><code>#1c1c1e</code><span></span></li>
+				<li><i style="background:var(--mc-raised)"></i><b>--mc-raised</b><code>#2c2c2e</code><span></span></li>
+				<li><i style="background:var(--mc-border)"></i><b>--mc-border</b><code>#3a3a3c</code><span></span></li>
+				<li><i style="background:var(--mc-text)"></i><b>--mc-text</b><code>#f5f5f7</code><span>17.34:1</span></li>
+				<li><i style="background:var(--mc-muted)"></i><b>--mc-muted</b><code>#98989d</code><span>6.58:1</span></li>
+				<li><i style="background:var(--mc-hover)"></i><b>--mc-hover</b><code>#ffffff14</code><span></span></li>
+				<li><i style="background:var(--mc-shadow)"></i><b>--mc-shadow</b><code>transparent</code><span></span></li>
+			</ul>
+			<h3>Status</h3>
+			<p>One word on the element, <code>data-status</code>, and the dot, the text or the number takes the color.</p>
+			<ul class="tokens">
+				<li><i style="background:var(--mc-ok)"></i><b>--mc-ok  ok</b><code>#3fb950</code><span>7.43:1</span></li>
+				<li><i style="background:var(--mc-warn)"></i><b>--mc-warn  warn</b><code>#d29922</code><span>7.48:1</span></li>
+				<li><i style="background:var(--mc-danger)"></i><b>--mc-danger  danger</b><code>#ff6961</code><span>6.69:1</span></li>
+				<li><i style="background:var(--mc-muted)"></i><b>--mc-muted  muted</b><code>#98989d</code><span>6.58:1</span></li>
+			</ul>
+			<h3>Accent</h3>
+			<p>Crimson by default. <code>mc-navy</code> and <code>mc-emerald</code> on the theme swap it.</p>
+			<ul class="tokens">
+				<li><i style="background:var(--mc-accent)"></i><b>--mc-accent  crimson</b><code>#ff6b81</code><span>6.90:1</span></li>
+				<li><i style="background:#8ab4ff"></i><b>--mc-accent  mc-navy</b><code>#8ab4ff</code><span>9.04:1</span></li>
+				<li><i style="background:#34d399"></i><b>--mc-accent  mc-emerald</b><code>#34d399</code><span>9.82:1</span></li>
+			</ul>
+			<h3>Chart palette</h3>
+			<p>Eight hues for <code>mc-categorical</code>.</p>
+			<ul class="tokens">
+				<li><i style="background:var(--mc-c1)"></i><b>--mc-c1</b><code>#5d9cf0</code><span>6.73:1</span></li>
+				<li><i style="background:var(--mc-c2)"></i><b>--mc-c2</b><code>#f58a5c</code><span>7.80:1</span></li>
+				<li><i style="background:var(--mc-c3)"></i><b>--mc-c3</b><code>#3fcf9a</code><span>9.53:1</span></li>
+				<li><i style="background:var(--mc-c4)"></i><b>--mc-c4</b><code>#f7bd3a</code><span>11.06:1</span></li>
+				<li><i style="background:var(--mc-c5)"></i><b>--mc-c5</b><code>#f29cbd</code><span>9.23:1</span></li>
+				<li><i style="background:var(--mc-c6)"></i><b>--mc-c6</b><code>#3dae3d</code><span>6.58:1</span></li>
+				<li><i style="background:var(--mc-c7)"></i><b>--mc-c7</b><code>#8f80f0</code><span>5.86:1</span></li>
+				<li><i style="background:var(--mc-c8)"></i><b>--mc-c8</b><code>#f27371</code><span>6.71:1</span></li>
+			</ul>
+		</div>
+		</div>
+	</section>
+
+	<footer class="end">
+		<nav class="mc-pagination" aria-label="Pages"><a href="../theme/" rel="prev">&larr; Theme</a><span></span></nav>
+		<p><a href="../">Levi.css</a> &middot; About 1400 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
+	</footer>
+</main>
+
+</body>
+</html>

@@ -95,7 +95,7 @@ table.mc-table.mc-expandable tbody > tr:not(:first-child){
     display: none;
 }
 
-table.mc-table.mc-expandable tbody:has(> tr:first-child input:checked) > tr{
+table.mc-table.mc-expandable tbody:has(> tr:first-child input:checked) > tr:not([hidden]){
     display: table-row;
 }
 
@@ -132,4 +132,8 @@ table.mc-table.mc-expandable input{
 
 :is(fieldset.mc-fieldset, main.mc-dashboard section):has(table.mc-table){
     overflow-x: auto;
+}
+
+table.mc-table.mc-expandable tr[hidden]{
+    display: none;
 }

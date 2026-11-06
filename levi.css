@@ -225,7 +225,7 @@ table.mc-table.mc-expandable tbody > tr:not(:first-child){
     display: none;
 }
 
-table.mc-table.mc-expandable tbody:has(> tr:first-child input:checked) > tr{
+table.mc-table.mc-expandable tbody:has(> tr:first-child input:checked) > tr:not([hidden]){
     display: table-row;
 }
 
@@ -262,6 +262,10 @@ table.mc-table.mc-expandable input{
 
 :is(fieldset.mc-fieldset, main.mc-dashboard section):has(table.mc-table){
     overflow-x: auto;
+}
+
+table.mc-table.mc-expandable tr[hidden]{
+    display: none;
 }
 
 body:has(> aside.mc-sidebar){
@@ -1095,6 +1099,10 @@ menu.mc-toolbar label{
     align-items: center;
     gap: 0.5em;
     color: var(--mc-muted);
+}
+
+fieldset.mc-fieldset > menu.mc-toolbar{
+    margin-block-end: 0.75rem;
 }
 
 nav.mc-breadcrumb ol{
