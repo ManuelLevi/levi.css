@@ -796,3 +796,23 @@ aside.mc-sidebar summary a.brand{
     color: inherit;
     text-decoration: none;
 }
+
+aside.mc-sidebar ul.mc-tree li:has(> a){
+    position: relative;
+}
+
+aside.mc-sidebar ul.mc-tree a{
+    color: inherit;
+    text-decoration: none;
+}
+
+aside.mc-sidebar ul.mc-tree a::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+aside.mc-sidebar ul.mc-tree li:has(> a[aria-current]){
+    color: var(--mc-accent);
+    background: var(--mc-selected);
+}
