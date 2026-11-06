@@ -1,0 +1,4 @@
+#!/bin/sh
+# Keeps levi.css and levi.min.css equal to src/ on every commit.
+./build.sh
+git add levi.css levi.min.css
