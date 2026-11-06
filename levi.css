@@ -1501,7 +1501,8 @@ dl.mc-stats dt{
 dl.mc-stats dd{
     margin: 0.25rem 0 0;
     font-size: 2rem;
-    letter-spacing: -0.03em;
+    font-weight: bold;
+    letter-spacing: -0.04em;
 }
 
 @media (max-width: 40rem){
@@ -1525,6 +1526,7 @@ dl.mc-stats dd{
 
 dl.mc-stats dd small{
     display: block;
+    font-weight: normal;
     margin-block-start: 0.25rem;
     font-size: 0.85rem;
     letter-spacing: 0;
@@ -1558,6 +1560,22 @@ dl.mc-stats a:hover{
 
 dl.mc-stats [data-status]{
     color: var(--status);
+}
+
+dl.mc-stats dd svg{
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    margin-block-start: 0.75rem;
+    fill: none;
+    stroke: var(--status, var(--mc-muted));
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+
+dl.mc-stats dd svg polyline{
+    vector-effect: non-scaling-stroke;
 }
 
 main.mc-dashboard{

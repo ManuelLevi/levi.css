@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Big numbers in one row. A trend goes in a small. A link inside takes the text color, and data-status colors the number.">
+	<meta name="description" content="Big numbers in one row. A trend goes in a small, and an optional svg draws it as a line. A link inside takes the text color, and data-status colors the number.">
 	<link rel="stylesheet" href="../levi.css">
 	<link rel="stylesheet" href="../demo.css">
 	<link rel="icon" href="data:,">
@@ -74,20 +74,20 @@
 <main>
 	<section id="stats">
 		<h1>Stats</h1>
-		<p>Big numbers in one row. A trend goes in a <code>small</code>. A link inside takes the text color, and <code>data-status</code> colors the number.</p>
+		<p>Big numbers in one row. A trend goes in a <code>small</code>, and an optional <code>svg</code> draws it as a line. A link inside takes the text color, and <code>data-status</code> colors the number.</p>
 		<div class="mc-group">
 			<dl class="mc-stats">
-			  <div><dt>Revenue</dt><dd>$48,200<small data-trend="up">12% this month</small></dd></div>
-			  <div><dt>Active users</dt><dd>2,431<small data-trend="up">4.1%</small></dd></div>
-			  <div><dt>Conversion</dt><dd>3.8%<small data-trend="down">0.3 pts</small></dd></div>
+			  <div><dt>Revenue</dt><dd>$48,200<small data-trend="up">12% this month</small><svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,22 14.3,19.1 28.6,21.3 42.9,14.9 57.1,16.3 71.4,9.9 85.7,6.3 100,2"/></svg></dd></div>
+			  <div><dt>Active users</dt><dd>2,431<small data-trend="up">4.1%</small><svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,22 14.3,17.6 28.6,19.8 42.9,13.1 57.1,15.3 71.4,8.7 85.7,4.2 100,2"/></svg></dd></div>
+			  <div><dt>Conversion</dt><dd>3.8%<small data-trend="down">0.3 pts</small><svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,2 14.3,5.3 28.6,12 42.9,8.7 57.1,15.3 71.4,18.7 85.7,18.7 100,22"/></svg></dd></div>
 			  <div data-status="danger"><dt>Open issues</dt><dd><a href="#">17</a><small>3 overdue</small></dd></div>
 			</dl>
 			<details>
 				<summary>Show code</summary>
 <pre><code>&lt;dl class="mc-stats"&gt;
-  &lt;div&gt;&lt;dt&gt;Revenue&lt;/dt&gt;&lt;dd&gt;$48,200&lt;small data-trend="up"&gt;12% this month&lt;/small&gt;&lt;/dd&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;dt&gt;Active users&lt;/dt&gt;&lt;dd&gt;2,431&lt;small data-trend="up"&gt;4.1%&lt;/small&gt;&lt;/dd&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;dt&gt;Conversion&lt;/dt&gt;&lt;dd&gt;3.8%&lt;small data-trend="down"&gt;0.3 pts&lt;/small&gt;&lt;/dd&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;dt&gt;Revenue&lt;/dt&gt;&lt;dd&gt;$48,200&lt;small data-trend="up"&gt;12% this month&lt;/small&gt;&lt;svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"&gt;&lt;polyline points="0,22 14.3,19.1 28.6,21.3 42.9,14.9 57.1,16.3 71.4,9.9 85.7,6.3 100,2"/&gt;&lt;/svg&gt;&lt;/dd&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;dt&gt;Active users&lt;/dt&gt;&lt;dd&gt;2,431&lt;small data-trend="up"&gt;4.1%&lt;/small&gt;&lt;svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"&gt;&lt;polyline points="0,22 14.3,17.6 28.6,19.8 42.9,13.1 57.1,15.3 71.4,8.7 85.7,4.2 100,2"/&gt;&lt;/svg&gt;&lt;/dd&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;dt&gt;Conversion&lt;/dt&gt;&lt;dd&gt;3.8%&lt;small data-trend="down"&gt;0.3 pts&lt;/small&gt;&lt;svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"&gt;&lt;polyline points="0,2 14.3,5.3 28.6,12 42.9,8.7 57.1,15.3 71.4,18.7 85.7,18.7 100,22"/&gt;&lt;/svg&gt;&lt;/dd&gt;&lt;/div&gt;
   &lt;div data-status="danger"&gt;&lt;dt&gt;Open issues&lt;/dt&gt;&lt;dd&gt;&lt;a href="#"&gt;17&lt;/a&gt;&lt;small&gt;3 overdue&lt;/small&gt;&lt;/dd&gt;&lt;/div&gt;
 &lt;/dl&gt;</code></pre>
 			</details>
@@ -96,7 +96,7 @@
 
 	<footer class="end">
 		<nav class="mc-pagination" aria-label="Pages"><a href="../progress/" rel="prev">&larr; Progress</a><a href="../chart/" rel="next">Chart &rarr;</a></nav>
-		<p><a href="../">Levi.css</a> &middot; About 1350 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
+		<p><a href="../">Levi.css</a> &middot; About 1400 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
 	</footer>
 </main>
 
