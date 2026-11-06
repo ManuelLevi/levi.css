@@ -50,7 +50,7 @@ aside.mc-sidebar > details:not([open]) > summary{
     padding-inline: 0;
 }
 
-aside.mc-sidebar > details:not([open]) > summary > span{
+aside.mc-sidebar > details:not([open]) > summary > :is(span, a){
     display: none;
 }
 
@@ -80,13 +80,26 @@ aside.mc-sidebar nav{
 
     aside.mc-sidebar nav > ul.mc-tree{
         display: block;
-        max-height: 50vh;
-        overflow-y: auto;
         mask-image: none;
     }
 
     aside.mc-sidebar nav > ul.mc-tree > li{
         white-space: normal;
+    }
+
+    aside.mc-sidebar ul.mc-tree details > ul{
+        display: flex;
+        overflow-x: auto;
+        mask-image: linear-gradient(to right, #000 85%, transparent);
+    }
+
+    aside.mc-sidebar ul.mc-tree details > ul > li{
+        flex: none;
+        white-space: nowrap;
+    }
+
+    aside.mc-sidebar ul.mc-tree details > ul > li:has(> a[aria-current]){
+        order: -1;
     }
 
     aside.mc-sidebar:has(.mc-tree), aside.mc-sidebar:has(.mc-tree):has(> details:not([open])){

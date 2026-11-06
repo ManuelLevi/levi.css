@@ -1,11 +1,14 @@
 .mc-empty{
-    display: grid;
-    gap: 0.5rem;
-    justify-items: center;
     margin: 0;
     padding: var(--mc-space) var(--mc-card);
     text-align: center;
     color: var(--mc-muted);
+}
+
+div.mc-empty{
+    display: grid;
+    gap: 0.5rem;
+    justify-items: center;
 }
 
 .mc-empty p{

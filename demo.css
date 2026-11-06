@@ -835,6 +835,24 @@ main > footer.end p{
     margin-block: 1rem 0;
 }
 
-main > footer.end a{
+main > footer.end p a{
     color: inherit;
+}
+
+.split::before{
+    content: "Drag the red corner to compare light and dark.";
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--mc-muted);
+    font-size: 0.85rem;
+    background: var(--mc-surface);
+}
+
+.cols{
+    align-items: start;
+}
+
+.showcase.flat{
+    padding: 0;
+    background: none;
 }

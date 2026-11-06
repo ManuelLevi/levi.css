@@ -52,3 +52,11 @@
 .mc-daterange input:user-invalid{
     color: var(--mc-danger);
 }
+
+.mc-daterange label{
+    min-width: 0;
+}
+
+.mc-daterange input{
+    min-width: 0;
+}

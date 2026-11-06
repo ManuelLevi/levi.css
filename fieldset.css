@@ -17,3 +17,8 @@ fieldset.mc-fieldset fieldset.mc-fieldset{
     margin-block-start: var(--mc-card);
     padding-block-start: 0.25rem;
 }
+
+fieldset.mc-fieldset > :is(ul.mc-list, ul.mc-tree, table.mc-table){
+    margin-inline: calc(var(--mc-pad-inline) * -1);
+    width: calc(100% + 2 * var(--mc-pad-inline));
+}

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<meta name="description" content="A bordered group with a title. Put anything inside: a list, a table, stats, a chart, or another fieldset. It is a card, and it needs no form.">
 	<link rel="stylesheet" href="../levi.css">
 	<link rel="stylesheet" href="../demo.css">
 	<link rel="icon" href="data:,">
@@ -74,7 +74,7 @@
 <main>
 	<section id="fieldsets">
 		<h1>Fieldset</h1>
-		<p>A bordered group with a title. Put anything inside: a list, a table, stats, a chart. It is a card, and it needs no form.</p>
+		<p>A bordered group with a title. Put anything inside: a list, a table, stats, a chart, or another fieldset. It is a card, and it needs no form.</p>
 		<div class="mc-group">
 			<div class="cols">
 			<fieldset class="mc-fieldset">
@@ -83,12 +83,15 @@
 			  <p>72 GB of 100 GB used.</p>
 			</fieldset>
 			<fieldset class="mc-fieldset">
-			  <legend>Recent</legend>
-			  <ul class="mc-list">
-			    <li><a href="#">Pricing page</a></li>
-			    <li><a href="#">Q4 budget</a></li>
-			    <li><a href="#">Onboarding flow</a></li>
-			  </ul>
+			  <legend>Workspace</legend>
+			  <fieldset class="mc-fieldset">
+			    <legend>Recent</legend>
+			    <ul class="mc-list">
+			      <li><a href="#">Pricing page</a></li>
+			      <li><a href="#">Q4 budget</a></li>
+			      <li><a href="#">Onboarding flow</a></li>
+			    </ul>
+			  </fieldset>
 			</fieldset>
 			</div>
 			<details>
@@ -109,7 +112,7 @@
 
 	<footer class="end">
 		<nav class="mc-pagination" aria-label="Pages"><a href="../form/" rel="prev">&larr; Form</a><a href="../group/" rel="next">Group &rarr;</a></nav>
-		<p><a href="../">Levi.css</a> &middot; About 1250 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
+		<p><a href="../">Levi.css</a> &middot; About 1300 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
 	</footer>
 </main>
 

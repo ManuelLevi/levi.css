@@ -1,5 +1,6 @@
 /* Layout for the overview page only. It is not part of the library. */
 .cols{
+    align-items: start;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: var(--mc-space);
