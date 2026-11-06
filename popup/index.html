@@ -13,7 +13,7 @@
 
 	<aside class="mc-sidebar">
 		<details open>
-			<summary><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<summary aria-label="Menu"><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
 			<nav>
 				<ul class="mc-tree mc-compact">
 					<li><a href="../">Home</a></li>
@@ -94,7 +94,7 @@
 			    <h3>Delete this project?</h3>
 			    <p>This can't be undone.</p>
 			    <footer>
-			      <button class="mc-button">Cancel</button>
+			      <button class="mc-button" type="button" command="close" commandfor="confirm">Cancel</button>
 			      <button class="mc-button mc-primary mc-danger">Delete</button>
 			    </footer>
 			  </form>
@@ -107,7 +107,7 @@
     &lt;h3&gt;Delete this project?&lt;/h3&gt;
     &lt;p&gt;This can't be undone.&lt;/p&gt;
     &lt;footer&gt;
-      &lt;button class="mc-button"&gt;Cancel&lt;/button&gt;
+      &lt;button class="mc-button" type="button" command="close" commandfor="confirm"&gt;Cancel&lt;/button&gt;
       &lt;button class="mc-button mc-primary mc-danger"&gt;Delete&lt;/button&gt;
     &lt;/footer&gt;
   &lt;/form&gt;

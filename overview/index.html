@@ -21,7 +21,7 @@
 
 <aside class="mc-sidebar">
 	<details open>
-		<summary><span>Menu</span></summary>
+		<summary aria-label="Menu"><span>Menu</span></summary>
 		<nav>
 			<ul class="mc-list">
 				<li><a href="#overview" aria-current="page">Overview</a></li>
@@ -90,17 +90,17 @@
 							    <tr><th>Name</th><th>Owner</th><th>Status</th><th>Budget</th></tr>
 							  </thead>
 							  <tbody>
-							    <tr><td><label><input type="checkbox" checked aria-label="Expand"> Atlas</label></td><td>Ada Lovelace</td><td data-status="ok">Active</td><td>$48,200</td></tr>
+							    <tr><td><label><input type="checkbox" checked> Atlas</label></td><td>Ada Lovelace</td><td data-status="ok">Active</td><td>$48,200</td></tr>
 							    <tr><td>Web app</td><td>Sam Rivera</td><td data-status="ok">Active</td><td>$31,000</td></tr>
 							    <tr><td>Mobile app</td><td>Priya Nair</td><td data-status="warn">Delayed</td><td>$17,200</td></tr>
 							  </tbody>
 							  <tbody>
-							    <tr><td><label><input type="checkbox" aria-label="Expand"> Orion</label></td><td>Chen Wei</td><td data-status="warn">Review</td><td>$22,500</td></tr>
+							    <tr><td><label><input type="checkbox"> Orion</label></td><td>Chen Wei</td><td data-status="warn">Review</td><td>$22,500</td></tr>
 							    <tr><td>Website</td><td>Chen Wei</td><td data-status="ok">Active</td><td>$9,500</td></tr>
 							    <tr><td>Billing</td><td>Jamie Lee</td><td data-status="danger">Blocked</td><td>$13,000</td></tr>
 							  </tbody>
 							  <tbody>
-							    <tr><td><label><input type="checkbox" aria-label="Expand"> Nova</label></td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
+							    <tr><td><label><input type="checkbox"> Nova</label></td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
 							    <tr><td>Dashboard</td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
 							  </tbody>
 							  <tbody>
@@ -242,7 +242,7 @@
 		<h3>Invite a teammate</h3>
 		<label>Email <input class="mc-input" type="email" placeholder="name@company.com"></label>
 		<footer>
-			<button class="mc-button">Cancel</button>
+			<button class="mc-button" type="button" command="close" commandfor="invite">Cancel</button>
 			<button class="mc-button mc-primary">Send invite</button>
 		</footer>
 	</form>
