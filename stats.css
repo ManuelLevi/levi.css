@@ -71,3 +71,16 @@ dl.mc-stats dd small[data-trend="up"]::before{
 dl.mc-stats dd small[data-trend="down"]::before{
     content: "\2193\a0";
 }
+
+dl.mc-stats a{
+    color: inherit;
+    text-decoration: none;
+}
+
+dl.mc-stats a:hover{
+    text-decoration: underline;
+}
+
+dl.mc-stats [data-status]{
+    color: var(--status);
+}
