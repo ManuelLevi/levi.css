@@ -22,6 +22,15 @@ main.mc-dashboard > header > div{
     gap: var(--mc-space);
 }
 
+main.mc-dashboard > :where(* + *){
+    margin-block-start: var(--mc-space);
+}
+
+main.mc-dashboard > header hgroup p{
+    margin: 0.25rem 0 0;
+    color: var(--mc-muted);
+}
+
 main.mc-dashboard > header h1{
     margin: 0;
     font-size: 1.8rem;

@@ -44,6 +44,9 @@
 					<li><a href="../expandable-table/">Expandable table</a></li>
 					<li><a href="../list/">List</a></li>
 					<li><a href="../tree/">Tree</a></li>
+					<li><a href="../facts/">Facts</a></li>
+					<li><a href="../empty/">Empty state</a></li>
+					<li><a href="../pagination/">Pagination</a></li>
 					<li class="group">System</li>
 					<li><a href="../theme/">Theme</a></li>
 				</ul>
@@ -112,6 +115,62 @@
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="sorting">
+		<h2>Sorting, wrapping and actions</h2>
+		<p>A sortable header takes <code>aria-sort</code>. A cell with long text takes <code>mc-wrap</code>, and a column of actions takes <code>mc-actions</code>.</p>
+		<div class="mc-group">
+			<table class="mc-table">
+			  <thead>
+			    <tr><th scope="col" aria-sort="ascending">Name</th><th scope="col" aria-sort="none">Runs</th><th scope="col" class="mc-actions"></th></tr>
+			  </thead>
+			  <tbody>
+			    <tr><td>Invoice approval</td><td class="mc-wrap">412 runs this month, 3 waiting for a person to approve</td><td class="mc-actions"><a href="#">Runs</a><a href="#">Edit</a></td></tr>
+			    <tr><td>Onboarding</td><td class="mc-wrap">88 runs this month</td><td class="mc-actions"><a href="#">Runs</a><a href="#">Edit</a></td></tr>
+			  </tbody>
+			</table>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;table class="mc-table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th scope="col" aria-sort="ascending"&gt;Name&lt;/th&gt;&lt;th scope="col" aria-sort="none"&gt;Runs&lt;/th&gt;&lt;th scope="col" class="mc-actions"&gt;&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Invoice approval&lt;/td&gt;&lt;td class="mc-wrap"&gt;412 runs this month, 3 waiting for a person to approve&lt;/td&gt;&lt;td class="mc-actions"&gt;&lt;a href="#"&gt;Runs&lt;/a&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Onboarding&lt;/td&gt;&lt;td class="mc-wrap"&gt;88 runs this month&lt;/td&gt;&lt;td class="mc-actions"&gt;&lt;a href="#"&gt;Runs&lt;/a&gt;&lt;a href="#"&gt;Edit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="details">
+		<h2>Group with a count</h2>
+		<p>A <code>details</code> is a group. A <code>small</code> in its summary is the count, and anything can go inside.</p>
+		<div class="mc-group">
+			<details open>
+			  <summary>Accounting <small>2 workflows</small></summary>
+			  <table class="mc-table">
+			    <tbody>
+			      <tr><td>Invoice approval</td><td data-status="ok">Healthy</td></tr>
+			      <tr><td>Expense report</td><td data-status="warn">3 waiting</td></tr>
+			    </tbody>
+			  </table>
+			</details>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;details open&gt;
+  &lt;summary&gt;Accounting &lt;small&gt;2 workflows&lt;/small&gt;&lt;/summary&gt;
+  &lt;table class="mc-table"&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;Invoice approval&lt;/td&gt;&lt;td data-status="ok"&gt;Healthy&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Expense report&lt;/td&gt;&lt;td data-status="warn"&gt;3 waiting&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/details&gt;</code></pre>
 			</details>
 		</div>
 	</section>

@@ -1,0 +1,20 @@
+dl.mc-facts{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: var(--mc-space);
+    margin: 0;
+}
+
+dl.mc-facts dt, dl.mc-facts dd{
+    margin: 0;
+    padding: var(--mc-pad);
+    box-shadow: inset 0 -1px 0 var(--mc-border);
+}
+
+dl.mc-facts dt{
+    color: var(--mc-muted);
+}
+
+dl.mc-facts :is(dt, dd):last-of-type{
+    box-shadow: none;
+}

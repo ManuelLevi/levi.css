@@ -11,3 +11,10 @@ menu.mc-toolbar{
 menu.mc-toolbar > li:has(> .mc-input){
     flex: 1;
 }
+
+menu.mc-toolbar label{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--mc-muted);
+}

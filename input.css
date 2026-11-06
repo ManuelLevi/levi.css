@@ -39,6 +39,16 @@ form.mc-form label:has(> .mc-input){
     color: var(--mc-muted);
 }
 
+form.mc-form label:has(> input:is([type="checkbox"], [type="radio"])){
+    display: block;
+    padding: var(--mc-pad);
+}
+
+form.mc-form label > input:is([type="checkbox"], [type="radio"]){
+    margin: 0;
+    vertical-align: middle;
+}
+
 input[type="checkbox"][role="switch"]{
     appearance: none;
     flex: none;

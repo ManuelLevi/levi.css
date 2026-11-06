@@ -1,0 +1,21 @@
+nav.mc-pagination{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: var(--mc-pad);
+    color: var(--mc-muted);
+}
+
+nav.mc-pagination p{
+    margin: 0;
+    margin-inline-end: auto;
+}
+
+nav.mc-pagination a{
+    color: var(--mc-text);
+    text-decoration: none;
+}
+
+nav.mc-pagination a:hover{
+    color: var(--mc-accent);
+}

@@ -40,7 +40,7 @@
 			<ol><li><a href="#">Projects</a></li><li><a href="#">Atlas</a></li><li aria-current="page">Overview</li></ol>
 		</nav>
 		<div>
-			<h1>Overview</h1>
+			<hgroup><h1>Overview</h1><p>Everything in Atlas, this month.</p></hgroup>
 			<menu class="mc-toolbar">
 				<li><input class="mc-input" type="search" placeholder="Search" aria-label="Search"></li>
 				<li><button class="mc-button" popovertarget="actions">Actions</button></li>
@@ -125,6 +125,7 @@
 					  <li><a href="#">Q4 budget</a></li>
 					  <li><a href="#">Onboarding flow</a></li>
 					</ul>
+					<nav class="mc-pagination" aria-label="Pagination"><p>Showing 3 of 24</p><a href="#" rel="prev">Previous</a><a href="#" rel="next">Next</a></nav>
 				</fieldset>
 			</div>
 		</section>
@@ -202,19 +203,35 @@
 
 	<section id="settings">
 		<h2>Settings</h2>
-		<div class="mc-group">
-			<form class="mc-form">
-			  <label>Workspace name <input class="mc-input" type="text" value="Atlas"></label>
-			  <label>Plan <select class="mc-input"><option>Team</option><option>Personal</option></select></label>
-			  <label>Notes <textarea class="mc-input" rows="2"></textarea></label>
-			  <fieldset class="mc-fieldset">
-			    <legend>Notifications</legend>
-			    <label><input type="radio" name="notify" checked> Email</label>
-			    <label><input type="radio" name="notify"> Never</label>
-			    <label><input type="checkbox" role="switch" checked> Weekly summary</label>
-			  </fieldset>
-			  <div class="row"><button class="mc-button mc-primary">Save changes</button><button class="mc-button" type="button">Cancel</button></div>
-			</form>
+		<div class="cols">
+			<div class="mc-group">
+				<form class="mc-form">
+				  <label>Workspace name <input class="mc-input" type="text" value="Atlas"></label>
+				  <label>Plan <select class="mc-input"><option>Team</option><option>Personal</option></select></label>
+				  <label>Notes <textarea class="mc-input" rows="2"></textarea></label>
+				  <fieldset class="mc-fieldset">
+				    <legend>Notifications</legend>
+				    <label><input type="radio" name="notify" checked> Email</label>
+				    <label><input type="radio" name="notify"> Never</label>
+				    <label><input type="checkbox" role="switch" checked> Weekly summary</label>
+				  </fieldset>
+				  <div class="row"><button class="mc-button mc-primary">Save changes</button><button class="mc-button" type="button">Cancel</button></div>
+				</form>
+			</div>
+			<div>
+				<fieldset class="mc-fieldset">
+					<legend>Workspace</legend>
+					<dl class="mc-facts">
+					  <dt>Owner</dt><dd>Ada Lovelace</dd>
+					  <dt>Region</dt><dd>Lisbon</dd>
+					  <dt>Plan</dt><dd>Team, billed monthly</dd>
+					</dl>
+				</fieldset>
+				<fieldset class="mc-fieldset">
+					<legend>Inbox</legend>
+					<p class="mc-empty">No tasks are waiting for you.</p>
+				</fieldset>
+			</div>
 		</div>
 	</section>
 </main>

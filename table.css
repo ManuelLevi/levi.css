@@ -45,6 +45,36 @@ table.mc-table td[data-status]::before{
     background: var(--status, var(--mc-muted));
 }
 
+table.mc-table th[aria-sort]{
+    cursor: pointer;
+}
+
+table.mc-table th[aria-sort="ascending"]::after{
+    content: "\a0\2191";
+}
+
+table.mc-table th[aria-sort="descending"]::after{
+    content: "\a0\2193";
+}
+
+table.mc-table td.mc-wrap{
+    white-space: normal;
+}
+
+table.mc-table :is(th, td).mc-actions{
+    text-align: end;
+}
+
+table.mc-table td.mc-actions a{
+    margin-inline-start: 0.75em;
+    color: var(--mc-muted);
+    text-decoration: none;
+}
+
+table.mc-table td.mc-actions a:hover{
+    color: var(--mc-text);
+}
+
 table.mc-table :is(th, td):first-child{
     padding-inline-start: 0;
 }

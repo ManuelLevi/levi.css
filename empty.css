@@ -1,0 +1,6 @@
+.mc-empty{
+    margin: 0;
+    padding: var(--mc-space) var(--mc-card);
+    text-align: center;
+    color: var(--mc-muted);
+}

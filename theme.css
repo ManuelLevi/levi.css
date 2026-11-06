@@ -68,6 +68,10 @@
     --status: var(--mc-danger);
 }
 
+.mc-theme .mc-muted{
+    color: var(--mc-muted);
+}
+
 .mc-theme h3{
     font-size: 1.1rem;
 }

@@ -2,20 +2,13 @@ fieldset.mc-fieldset{
     box-sizing: border-box;
     min-width: 0;
     margin-inline: 0;
+    padding: 0.5rem var(--mc-card) var(--mc-card);
     border: 1px solid var(--mc-border);
     border-radius: var(--mc-radius);
 }
 
 fieldset.mc-fieldset legend{
+    padding-inline: 0.25em;
+    font-size: 0.85rem;
     color: var(--mc-muted);
-}
-
-fieldset.mc-fieldset label{
-    display: block;
-    padding: var(--mc-pad);
-}
-
-fieldset.mc-fieldset input{
-    margin: 0;
-    vertical-align: middle;
 }

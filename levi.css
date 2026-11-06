@@ -19,6 +19,9 @@
 @import url("breadcrumb.css");
 @import url("progress.css");
 @import url("pill.css");
+@import url("facts.css");
+@import url("empty.css");
+@import url("pagination.css");
 @import url("chart.css");
 @import url("stats.css");
 @import url("dashboard.css");

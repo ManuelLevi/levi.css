@@ -27,3 +27,7 @@ main.mc-dashboard > .mc-alert:last-of-type{
 #charts .cols ul.mc-split + ul.mc-split{
     margin-block-start: 1rem;
 }
+
+.cols > div > * + *{
+    margin-block-start: 1rem;
+}

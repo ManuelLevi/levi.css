@@ -44,6 +44,9 @@
 					<li><a href="../expandable-table/">Expandable table</a></li>
 					<li><a href="../list/">List</a></li>
 					<li><a href="../tree/">Tree</a></li>
+					<li><a href="../facts/">Facts</a></li>
+					<li><a href="../empty/">Empty state</a></li>
+					<li><a href="../pagination/">Pagination</a></li>
 					<li class="group">System</li>
 					<li><a href="../theme/">Theme</a></li>
 				</ul>
@@ -85,6 +88,30 @@
   &lt;section&gt;Everything at a glance.&lt;/section&gt;
   &lt;section&gt;What changed, and when.&lt;/section&gt;
   &lt;section&gt;Preferences for this project.&lt;/section&gt;
+&lt;/div&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="tab-links">
+		<h2>Tabs as links</h2>
+		<p>The same tabs, as links, to move between pages. The current page takes <code>aria-current</code>.</p>
+		<div class="mc-group">
+			<div class="mc-tabs">
+			  <nav aria-label="Process">
+			    <a href="#" aria-current="page">Workflow</a>
+			    <a href="#">Runs</a>
+			    <a href="#">Documentation</a>
+			  </nav>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;div class="mc-tabs"&gt;
+  &lt;nav aria-label="Process"&gt;
+    &lt;a href="#" aria-current="page"&gt;Workflow&lt;/a&gt;
+    &lt;a href="#"&gt;Runs&lt;/a&gt;
+    &lt;a href="#"&gt;Documentation&lt;/a&gt;
+  &lt;/nav&gt;
 &lt;/div&gt;</code></pre>
 			</details>
 		</div>
