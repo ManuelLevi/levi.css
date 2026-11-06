@@ -434,12 +434,9 @@ iframe{
     width: 8rem;
 }
 
-body:has(#a-navy:checked){
-    --mc-primary: var(--mc-navy);
-}
-
 body:has(#a-emerald:checked){
     --mc-primary: var(--mc-emerald);
+    --mc-secondary: var(--mc-navy);
 }
 
 .shots.one{
@@ -463,17 +460,14 @@ body:has(#a-emerald:checked){
     margin-block-start: 0.5rem;
 }
 
-.stage iframe[src="dashboard-navy.html"],
 .stage iframe[src="dashboard-emerald.html"]{
     display: none;
 }
 
-body:has(#a-navy:checked) .stage iframe[src="dashboard.html"],
 body:has(#a-emerald:checked) .stage iframe[src="dashboard.html"]{
     display: none;
 }
 
-body:has(#a-navy:checked) .stage iframe[src="dashboard-navy.html"],
 body:has(#a-emerald:checked) .stage iframe[src="dashboard-emerald.html"]{
     display: block;
 }
@@ -488,15 +482,11 @@ body:has(#a-emerald:checked) .stage iframe[src="dashboard-emerald.html"]{
 }
 
 .swatches label:nth-of-type(1)::before{
-    background: crimson;
-}
-
-.swatches label:nth-of-type(2)::before{
     background: #1e3a8a;
     box-shadow: 0 0 0 1px #ffffff40;
 }
 
-.swatches label:nth-of-type(3)::before{
+.swatches label:nth-of-type(2)::before{
     background: #047857;
 }
 
@@ -598,7 +588,6 @@ aside.mc-sidebar li.group:first-child{
     display: none;
 }
 
-body:has(#a-crimson:checked) .split .compare[data-accent="crimson"],
 body:has(#a-navy:checked) .split .compare[data-accent="navy"],
 body:has(#a-emerald:checked) .split .compare[data-accent="emerald"]{
     display: block;
@@ -840,7 +829,7 @@ main > footer.end p a{
 }
 
 .split::before{
-    content: "Drag the red corner to compare light and dark.";
+    content: "Drag the corner to compare light and dark.";
     display: block;
     padding: 0.5rem 1rem;
     color: var(--mc-muted);
