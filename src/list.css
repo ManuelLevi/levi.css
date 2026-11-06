@@ -92,3 +92,15 @@ ol.mc-list li:has(> data)::before{
     align-items: center;
     gap: 0.6em;
 }
+
+:is(ul, ol).mc-list :is(ul, ol):has(> li > :is(a, button) > .mc-icon){
+    padding-inline-start: 0;
+}
+
+:is(ul, ol).mc-list li:has(> :is(ul, ol)){
+    padding-inline: 0;
+}
+
+:is(ul, ol).mc-list li:has(> :is(ul, ol)) > :not(ul, ol){
+    padding-inline: var(--mc-pad-inline);
+}

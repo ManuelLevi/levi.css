@@ -67,6 +67,7 @@ aside.mc-sidebar:has(> details:not([open]) .mc-icon){
 }
 
 aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav li:not(:has(.mc-icon)),
+aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav li > :not(ul, a, button, data),
 aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav :is(a, button) > :not(svg),
 aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav li > data{
     display: none;
@@ -74,7 +75,13 @@ aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav li > data{
 
 aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav :is(a, button){
     justify-content: center;
+    min-height: var(--mc-row);
     padding-inline: 0;
+    background: none;
+}
+
+aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav a[aria-current]{
+    color: var(--mc-primary);
 }
 
 @media (max-width: 40rem){
