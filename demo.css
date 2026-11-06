@@ -902,3 +902,16 @@ main .demo > * + *{
 main p{
     color: var(--mc-muted);
 }
+
+.icons{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    gap: 0.5rem 1rem;
+    margin-block-end: 1.5rem;
+}
+
+.icons span{
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}

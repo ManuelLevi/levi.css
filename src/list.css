@@ -67,6 +67,10 @@ ol.mc-list li::before{
     color: var(--status, var(--mc-muted));
 }
 
+:is(ul, ol).mc-list li > data.mc-pill{
+    color: var(--mc-text);
+}
+
 :is(ul, ol).mc-list li:has(> data) > :is(a, button){
     flex: 1;
     min-width: 0;
@@ -81,4 +85,10 @@ ol.mc-list li::before{
 ol.mc-list li:has(> data)::before{
     padding-inline-start: var(--mc-pad-inline);
     line-height: var(--mc-row);
+}
+
+:is(ul, ol).mc-list :is(a, button):has(> .mc-icon){
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
 }

@@ -329,6 +329,25 @@ aside.mc-sidebar nav{
     padding: 0.5rem;
 }
 
+aside.mc-sidebar:has(.mc-icon) > details:not([open])::details-content{
+    content-visibility: visible;
+}
+
+aside.mc-sidebar:has(> details:not([open]) .mc-icon){
+    width: 3rem;
+}
+
+aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav li:not(:has(.mc-icon)),
+aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav :is(a, button) > :not(svg),
+aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav li > data{
+    display: none;
+}
+
+aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav :is(a, button){
+    justify-content: center;
+    padding-inline: 0;
+}
+
 @media (max-width: 40rem){
     body:has(> aside.mc-sidebar){
         flex-direction: column;
@@ -522,6 +541,10 @@ ol.mc-list li::before{
     color: var(--status, var(--mc-muted));
 }
 
+:is(ul, ol).mc-list li > data.mc-pill{
+    color: var(--mc-text);
+}
+
 :is(ul, ol).mc-list li:has(> data) > :is(a, button){
     flex: 1;
     min-width: 0;
@@ -536,6 +559,12 @@ ol.mc-list li::before{
 ol.mc-list li:has(> data)::before{
     padding-inline-start: var(--mc-pad-inline);
     line-height: var(--mc-row);
+}
+
+:is(ul, ol).mc-list :is(a, button):has(> .mc-icon){
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
 }
 
 .mc-theme summary{
@@ -690,6 +719,17 @@ fieldset.mc-fieldset fieldset.mc-fieldset{
 fieldset.mc-fieldset > :is(ul.mc-list, ul.mc-tree, table.mc-table){
     margin-inline: calc(var(--mc-pad-inline) * -1);
     width: calc(100% + 2 * var(--mc-pad-inline));
+}
+
+svg.mc-icon{
+    flex: none;
+    width: 1.25em;
+    height: 1.25em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 :is(button, a).mc-button{

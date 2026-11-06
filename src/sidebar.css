@@ -58,6 +58,25 @@ aside.mc-sidebar nav{
     padding: 0.5rem;
 }
 
+aside.mc-sidebar:has(.mc-icon) > details:not([open])::details-content{
+    content-visibility: visible;
+}
+
+aside.mc-sidebar:has(> details:not([open]) .mc-icon){
+    width: 3rem;
+}
+
+aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav li:not(:has(.mc-icon)),
+aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav :is(a, button) > :not(svg),
+aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav li > data{
+    display: none;
+}
+
+aside.mc-sidebar:has(.mc-icon) > details:not([open]) nav :is(a, button){
+    justify-content: center;
+    padding-inline: 0;
+}
+
 @media (max-width: 40rem){
     body:has(> aside.mc-sidebar){
         flex-direction: column;

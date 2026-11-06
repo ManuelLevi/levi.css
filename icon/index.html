@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="An SVG from icons.svg, drawn in the text color at the text size. The set is Lucide (ISC license), one stroke for all. Next to the text in a list or sidebar item it takes its own space, and in a collapsed sidebar only the icon stays. A pill or a value goes at the end of the item, in a data.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Icon · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary aria-label="Menu"><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-tree mc-compact">
+					<li><a href="../">Home</a></li>
+					<li><a href="../demo/">Demo</a></li>
+					<li>
+						<details open>
+							<summary>Components</summary>
+							<ul>
+								<li><a href="../dashboard/">Dashboard</a></li>
+								<li><a href="../navbar/">Navbar</a></li>
+								<li><a href="../sidebar/">Sidebar</a></li>
+								<li><a href="../breadcrumb/">Breadcrumb</a></li>
+								<li><a href="../toolbar/">Toolbar</a></li>
+								<li><a href="../menu/">Menu</a></li>
+								<li><a href="../tabs/">Tabs</a></li>
+								<li><a href="../daterange/">Date range</a></li>
+								<li><a href="../button/">Button</a></li>
+								<li><a href="../input/">Input</a></li>
+								<li><a href="../form/">Form</a></li>
+								<li><a href="../fieldset/">Fieldset</a></li>
+								<li><a href="../group/">Group</a></li>
+								<li><a href="../grid/">Grid</a></li>
+								<li><a href="../popup/">Popup</a></li>
+								<li><a href="../tooltip/">Tooltip</a></li>
+								<li><a href="../icon/" aria-current="page">Icon</a></li>
+								<li><a href="../alert/">Alert</a></li>
+								<li><a href="../pill/">Pill</a></li>
+								<li><a href="../progress/">Progress</a></li>
+								<li><a href="../stats/">Stats</a></li>
+								<li><a href="../chart/">Chart</a></li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>Data</summary>
+							<ul>
+								<li><a href="../table/">Table</a></li>
+								<li><a href="../expandable-table/">Expandable table</a></li>
+								<li><a href="../list/">List</a></li>
+								<li><a href="../tree/">Tree</a></li>
+								<li><a href="../facts/">Facts</a></li>
+								<li><a href="../empty/">Empty state</a></li>
+								<li><a href="../pagination/">Pagination</a></li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>System</summary>
+							<ul>
+								<li><a href="../theme/">Theme</a></li>
+								<li><a href="../color/">Color</a></li>
+							</ul>
+						</details>
+					</li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="icon">
+		<h1>Icon</h1>
+		<p>An SVG from <code>icons.svg</code>, drawn in the text color at the text size. The set is Lucide (ISC license), one stroke for all. Next to the text in a list or sidebar item it takes its own space, and in a collapsed sidebar only the icon stays. A pill or a value goes at the end of the item, in a <code>data</code>.</p>
+		<div class="mc-group">
+			<div class="icons">
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#activity"/></svg>activity</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#book-open"/></svg>book-open</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#cpu"/></svg>cpu</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#flame"/></svg>flame</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#folders"/></svg>folders</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#inbox"/></svg>inbox</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#key-round"/></svg>key-round</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#layout-dashboard"/></svg>layout-dashboard</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#message-square"/></svg>message-square</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#play"/></svg>play</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#triangle-alert"/></svg>triangle-alert</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#user"/></svg>user</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#users"/></svg>users</span>
+			  <span><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#workflow"/></svg>workflow</span>
+			</div>
+			<ul class="mc-list">
+			  <li><a href="#"><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#inbox"/></svg><span>My tasks</span></a><data class="mc-pill" data-status="warn" value="3">3</data></li>
+			  <li><a href="#"><svg class="mc-icon" aria-hidden="true"><use href="../icons.svg#workflow"/></svg><span>Workflows</span></a></li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-list"&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;&lt;svg class="mc-icon" aria-hidden="true"&gt;&lt;use href="../icons.svg#inbox"/&gt;&lt;/svg&gt;&lt;span&gt;My tasks&lt;/span&gt;&lt;/a&gt;
+    &lt;data class="mc-pill" data-status="warn" value="3"&gt;3&lt;/data&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<footer class="end">
+		<nav class="mc-pagination" aria-label="Pages"><a href="../tooltip/" rel="prev">&larr; Tooltip</a><a href="../alert/" rel="next">Alert &rarr;</a></nav>
+		<p><a href="../">Levi.css</a> &middot; About 1550 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
+	</footer>
+</main>
+
+</body>
+</html>
