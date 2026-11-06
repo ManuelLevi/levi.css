@@ -593,36 +593,19 @@ body:has(#a-emerald:checked) .split .compare[data-accent="emerald"]{
     display: block;
 }
 
-.split .compare > div{
+.split .compare > iframe:last-child{
     position: absolute;
-    inset: 0 auto 0 0;
-    box-sizing: border-box;
-    width: 14rem;
-    min-width: 3rem;
-    max-width: 100%;
-    overflow: hidden;
-    resize: horizontal;
-    border-inline-end: 1px solid var(--mc-primary);
+    inset: 0;
+    clip-path: inset(0 50% 0 0);
 }
 
-.split .compare > div::after{
-    content: "\2194";
+.split .compare::after{
+    content: "";
     position: absolute;
-    inset: auto 0 0 auto;
-    display: grid;
-    place-items: center;
-    width: 2rem;
-    height: 2rem;
-    border-start-start-radius: 100%;
+    inset: 0 auto 0 50%;
+    width: 1px;
     background: var(--mc-primary);
-    color: #fff;
-    font-size: 0.9rem;
     pointer-events: none;
-}
-
-.split .compare > div > iframe{
-    width: 100cqw;
-    height: 100%;
 }
 
 .chapter{
@@ -650,15 +633,17 @@ body:has(#a-emerald:checked) .split .compare[data-accent="emerald"]{
 }
 
 @media (max-width: 40rem){
-    .split .compare > iframe{
+    .split .compare > iframe:first-child{
         display: none;
     }
 
-    .split .compare > div{
+    .split .compare > iframe:last-child{
         position: static;
-        width: auto;
-        resize: none;
-        border: 0;
+        clip-path: none;
+    }
+
+    .split .compare::after{
+        display: none;
     }
 }
 
@@ -826,15 +811,6 @@ main > footer.end p{
 
 main > footer.end p a{
     color: inherit;
-}
-
-.split::before{
-    content: "Drag the corner to compare light and dark.";
-    display: block;
-    padding: 0.5rem 1rem;
-    color: var(--mc-muted);
-    font-size: 0.85rem;
-    background: var(--mc-surface);
 }
 
 .cols{
