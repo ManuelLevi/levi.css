@@ -9,7 +9,7 @@ CSS for the HTML you already write. One stylesheet, no JavaScript, no build step
 
 `levi.css` is one file with every component inside, and `levi.min.css` is the same without comments. The components live in `src/`, and `./build.sh` rebuilds both files (a commit hook does it too).
 
-Open `index.html` to start, `overview/` for every component on one page, and one folder per component (`progress/`, `table/`, `tabs/`) for its documentation.
+Open `index.html` to start, `demo/` for every component on one page, and one folder per component (`progress/`, `table/`, `tabs/`) for its documentation.
 
 ## A note on activity
 

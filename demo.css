@@ -890,3 +890,11 @@ ul.tokens span{
 .grid-demo .mc-row{
     --mc-gap: 1rem;
 }
+
+main .demo > * + *{
+    margin-block-start: var(--mc-space);
+}
+
+.demo .mc-row + .mc-row{
+    margin-block-start: var(--mc-space);
+}
