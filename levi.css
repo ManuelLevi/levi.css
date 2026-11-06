@@ -974,6 +974,42 @@ dialog.mc-popup footer{
     margin-block-start: var(--mc-space);
 }
 
+[data-tooltip]{
+    anchor-name: --mc-tooltip;
+    anchor-scope: --mc-tooltip;
+}
+
+[data-tooltip]::after{
+    content: attr(data-tooltip);
+    position: fixed;
+    position-anchor: --mc-tooltip;
+    position-area: block-start;
+    position-try-fallbacks: flip-block;
+    z-index: 3;
+    box-sizing: border-box;
+    width: max-content;
+    max-width: 18rem;
+    margin-block: 0.4em;
+    padding: 0.35em 0.7em;
+    font-size: 0.85rem;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: start;
+    text-wrap: balance;
+    white-space: normal;
+    color: var(--mc-bg);
+    background: var(--mc-text);
+    border-radius: var(--mc-radius);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.12s;
+}
+
+[data-tooltip]:is(:hover, :focus-visible)::after{
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
 [popover].mc-menu{
     position-area: block-end span-inline-end;
     min-width: 12rem;

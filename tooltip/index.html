@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A short note on hover or keyboard focus. Put it in data-tooltip; no JavaScript. It only supplements: what the user needs to read must also be on screen. A control without text needs an aria-label too, and a plain element needs tabindex=&quot;0&quot; to be reached by keyboard.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Tooltip · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary aria-label="Menu"><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-tree mc-compact">
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li>
+						<details open>
+							<summary>Components</summary>
+							<ul>
+								<li><a href="../dashboard/">Dashboard</a></li>
+								<li><a href="../navbar/">Navbar</a></li>
+								<li><a href="../sidebar/">Sidebar</a></li>
+								<li><a href="../breadcrumb/">Breadcrumb</a></li>
+								<li><a href="../toolbar/">Toolbar</a></li>
+								<li><a href="../menu/">Menu</a></li>
+								<li><a href="../tabs/">Tabs</a></li>
+								<li><a href="../daterange/">Date range</a></li>
+								<li><a href="../button/">Button</a></li>
+								<li><a href="../input/">Input</a></li>
+								<li><a href="../form/">Form</a></li>
+								<li><a href="../fieldset/">Fieldset</a></li>
+								<li><a href="../group/">Group</a></li>
+								<li><a href="../grid/">Grid</a></li>
+								<li><a href="../popup/">Popup</a></li>
+								<li><a href="../tooltip/" aria-current="page">Tooltip</a></li>
+								<li><a href="../alert/">Alert</a></li>
+								<li><a href="../pill/">Pill</a></li>
+								<li><a href="../progress/">Progress</a></li>
+								<li><a href="../stats/">Stats</a></li>
+								<li><a href="../chart/">Chart</a></li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>Data</summary>
+							<ul>
+								<li><a href="../table/">Table</a></li>
+								<li><a href="../expandable-table/">Expandable table</a></li>
+								<li><a href="../list/">List</a></li>
+								<li><a href="../tree/">Tree</a></li>
+								<li><a href="../facts/">Facts</a></li>
+								<li><a href="../empty/">Empty state</a></li>
+								<li><a href="../pagination/">Pagination</a></li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>System</summary>
+							<ul>
+								<li><a href="../theme/">Theme</a></li>
+								<li><a href="../color/">Color</a></li>
+							</ul>
+						</details>
+					</li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="tooltip">
+		<h1>Tooltip</h1>
+		<p>A short note on hover or keyboard focus. Put it in <code>data-tooltip</code>; no JavaScript. It only supplements: what the user needs to read must also be on screen. A control without text needs an <code>aria-label</code> too, and a plain element needs <code>tabindex="0"</code> to be reached by keyboard.</p>
+		<div class="mc-group">
+			<div class="row">
+			  <button class="mc-button" data-tooltip="Copies the link to the clipboard">Copy link</button>
+			  <span class="mc-pill" data-status="warn" tabindex="0" data-tooltip="Three runs have been waiting for more than an hour">3 waiting</span>
+			  <a href="#" data-tooltip="Opens in the same tab">Documentation</a>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;div class="row"&gt;
+  &lt;button class="mc-button" data-tooltip="Copies the link to the clipboard"&gt;Copy link&lt;/button&gt;
+  &lt;span class="mc-pill" data-status="warn" tabindex="0" data-tooltip="Three runs have been waiting for more than an hour"&gt;3 waiting&lt;/span&gt;
+  &lt;a href="#" data-tooltip="Opens in the same tab"&gt;Documentation&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<footer class="end">
+		<nav class="mc-pagination" aria-label="Pages"><a href="../popup/" rel="prev">&larr; Popup</a><a href="../alert/" rel="next">Alert &rarr;</a></nav>
+		<p><a href="../">Levi.css</a> &middot; About 1500 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
+	</footer>
+</main>
+
+</body>
+</html>
