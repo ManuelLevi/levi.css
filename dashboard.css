@@ -3,14 +3,14 @@ main.mc-dashboard{
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    padding: var(--mc-space) calc(var(--mc-space) * 1.5);
+    padding: 1.25rem calc(var(--mc-space) * 1.5) var(--mc-space);
 }
 
 main.mc-dashboard > header{
     display: grid;
-    gap: 0.75rem;
-    margin-block-end: var(--mc-space);
-    padding-block-end: var(--mc-space);
+    gap: 0.25rem;
+    margin-block-end: 1.25rem;
+    padding-block-end: 1rem;
     border-block-end: 1px solid var(--mc-border);
 }
 

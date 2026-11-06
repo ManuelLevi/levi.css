@@ -6,7 +6,7 @@ dialog.mc-popup{
     background: var(--mc-raised);
     border: 0;
     border-radius: var(--mc-radius);
-    box-shadow: 0 0 0 1px var(--mc-border), 0 1.25rem 3rem #0000002e;
+    box-shadow: 0 0 0 1px var(--mc-border), 0 1.25rem 3rem var(--mc-shadow);
     opacity: 0;
     transition: opacity 0.15s, display 0.15s allow-discrete, overlay 0.15s allow-discrete;
 }
@@ -31,8 +31,5 @@ dialog.mc-popup h3{
 }
 
 dialog.mc-popup footer{
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.5em;
     margin-block-start: var(--mc-space);
 }

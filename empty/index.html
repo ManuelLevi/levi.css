@@ -74,19 +74,27 @@
 <main>
 	<section id="empty">
 		<h1>Empty state</h1>
-		<p>One quiet line where a list, a table or a chart has nothing to show.</p>
+		<p>Where a list, a table or a chart has nothing to show: what is missing, what will appear, and the next step.</p>
 		<div class="mc-group">
-			<p class="mc-empty">No tasks are waiting for you.</p>
+			<div class="mc-empty">
+			  <p>No tasks are waiting for you.</p>
+			  <p>Tasks appear here as soon as someone assigns one.</p>
+			  <button class="mc-button">Create a task</button>
+			</div>
 			<details>
 				<summary>Show code</summary>
-<pre><code>&lt;p class="mc-empty"&gt;No tasks are waiting for you.&lt;/p&gt;</code></pre>
+<pre><code>&lt;div class="mc-empty"&gt;
+  &lt;p&gt;No tasks are waiting for you.&lt;/p&gt;
+  &lt;p&gt;Tasks appear here as soon as someone assigns one.&lt;/p&gt;
+  &lt;button class="mc-button"&gt;Create a task&lt;/button&gt;
+&lt;/div&gt;</code></pre>
 			</details>
 		</div>
 	</section>
 
 	<footer class="end">
 		<nav class="mc-pagination" aria-label="Pages"><a href="../facts/" rel="prev">&larr; Facts</a><a href="../pagination/" rel="next">Pagination &rarr;</a></nav>
-		<p><a href="../">Levi.css</a> &middot; About 1200 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
+		<p><a href="../">Levi.css</a> &middot; About 1250 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
 	</footer>
 </main>
 

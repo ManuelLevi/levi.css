@@ -9,6 +9,7 @@
     --mc-ok: light-dark(#1a7f37, #3fb950);
     --mc-warn: light-dark(#b36b00, #d29922);
     --mc-danger: light-dark(#c62828, #ff6961);
+    --mc-shadow: light-dark(#00000026, transparent);
     --mc-hover: light-dark(#0000000d, #ffffff14);
     --mc-accent: light-dark(crimson, #ff6b81);
     --mc-c1: light-dark(#2a78d6, #5d9cf0);
