@@ -86,10 +86,6 @@
     font-size: 1.1rem;
 }
 
-.mc-theme p{
-    color: var(--mc-muted);
-}
-
 .mc-theme a{
     color: var(--mc-primary);
 }

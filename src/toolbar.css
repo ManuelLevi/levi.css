@@ -8,7 +8,7 @@ menu.mc-toolbar{
     list-style: none;
 }
 
-menu.mc-toolbar > li:has(> .mc-input){
+menu.mc-toolbar > li:has(> .mc-input[type="search"]){
     flex: 1;
 }
 

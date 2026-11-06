@@ -14,7 +14,7 @@ main.mc-dashboard > header{
     border-block-end: 1px solid var(--mc-border);
 }
 
-main.mc-dashboard > header > div{
+main.mc-dashboard > header > div:has(> :is(h1, hgroup)){
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -60,7 +60,7 @@ main.mc-dashboard > .mc-tabs{
         padding-inline: 1rem;
     }
 
-    main.mc-dashboard > header > div{
+    main.mc-dashboard > header > div:has(> :is(h1, hgroup)){
         gap: 0.75rem;
     }
 

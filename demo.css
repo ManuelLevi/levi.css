@@ -898,3 +898,7 @@ main .demo > * + *{
 .demo .mc-row + .mc-row{
     margin-block-start: var(--mc-space);
 }
+
+main p{
+    color: var(--mc-muted);
+}

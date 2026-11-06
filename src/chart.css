@@ -236,3 +236,16 @@ figure.mc-chart.mc-line figcaption{
         padding-inline-start: 0.5rem;
     }
 }
+
+.mc-chart a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.mc-chart a:hover{
+    text-decoration: underline;
+}
+
+ul.mc-chart.mc-columns:has(> li:nth-child(13)) li:not(:nth-child(3n + 1)) span{
+    visibility: hidden;
+}
