@@ -12,3 +12,8 @@ fieldset.mc-fieldset legend{
     font-size: 0.85rem;
     color: var(--mc-muted);
 }
+
+fieldset.mc-fieldset fieldset.mc-fieldset{
+    margin-block-start: var(--mc-card);
+    padding-block-start: 0.25rem;
+}
