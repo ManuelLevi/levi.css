@@ -435,11 +435,11 @@ iframe{
 }
 
 body:has(#a-navy:checked){
-    --mc-primary: light-dark(#1e3a8a, #8ab4ff);
+    --mc-primary: var(--mc-navy);
 }
 
 body:has(#a-emerald:checked){
-    --mc-primary: light-dark(#047857, #34d399);
+    --mc-primary: var(--mc-emerald);
 }
 
 .shots.one{

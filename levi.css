@@ -11,8 +11,11 @@
     --mc-danger: light-dark(#c62828, #ff6961);
     --mc-shadow: light-dark(#00000026, transparent);
     --mc-hover: light-dark(#0000000d, #ffffff14);
-    --mc-primary: light-dark(crimson, #ff6b81);
-    --mc-secondary: light-dark(#1e3a8a, #8ab4ff);
+    --mc-crimson: light-dark(crimson, #ff6b81);
+    --mc-navy: light-dark(#1e3a8a, #8ab4ff);
+    --mc-emerald: light-dark(#047857, #34d399);
+    --mc-primary: var(--mc-crimson);
+    --mc-secondary: var(--mc-navy);
     --mc-c1: light-dark(#2a78d6, #5d9cf0);
     --mc-c2: light-dark(#eb6834, #f58a5c);
     --mc-c3: light-dark(#1baf7a, #3fcf9a);
@@ -40,12 +43,12 @@
 }
 
 .mc-navy{
-    --mc-primary: light-dark(#1e3a8a, #8ab4ff);
-    --mc-secondary: light-dark(crimson, #ff6b81);
+    --mc-primary: var(--mc-navy);
+    --mc-secondary: var(--mc-crimson);
 }
 
 .mc-emerald{
-    --mc-primary: light-dark(#047857, #34d399);
+    --mc-primary: var(--mc-emerald);
 }
 
 .mc-theme h1{
