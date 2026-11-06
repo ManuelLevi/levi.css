@@ -869,11 +869,14 @@ form.mc-form > button{
     display: flex;
     flex-wrap: wrap;
     gap: var(--mc-gap);
-    align-items: flex-start;
 }
 
 .mc-row > *{
     min-width: 0;
+}
+
+.mc-row > * > fieldset.mc-fieldset:only-child{
+    height: 100%;
 }
 
 .mc-row > .mc-col{
