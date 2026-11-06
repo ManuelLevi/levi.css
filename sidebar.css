@@ -78,6 +78,21 @@ aside.mc-sidebar nav{
         display: none;
     }
 
+    aside.mc-sidebar nav > ul.mc-tree{
+        display: block;
+        max-height: 50vh;
+        overflow-y: auto;
+        mask-image: none;
+    }
+
+    aside.mc-sidebar nav > ul.mc-tree > li{
+        white-space: normal;
+    }
+
+    aside.mc-sidebar:has(.mc-tree), aside.mc-sidebar:has(.mc-tree):has(> details:not([open])){
+        position: static;
+    }
+
     aside.mc-sidebar, aside.mc-sidebar:has(> details:not([open])){
         position: sticky;
         top: 0;
