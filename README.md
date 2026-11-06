@@ -7,6 +7,8 @@ CSS for the HTML you already write. One stylesheet, no JavaScript, no build step
 <body class="mc-theme">
 ```
 
+Copy `dist/levi.css` (one file, 28 components inside) or `dist/levi.min.css`. To rebuild them after editing a component, run `./build.sh`.
+
 Open `index.html` to start, `overview/` for every component on one page, and one folder per component (`progress/`, `table/`, `tabs/`) for its documentation.
 
 ## A note on activity
