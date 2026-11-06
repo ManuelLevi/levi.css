@@ -37,3 +37,11 @@
     margin-inline-start: 0.5em;
     color: var(--mc-muted);
 }
+
+.mc-theme :dir(rtl) :is(summary, :where(table.mc-expandable input))::before{
+    transform: rotate(45deg);
+}
+
+.mc-theme :dir(rtl) :is(details[open] > summary, :where(table.mc-expandable input:checked))::before{
+    transform: translateY(-0.15em) rotate(-45deg);
+}

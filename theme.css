@@ -85,6 +85,14 @@
     color: var(--mc-accent);
 }
 
+.mc-theme :is(p, td, dd, small) a:not([class]):hover{
+    color: color-mix(in srgb, var(--mc-accent) 80%, var(--mc-text));
+}
+
+.mc-theme :is(p, td, dd, small) a:not([class]):active{
+    color: color-mix(in srgb, var(--mc-accent) 60%, var(--mc-text));
+}
+
 .mc-theme input{
     accent-color: var(--mc-accent);
 }

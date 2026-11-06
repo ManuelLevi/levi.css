@@ -18,7 +18,7 @@
 }
 
 :is(ul, ol).mc-list a[aria-current]{
-    color: var(--mc-accent);
+    color: color-mix(in srgb, var(--mc-accent) 75%, var(--mc-text));
     background: linear-gradient(var(--mc-accent), var(--mc-accent)) left / 0.15em 60% no-repeat, var(--mc-hover);
 }
 
