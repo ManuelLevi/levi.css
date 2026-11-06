@@ -1,9 +1,9 @@
 .mc-chart{
-    --mc-s1: var(--mc-accent);
-    --mc-s2: color-mix(in srgb, var(--mc-accent) 70%, var(--mc-bg));
-    --mc-s3: color-mix(in srgb, var(--mc-accent) 48%, var(--mc-bg));
-    --mc-s4: color-mix(in srgb, var(--mc-accent) 30%, var(--mc-bg));
-    --mc-s5: color-mix(in srgb, var(--mc-accent) 16%, var(--mc-bg));
+    --mc-s1: var(--mc-primary);
+    --mc-s2: color-mix(in srgb, var(--mc-primary) 70%, var(--mc-bg));
+    --mc-s3: color-mix(in srgb, var(--mc-primary) 48%, var(--mc-bg));
+    --mc-s4: color-mix(in srgb, var(--mc-primary) 30%, var(--mc-bg));
+    --mc-s5: color-mix(in srgb, var(--mc-primary) 16%, var(--mc-bg));
     --mc-h: 10rem;
 }
 
@@ -102,7 +102,7 @@ ul.mc-chart.mc-columns li::before{
     width: 100%;
     max-width: 2.5rem;
     height: calc(var(--value) / 100 * var(--mc-h));
-    background: color-mix(in srgb, var(--mc-accent) 35%, var(--mc-bg));
+    background: color-mix(in srgb, var(--mc-primary) 35%, var(--mc-bg));
     border-start-start-radius: var(--mc-radius);
     border-start-end-radius: var(--mc-radius);
     transition: background-color 0.12s;
@@ -110,7 +110,7 @@ ul.mc-chart.mc-columns li::before{
 
 ul.mc-chart.mc-columns li:hover::before,
 ul.mc-chart.mc-columns li[aria-current]::before{
-    background: var(--mc-accent);
+    background: var(--mc-primary);
 }
 
 ul.mc-chart.mc-columns li b{
@@ -204,13 +204,13 @@ figure.mc-chart.mc-line svg{
 }
 
 figure.mc-chart.mc-line polygon{
-    fill: color-mix(in srgb, var(--mc-accent) 12%, transparent);
+    fill: color-mix(in srgb, var(--mc-primary) 12%, transparent);
     stroke: none;
 }
 
 figure.mc-chart.mc-line polyline{
     fill: none;
-    stroke: var(--mc-accent);
+    stroke: var(--mc-primary);
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;

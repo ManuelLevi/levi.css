@@ -17,5 +17,5 @@ nav.mc-pagination a{
 }
 
 nav.mc-pagination a:hover{
-    color: var(--mc-accent);
+    color: var(--mc-primary);
 }

@@ -7,9 +7,9 @@ ul.mc-tree, ul.mc-tree ul{
 ul.mc-tree{
     --mc-slot: 1.5em;
     --mc-step: 0.75em;
-    --mc-selected: color-mix(in srgb, var(--mc-accent) 8%, transparent);
-    --mc-selected-hover: color-mix(in srgb, var(--mc-accent) 12%, transparent);
-    --mc-selected-focus: color-mix(in srgb, var(--mc-accent) 20%, transparent);
+    --mc-selected: color-mix(in srgb, var(--mc-primary) 8%, transparent);
+    --mc-selected-hover: color-mix(in srgb, var(--mc-primary) 12%, transparent);
+    --mc-selected-focus: color-mix(in srgb, var(--mc-primary) 20%, transparent);
     --mc-focused: color-mix(in srgb, var(--mc-text) 12%, transparent);
 }
 

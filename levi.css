@@ -11,7 +11,8 @@
     --mc-danger: light-dark(#c62828, #ff6961);
     --mc-shadow: light-dark(#00000026, transparent);
     --mc-hover: light-dark(#0000000d, #ffffff14);
-    --mc-accent: light-dark(crimson, #ff6b81);
+    --mc-primary: light-dark(crimson, #ff6b81);
+    --mc-secondary: light-dark(#1e3a8a, #8ab4ff);
     --mc-c1: light-dark(#2a78d6, #5d9cf0);
     --mc-c2: light-dark(#eb6834, #f58a5c);
     --mc-c3: light-dark(#1baf7a, #3fcf9a);
@@ -29,7 +30,7 @@
     --mc-radius: 0.35em;
     --mc-space: 2rem;
     --mc-card: 1.25rem;
-    --mc-focus: 2px solid var(--mc-accent);
+    --mc-focus: 2px solid var(--mc-primary);
     background: var(--mc-bg);
     color: var(--mc-text);
     font-family: Arial, sans-serif;
@@ -39,11 +40,12 @@
 }
 
 .mc-navy{
-    --mc-accent: light-dark(#1e3a8a, #8ab4ff);
+    --mc-primary: light-dark(#1e3a8a, #8ab4ff);
+    --mc-secondary: light-dark(crimson, #ff6b81);
 }
 
 .mc-emerald{
-    --mc-accent: light-dark(#047857, #34d399);
+    --mc-primary: light-dark(#047857, #34d399);
 }
 
 .mc-theme h1{
@@ -86,19 +88,19 @@
 }
 
 .mc-theme a{
-    color: var(--mc-accent);
+    color: var(--mc-primary);
 }
 
 .mc-theme :is(p, td, dd, small) a:not([class]):hover{
-    color: color-mix(in srgb, var(--mc-accent) 80%, var(--mc-text));
+    color: color-mix(in srgb, var(--mc-primary) 80%, var(--mc-text));
 }
 
 .mc-theme :is(p, td, dd, small) a:not([class]):active{
-    color: color-mix(in srgb, var(--mc-accent) 60%, var(--mc-text));
+    color: color-mix(in srgb, var(--mc-primary) 60%, var(--mc-text));
 }
 
 .mc-theme input{
-    accent-color: var(--mc-accent);
+    accent-color: var(--mc-primary);
 }
 
 .mc-light{
@@ -479,8 +481,8 @@ body:has(> header.mc-navbar){
 }
 
 :is(ul, ol).mc-list a[aria-current]{
-    color: color-mix(in srgb, var(--mc-accent) 75%, var(--mc-text));
-    background: linear-gradient(var(--mc-accent), var(--mc-accent)) left / 0.15em 60% no-repeat, var(--mc-hover);
+    color: color-mix(in srgb, var(--mc-primary) 75%, var(--mc-text));
+    background: linear-gradient(var(--mc-primary), var(--mc-primary)) left / 0.15em 60% no-repeat, var(--mc-hover);
 }
 
 :is(ul, ol).mc-list :is(a, button):focus-visible{
@@ -594,9 +596,9 @@ ul.mc-tree, ul.mc-tree ul{
 ul.mc-tree{
     --mc-slot: 1.5em;
     --mc-step: 0.75em;
-    --mc-selected: color-mix(in srgb, var(--mc-accent) 8%, transparent);
-    --mc-selected-hover: color-mix(in srgb, var(--mc-accent) 12%, transparent);
-    --mc-selected-focus: color-mix(in srgb, var(--mc-accent) 20%, transparent);
+    --mc-selected: color-mix(in srgb, var(--mc-primary) 8%, transparent);
+    --mc-selected-hover: color-mix(in srgb, var(--mc-primary) 12%, transparent);
+    --mc-selected-focus: color-mix(in srgb, var(--mc-primary) 20%, transparent);
     --mc-focused: color-mix(in srgb, var(--mc-text) 12%, transparent);
 }
 
@@ -722,7 +724,7 @@ fieldset.mc-fieldset > :is(ul.mc-list, ul.mc-tree, table.mc-table){
 
 :is(button, a).mc-button.mc-primary{
     color: var(--mc-bg);
-    background: var(--mc-accent);
+    background: var(--mc-primary);
     box-shadow: none;
 }
 
@@ -736,7 +738,7 @@ fieldset.mc-fieldset > :is(ul.mc-list, ul.mc-tree, table.mc-table){
 }
 
 :is(button, a).mc-button.mc-danger{
-    --mc-accent: var(--mc-danger);
+    --mc-primary: var(--mc-danger);
 }
 
 :is(button, a).mc-button:disabled + small{
@@ -767,7 +769,7 @@ fieldset.mc-fieldset > :is(ul.mc-list, ul.mc-tree, table.mc-table){
 
 .mc-input:focus-visible{
     outline: none;
-    box-shadow: inset 0 0 0 2px var(--mc-accent), 0 0 0 0.2em color-mix(in srgb, var(--mc-accent) 20%, transparent);
+    box-shadow: inset 0 0 0 2px var(--mc-primary), 0 0 0 0.2em color-mix(in srgb, var(--mc-primary) 20%, transparent);
 }
 
 .mc-input:user-invalid, .mc-input[aria-invalid="true"]{
@@ -811,7 +813,7 @@ input[type="checkbox"][role="switch"]{
 }
 
 input[type="checkbox"][role="switch"]:checked{
-    background-color: var(--mc-accent);
+    background-color: var(--mc-primary);
     background-position: calc(100% - 0.1em);
 }
 
@@ -1135,7 +1137,7 @@ nav.mc-breadcrumb a:hover, nav.mc-breadcrumb [aria-current]{
     box-sizing: border-box;
     width: 100%;
     height: 0.6em;
-    accent-color: var(--mc-accent);
+    accent-color: var(--mc-primary);
 }
 
 table.mc-table td:has(> .mc-progress){
@@ -1239,15 +1241,15 @@ nav.mc-pagination a{
 }
 
 nav.mc-pagination a:hover{
-    color: var(--mc-accent);
+    color: var(--mc-primary);
 }
 
 .mc-chart{
-    --mc-s1: var(--mc-accent);
-    --mc-s2: color-mix(in srgb, var(--mc-accent) 70%, var(--mc-bg));
-    --mc-s3: color-mix(in srgb, var(--mc-accent) 48%, var(--mc-bg));
-    --mc-s4: color-mix(in srgb, var(--mc-accent) 30%, var(--mc-bg));
-    --mc-s5: color-mix(in srgb, var(--mc-accent) 16%, var(--mc-bg));
+    --mc-s1: var(--mc-primary);
+    --mc-s2: color-mix(in srgb, var(--mc-primary) 70%, var(--mc-bg));
+    --mc-s3: color-mix(in srgb, var(--mc-primary) 48%, var(--mc-bg));
+    --mc-s4: color-mix(in srgb, var(--mc-primary) 30%, var(--mc-bg));
+    --mc-s5: color-mix(in srgb, var(--mc-primary) 16%, var(--mc-bg));
     --mc-h: 10rem;
 }
 
@@ -1346,7 +1348,7 @@ ul.mc-chart.mc-columns li::before{
     width: 100%;
     max-width: 2.5rem;
     height: calc(var(--value) / 100 * var(--mc-h));
-    background: color-mix(in srgb, var(--mc-accent) 35%, var(--mc-bg));
+    background: color-mix(in srgb, var(--mc-primary) 35%, var(--mc-bg));
     border-start-start-radius: var(--mc-radius);
     border-start-end-radius: var(--mc-radius);
     transition: background-color 0.12s;
@@ -1354,7 +1356,7 @@ ul.mc-chart.mc-columns li::before{
 
 ul.mc-chart.mc-columns li:hover::before,
 ul.mc-chart.mc-columns li[aria-current]::before{
-    background: var(--mc-accent);
+    background: var(--mc-primary);
 }
 
 ul.mc-chart.mc-columns li b{
@@ -1448,13 +1450,13 @@ figure.mc-chart.mc-line svg{
 }
 
 figure.mc-chart.mc-line polygon{
-    fill: color-mix(in srgb, var(--mc-accent) 12%, transparent);
+    fill: color-mix(in srgb, var(--mc-primary) 12%, transparent);
     stroke: none;
 }
 
 figure.mc-chart.mc-line polyline{
     fill: none;
-    stroke: var(--mc-accent);
+    stroke: var(--mc-primary);
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;

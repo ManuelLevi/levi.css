@@ -435,11 +435,11 @@ iframe{
 }
 
 body:has(#a-navy:checked){
-    --mc-accent: light-dark(#1e3a8a, #8ab4ff);
+    --mc-primary: light-dark(#1e3a8a, #8ab4ff);
 }
 
 body:has(#a-emerald:checked){
-    --mc-accent: light-dark(#047857, #34d399);
+    --mc-primary: light-dark(#047857, #34d399);
 }
 
 .shots.one{
@@ -504,7 +504,7 @@ body:has(#a-emerald:checked) .stage iframe[src="dashboard-emerald.html"]{
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: -0.05em;
-    color: var(--mc-accent);
+    color: var(--mc-primary);
 }
 
 .mc-tabs section > .mc-alert,
@@ -558,8 +558,8 @@ aside.mc-sidebar nav > ul{
 }
 
 aside.mc-sidebar a:target-current{
-    color: var(--mc-accent);
-    background: linear-gradient(var(--mc-accent), var(--mc-accent)) left / 0.15em 60% no-repeat, var(--mc-hover);
+    color: var(--mc-primary);
+    background: linear-gradient(var(--mc-primary), var(--mc-primary)) left / 0.15em 60% no-repeat, var(--mc-hover);
 }
 
 :is(main, .pair) > section > p{
@@ -613,7 +613,7 @@ body:has(#a-emerald:checked) .split .compare[data-accent="emerald"]{
     max-width: 100%;
     overflow: hidden;
     resize: horizontal;
-    border-inline-end: 1px solid var(--mc-accent);
+    border-inline-end: 1px solid var(--mc-primary);
 }
 
 .split .compare > div::after{
@@ -625,7 +625,7 @@ body:has(#a-emerald:checked) .split .compare[data-accent="emerald"]{
     width: 2rem;
     height: 2rem;
     border-start-start-radius: 100%;
-    background: var(--mc-accent);
+    background: var(--mc-primary);
     color: #fff;
     font-size: 0.9rem;
     pointer-events: none;
@@ -657,7 +657,7 @@ body:has(#a-emerald:checked) .split .compare[data-accent="emerald"]{
 }
 
 .mark{
-    color: var(--mc-accent);
+    color: var(--mc-primary);
 }
 
 @media (max-width: 40rem){
@@ -813,7 +813,7 @@ aside.mc-sidebar ul.mc-tree a::after{
 }
 
 aside.mc-sidebar ul.mc-tree li:has(> a[aria-current]){
-    color: var(--mc-accent);
+    color: var(--mc-primary);
     background: var(--mc-selected);
 }
 

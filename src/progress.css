@@ -3,7 +3,7 @@
     box-sizing: border-box;
     width: 100%;
     height: 0.6em;
-    accent-color: var(--mc-accent);
+    accent-color: var(--mc-primary);
 }
 
 table.mc-table td:has(> .mc-progress){

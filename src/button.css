@@ -29,7 +29,7 @@
 
 :is(button, a).mc-button.mc-primary{
     color: var(--mc-bg);
-    background: var(--mc-accent);
+    background: var(--mc-primary);
     box-shadow: none;
 }
 
@@ -43,7 +43,7 @@
 }
 
 :is(button, a).mc-button.mc-danger{
-    --mc-accent: var(--mc-danger);
+    --mc-primary: var(--mc-danger);
 }
 
 :is(button, a).mc-button:disabled + small{

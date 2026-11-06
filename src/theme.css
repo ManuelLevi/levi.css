@@ -11,7 +11,8 @@
     --mc-danger: light-dark(#c62828, #ff6961);
     --mc-shadow: light-dark(#00000026, transparent);
     --mc-hover: light-dark(#0000000d, #ffffff14);
-    --mc-accent: light-dark(crimson, #ff6b81);
+    --mc-primary: light-dark(crimson, #ff6b81);
+    --mc-secondary: light-dark(#1e3a8a, #8ab4ff);
     --mc-c1: light-dark(#2a78d6, #5d9cf0);
     --mc-c2: light-dark(#eb6834, #f58a5c);
     --mc-c3: light-dark(#1baf7a, #3fcf9a);
@@ -29,7 +30,7 @@
     --mc-radius: 0.35em;
     --mc-space: 2rem;
     --mc-card: 1.25rem;
-    --mc-focus: 2px solid var(--mc-accent);
+    --mc-focus: 2px solid var(--mc-primary);
     background: var(--mc-bg);
     color: var(--mc-text);
     font-family: Arial, sans-serif;
@@ -39,11 +40,12 @@
 }
 
 .mc-navy{
-    --mc-accent: light-dark(#1e3a8a, #8ab4ff);
+    --mc-primary: light-dark(#1e3a8a, #8ab4ff);
+    --mc-secondary: light-dark(crimson, #ff6b81);
 }
 
 .mc-emerald{
-    --mc-accent: light-dark(#047857, #34d399);
+    --mc-primary: light-dark(#047857, #34d399);
 }
 
 .mc-theme h1{
@@ -86,19 +88,19 @@
 }
 
 .mc-theme a{
-    color: var(--mc-accent);
+    color: var(--mc-primary);
 }
 
 .mc-theme :is(p, td, dd, small) a:not([class]):hover{
-    color: color-mix(in srgb, var(--mc-accent) 80%, var(--mc-text));
+    color: color-mix(in srgb, var(--mc-primary) 80%, var(--mc-text));
 }
 
 .mc-theme :is(p, td, dd, small) a:not([class]):active{
-    color: color-mix(in srgb, var(--mc-accent) 60%, var(--mc-text));
+    color: color-mix(in srgb, var(--mc-primary) 60%, var(--mc-text));
 }
 
 .mc-theme input{
-    accent-color: var(--mc-accent);
+    accent-color: var(--mc-primary);
 }
 
 .mc-light{
