@@ -7,7 +7,7 @@
     --mc-border: light-dark(#d9d9de, #3a3a3c);
     --mc-raised: light-dark(#fff, #2c2c2e);
     --mc-ok: light-dark(#1a7f37, #3fb950);
-    --mc-warn: light-dark(#c75000, #f0883e);
+    --mc-warn: light-dark(#ffc107, #ffc107);
     --mc-danger: light-dark(#c62828, #ff6961);
     --mc-shadow: light-dark(#00000026, transparent);
     --mc-hover: light-dark(#0000000d, #ffffff14);
