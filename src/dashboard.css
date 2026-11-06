@@ -26,10 +26,6 @@ main.mc-dashboard > :where(* + *){
     margin-block-start: var(--mc-space);
 }
 
-main.mc-dashboard > header > .mc-tabs{
-    margin-block-start: 0.5rem;
-}
-
 main.mc-dashboard > header hgroup p{
     margin: 0.25rem 0 0;
     color: var(--mc-muted);
