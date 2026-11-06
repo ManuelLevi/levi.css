@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Stats · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-list">
+					<li class="group">Start</li>
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li class="group">Components</li>
+					<li><a href="../dashboard/">Dashboard</a></li>
+					<li><a href="../navbar/">Navbar</a></li>
+					<li><a href="../sidebar/">Sidebar</a></li>
+					<li><a href="../breadcrumb/">Breadcrumb</a></li>
+					<li><a href="../toolbar/">Toolbar</a></li>
+					<li><a href="../menu/">Menu</a></li>
+					<li><a href="../tabs/">Tabs</a></li>
+					<li><a href="../daterange/">Date range</a></li>
+					<li><a href="../button/">Button</a></li>
+					<li><a href="../input/">Input</a></li>
+					<li><a href="../form/">Form</a></li>
+					<li><a href="../fieldset/">Fieldset</a></li>
+					<li><a href="../group/">Group</a></li>
+					<li><a href="../popup/">Popup</a></li>
+					<li><a href="../alert/">Alert</a></li>
+					<li><a href="../pill/">Pill</a></li>
+					<li><a href="../progress/">Progress</a></li>
+					<li><a href="../stats/" aria-current="page">Stats</a></li>
+					<li><a href="../chart/">Chart</a></li>
+					<li class="group">Data</li>
+					<li><a href="../table/">Table</a></li>
+					<li><a href="../expandable-table/">Expandable table</a></li>
+					<li><a href="../list/">List</a></li>
+					<li><a href="../tree/">Tree</a></li>
+					<li class="group">System</li>
+					<li><a href="../theme/">Theme</a></li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="stats">
+		<h1>Stats</h1>
+		<p>Big numbers in one row. A trend goes in a <code>small</code>. A link inside takes the text color, and <code>data-status</code> colors the number.</p>
+		<div class="mc-group">
+			<dl class="mc-stats">
+			  <div><dt>Revenue</dt><dd>$48,200<small data-trend="up">12% this month</small></dd></div>
+			  <div><dt>Active users</dt><dd>2,431<small data-trend="up">4.1%</small></dd></div>
+			  <div><dt>Conversion</dt><dd>3.8%<small data-trend="down">0.3 pts</small></dd></div>
+			  <div data-status="danger"><dt>Open issues</dt><dd><a href="#">17</a><small>3 overdue</small></dd></div>
+			</dl>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;dl class="mc-stats"&gt;
+  &lt;div&gt;&lt;dt&gt;Revenue&lt;/dt&gt;&lt;dd&gt;$48,200&lt;small data-trend="up"&gt;12% this month&lt;/small&gt;&lt;/dd&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;dt&gt;Active users&lt;/dt&gt;&lt;dd&gt;2,431&lt;small data-trend="up"&gt;4.1%&lt;/small&gt;&lt;/dd&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;dt&gt;Conversion&lt;/dt&gt;&lt;dd&gt;3.8%&lt;small data-trend="down"&gt;0.3 pts&lt;/small&gt;&lt;/dd&gt;&lt;/div&gt;
+  &lt;div data-status="danger"&gt;&lt;dt&gt;Open issues&lt;/dt&gt;&lt;dd&gt;&lt;a href="#"&gt;17&lt;/a&gt;&lt;small&gt;3 overdue&lt;/small&gt;&lt;/dd&gt;&lt;/div&gt;
+&lt;/dl&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+</main>
+
+</body>
+</html>

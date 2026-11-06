@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Expandable table · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-list">
+					<li class="group">Start</li>
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li class="group">Components</li>
+					<li><a href="../dashboard/">Dashboard</a></li>
+					<li><a href="../navbar/">Navbar</a></li>
+					<li><a href="../sidebar/">Sidebar</a></li>
+					<li><a href="../breadcrumb/">Breadcrumb</a></li>
+					<li><a href="../toolbar/">Toolbar</a></li>
+					<li><a href="../menu/">Menu</a></li>
+					<li><a href="../tabs/">Tabs</a></li>
+					<li><a href="../daterange/">Date range</a></li>
+					<li><a href="../button/">Button</a></li>
+					<li><a href="../input/">Input</a></li>
+					<li><a href="../form/">Form</a></li>
+					<li><a href="../fieldset/">Fieldset</a></li>
+					<li><a href="../group/">Group</a></li>
+					<li><a href="../popup/">Popup</a></li>
+					<li><a href="../alert/">Alert</a></li>
+					<li><a href="../pill/">Pill</a></li>
+					<li><a href="../progress/">Progress</a></li>
+					<li><a href="../stats/">Stats</a></li>
+					<li><a href="../chart/">Chart</a></li>
+					<li class="group">Data</li>
+					<li><a href="../table/">Table</a></li>
+					<li><a href="../expandable-table/" aria-current="page">Expandable table</a></li>
+					<li><a href="../list/">List</a></li>
+					<li><a href="../tree/">Tree</a></li>
+					<li class="group">System</li>
+					<li><a href="../theme/">Theme</a></li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="expandable-tables">
+		<h1>Expandable tables</h1>
+		<p>A real table whose rows open. Add <code>mc-expandable</code>, give each group its own <code>tbody</code>, and put a checkbox in the first row. The rows below it appear when it is checked. No JavaScript.</p>
+		<div class="mc-group">
+			<table class="mc-table mc-expandable">
+			  <thead>
+			    <tr><th>Name</th><th>Owner</th><th>Status</th><th>Budget</th></tr>
+			  </thead>
+			  <tbody>
+			    <tr><td><label><input type="checkbox" checked aria-label="Expand"> Atlas</label></td><td>Ada Lovelace</td><td data-status="ok">Active</td><td>$48,200</td></tr>
+			    <tr><td>Web app</td><td>Sam Rivera</td><td data-status="ok">Active</td><td>$31,000</td></tr>
+			    <tr><td>Mobile app</td><td>Priya Nair</td><td data-status="warn">Delayed</td><td>$17,200</td></tr>
+			  </tbody>
+			  <tbody>
+			    <tr><td><label><input type="checkbox" aria-label="Expand"> Orion</label></td><td>Chen Wei</td><td data-status="warn">Review</td><td>$22,500</td></tr>
+			    <tr><td>Website</td><td>Chen Wei</td><td data-status="ok">Active</td><td>$9,500</td></tr>
+			    <tr><td>Billing</td><td>Jamie Lee</td><td data-status="danger">Blocked</td><td>$13,000</td></tr>
+			  </tbody>
+			  <tbody>
+			    <tr><td><label><input type="checkbox" aria-label="Expand"> Nova</label></td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
+			    <tr><td>Dashboard</td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
+			  </tbody>
+			  <tbody>
+			    <tr><td>Archive</td><td>Jamie Lee</td><td>Closed</td><td>$0</td></tr>
+			  </tbody>
+			</table>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;table class="mc-table mc-expandable"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Owner&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Budget&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;label&gt;&lt;input type="checkbox" checked aria-label="Expand"&gt; Atlas&lt;/label&gt;&lt;/td&gt;&lt;td&gt;Ada Lovelace&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$48,200&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Web app&lt;/td&gt;&lt;td&gt;Sam Rivera&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$31,000&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Mobile app&lt;/td&gt;&lt;td&gt;Priya Nair&lt;/td&gt;&lt;td data-status="warn"&gt;Delayed&lt;/td&gt;&lt;td&gt;$17,200&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;label&gt;&lt;input type="checkbox" aria-label="Expand"&gt; Orion&lt;/label&gt;&lt;/td&gt;&lt;td&gt;Chen Wei&lt;/td&gt;&lt;td data-status="warn"&gt;Review&lt;/td&gt;&lt;td&gt;$22,500&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Website&lt;/td&gt;&lt;td&gt;Chen Wei&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$9,500&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Billing&lt;/td&gt;&lt;td&gt;Jamie Lee&lt;/td&gt;&lt;td data-status="danger"&gt;Blocked&lt;/td&gt;&lt;td&gt;$13,000&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;label&gt;&lt;input type="checkbox" aria-label="Expand"&gt; Nova&lt;/label&gt;&lt;/td&gt;&lt;td&gt;Alex Morgan&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$8,400&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Dashboard&lt;/td&gt;&lt;td&gt;Alex Morgan&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$8,400&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Archive&lt;/td&gt;&lt;td&gt;Jamie Lee&lt;/td&gt;&lt;td&gt;Closed&lt;/td&gt;&lt;td&gt;$0&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+</main>
+
+</body>
+</html>

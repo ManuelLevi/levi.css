@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Chart · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-list">
+					<li class="group">Start</li>
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li class="group">Components</li>
+					<li><a href="../dashboard/">Dashboard</a></li>
+					<li><a href="../navbar/">Navbar</a></li>
+					<li><a href="../sidebar/">Sidebar</a></li>
+					<li><a href="../breadcrumb/">Breadcrumb</a></li>
+					<li><a href="../toolbar/">Toolbar</a></li>
+					<li><a href="../menu/">Menu</a></li>
+					<li><a href="../tabs/">Tabs</a></li>
+					<li><a href="../daterange/">Date range</a></li>
+					<li><a href="../button/">Button</a></li>
+					<li><a href="../input/">Input</a></li>
+					<li><a href="../form/">Form</a></li>
+					<li><a href="../fieldset/">Fieldset</a></li>
+					<li><a href="../group/">Group</a></li>
+					<li><a href="../popup/">Popup</a></li>
+					<li><a href="../alert/">Alert</a></li>
+					<li><a href="../pill/">Pill</a></li>
+					<li><a href="../progress/">Progress</a></li>
+					<li><a href="../stats/">Stats</a></li>
+					<li><a href="../chart/" aria-current="page">Chart</a></li>
+					<li class="group">Data</li>
+					<li><a href="../table/">Table</a></li>
+					<li><a href="../expandable-table/">Expandable table</a></li>
+					<li><a href="../list/">List</a></li>
+					<li><a href="../tree/">Tree</a></li>
+					<li class="group">System</li>
+					<li><a href="../theme/">Theme</a></li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="charts">
+		<h1>Charts</h1>
+		<p>The data is the markup. Values are numbers in <code>--value</code> and the browser does the proportions. Colours are tones of the accent, or eight categorical hues with <code>mc-categorical</code>, or yours with <code>--c</code> on a slice, so one thing keeps one colour across charts. A donut slice also needs <code>--from</code>, the sum of the slices before it. Lines are a plain <code>svg</code>. No JavaScript.</p>
+		<div class="cols">
+		<div class="mc-group">
+			<h3>Columns</h3>
+			<ul class="mc-chart mc-columns">
+			  <li style="--value:42"><b>$42k</b><span>May</span></li>
+			  <li style="--value:58"><b>$58k</b><span>Jun</span></li>
+			  <li style="--value:51"><b>$51k</b><span>Jul</span></li>
+			  <li style="--value:74"><b>$74k</b><span>Aug</span></li>
+			  <li style="--value:66"><b>$66k</b><span>Sep</span></li>
+			  <li style="--value:92" aria-current="true"><b>$92k</b><span>Oct</span></li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-chart mc-columns"&gt;
+  &lt;li style="--value:42"&gt;&lt;b&gt;$42k&lt;/b&gt;&lt;span&gt;May&lt;/span&gt;&lt;/li&gt;
+  &lt;li style="--value:58"&gt;&lt;b&gt;$58k&lt;/b&gt;&lt;span&gt;Jun&lt;/span&gt;&lt;/li&gt;
+  &lt;li style="--value:51"&gt;&lt;b&gt;$51k&lt;/b&gt;&lt;span&gt;Jul&lt;/span&gt;&lt;/li&gt;
+  &lt;li style="--value:74"&gt;&lt;b&gt;$74k&lt;/b&gt;&lt;span&gt;Aug&lt;/span&gt;&lt;/li&gt;
+  &lt;li style="--value:66"&gt;&lt;b&gt;$66k&lt;/b&gt;&lt;span&gt;Sep&lt;/span&gt;&lt;/li&gt;
+  &lt;li style="--value:92" aria-current="true"&gt;&lt;b&gt;$92k&lt;/b&gt;&lt;span&gt;Oct&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+		<div class="mc-group">
+			<h3>Line</h3>
+			<figure class="mc-chart mc-line">
+			  <svg viewBox="0 0 100 40" preserveAspectRatio="none" role="img" aria-label="Revenue, March to October">
+			    <polygon points="0,28 14.3,22 28.6,25 42.9,16 57.1,19 71.4,10 85.7,12 100,4 100,40 0,40"/>
+			    <polyline points="0,28 14.3,22 28.6,25 42.9,16 57.1,19 71.4,10 85.7,12 100,4"/>
+			  </svg>
+			  <figcaption><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></figcaption>
+			</figure>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;figure class="mc-chart mc-line"&gt;
+  &lt;svg viewBox="0 0 100 40" preserveAspectRatio="none" role="img" aria-label="Revenue, March to October"&gt;
+    &lt;polygon points="0,28 14.3,22 28.6,25 42.9,16 57.1,19 71.4,10 85.7,12 100,4 100,40 0,40"/&gt;
+    &lt;polyline points="0,28 14.3,22 28.6,25 42.9,16 57.1,19 71.4,10 85.7,12 100,4"/&gt;
+  &lt;/svg&gt;
+  &lt;figcaption&gt;&lt;span&gt;Mar&lt;/span&gt;&lt;span&gt;Apr&lt;/span&gt;&lt;span&gt;May&lt;/span&gt;&lt;span&gt;Jun&lt;/span&gt;&lt;span&gt;Jul&lt;/span&gt;&lt;span&gt;Aug&lt;/span&gt;&lt;span&gt;Sep&lt;/span&gt;&lt;span&gt;Oct&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+			</details>
+		</div>
+		</div>
+		<div class="cols">
+		<div class="mc-group">
+			<h3>Donut</h3>
+			<figure class="mc-chart mc-donut mc-categorical">
+			  <ul>
+			    <li style="--from:0; --value:38">Billing <b>38%</b></li>
+			    <li style="--from:38; --value:24">Onboarding <b>24%</b></li>
+			    <li style="--from:62; --value:16">Support <b>16%</b></li>
+			    <li style="--from:78; --value:12">Reports <b>12%</b></li>
+			    <li style="--from:90; --value:6">Sync <b>6%</b></li>
+			    <li style="--from:96; --value:4">Cleanup <b>4%</b></li>
+			  </ul>
+			</figure>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;figure class="mc-chart mc-donut mc-categorical"&gt;
+  &lt;ul&gt;
+    &lt;li style="--from:0; --value:38"&gt;Billing &lt;b&gt;38%&lt;/b&gt;&lt;/li&gt;
+    &lt;li style="--from:38; --value:24"&gt;Onboarding &lt;b&gt;24%&lt;/b&gt;&lt;/li&gt;
+    &lt;li style="--from:62; --value:16"&gt;Support &lt;b&gt;16%&lt;/b&gt;&lt;/li&gt;
+    &lt;li style="--from:78; --value:12"&gt;Reports &lt;b&gt;12%&lt;/b&gt;&lt;/li&gt;
+    &lt;li style="--from:90; --value:6"&gt;Sync &lt;b&gt;6%&lt;/b&gt;&lt;/li&gt;
+    &lt;li style="--from:96; --value:4"&gt;Cleanup &lt;b&gt;4%&lt;/b&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/figure&gt;</code></pre>
+			</details>
+		</div>
+		<div class="mc-group">
+			<h3>Pie</h3>
+			<figure class="mc-chart mc-pie mc-categorical">
+			  <ul>
+			    <li style="--from:0; --value:38">Billing <b>38%</b></li>
+			    <li style="--from:38; --value:24">Onboarding <b>24%</b></li>
+			    <li style="--from:62; --value:16">Support <b>16%</b></li>
+			    <li style="--from:78; --value:12">Reports <b>12%</b></li>
+			    <li style="--from:90; --value:6">Sync <b>6%</b></li>
+			    <li style="--from:96; --value:4">Cleanup <b>4%</b></li>
+			  </ul>
+			</figure>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;figure class="mc-chart mc-pie mc-categorical"&gt;
+  &lt;ul&gt;
+    &lt;li style="--from:0; --value:38"&gt;Billing &lt;b&gt;38%&lt;/b&gt;&lt;/li&gt;
+    &lt;li style="--from:38; --value:24"&gt;Onboarding &lt;b&gt;24%&lt;/b&gt;&lt;/li&gt;
+    &lt;li style="--from:62; --value:16"&gt;Support &lt;b&gt;16%&lt;/b&gt;&lt;/li&gt;
+    &lt;li style="--from:78; --value:12"&gt;Reports &lt;b&gt;12%&lt;/b&gt;&lt;/li&gt;
+    &lt;li style="--from:90; --value:6"&gt;Sync &lt;b&gt;6%&lt;/b&gt;&lt;/li&gt;
+    &lt;li style="--from:96; --value:4"&gt;Cleanup &lt;b&gt;4%&lt;/b&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/figure&gt;</code></pre>
+			</details>
+		</div>
+		</div>
+		<div class="cols">
+		<div class="mc-group">
+			<h3>Split</h3>
+			<ul class="mc-chart mc-split">
+			  <li style="--value:46"><b>46%</b> Direct</li>
+			  <li style="--value:28"><b>28%</b> Search</li>
+			  <li style="--value:16"><b>16%</b> Referral</li>
+			  <li style="--value:10"><b>10%</b> Social</li>
+			</ul>
+			<ul class="mc-chart mc-split">
+			  <li style="--value:62"><b>62 GB</b> Projects</li>
+			  <li style="--value:24"><b>24 GB</b> Media</li>
+			  <li style="--value:14"><b>14 GB</b> Other</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-chart mc-split"&gt;
+  &lt;li style="--value:46"&gt;&lt;b&gt;46%&lt;/b&gt; Direct&lt;/li&gt;
+  &lt;li style="--value:28"&gt;&lt;b&gt;28%&lt;/b&gt; Search&lt;/li&gt;
+  &lt;li style="--value:16"&gt;&lt;b&gt;16%&lt;/b&gt; Referral&lt;/li&gt;
+  &lt;li style="--value:10"&gt;&lt;b&gt;10%&lt;/b&gt; Social&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="mc-chart mc-split"&gt;
+  &lt;li style="--value:62"&gt;&lt;b&gt;62 GB&lt;/b&gt; Projects&lt;/li&gt;
+  &lt;li style="--value:24"&gt;&lt;b&gt;24 GB&lt;/b&gt; Media&lt;/li&gt;
+  &lt;li style="--value:14"&gt;&lt;b&gt;14 GB&lt;/b&gt; Other&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+		</div>
+	</section>
+
+</main>
+
+</body>
+</html>

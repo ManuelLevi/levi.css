@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Form · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-list">
+					<li class="group">Start</li>
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li class="group">Components</li>
+					<li><a href="../dashboard/">Dashboard</a></li>
+					<li><a href="../navbar/">Navbar</a></li>
+					<li><a href="../sidebar/">Sidebar</a></li>
+					<li><a href="../breadcrumb/">Breadcrumb</a></li>
+					<li><a href="../toolbar/">Toolbar</a></li>
+					<li><a href="../menu/">Menu</a></li>
+					<li><a href="../tabs/">Tabs</a></li>
+					<li><a href="../daterange/">Date range</a></li>
+					<li><a href="../button/">Button</a></li>
+					<li><a href="../input/">Input</a></li>
+					<li><a href="../form/" aria-current="page">Form</a></li>
+					<li><a href="../fieldset/">Fieldset</a></li>
+					<li><a href="../group/">Group</a></li>
+					<li><a href="../popup/">Popup</a></li>
+					<li><a href="../alert/">Alert</a></li>
+					<li><a href="../pill/">Pill</a></li>
+					<li><a href="../progress/">Progress</a></li>
+					<li><a href="../stats/">Stats</a></li>
+					<li><a href="../chart/">Chart</a></li>
+					<li class="group">Data</li>
+					<li><a href="../table/">Table</a></li>
+					<li><a href="../expandable-table/">Expandable table</a></li>
+					<li><a href="../list/">List</a></li>
+					<li><a href="../tree/">Tree</a></li>
+					<li class="group">System</li>
+					<li><a href="../theme/">Theme</a></li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="forms">
+		<h1>Forms</h1>
+		<p>Labels wrap their fields, so there is no <code>for</code> and no <code>id</code>. Fields are as tall as every other row.</p>
+		<div class="mc-group">
+			<div class="cols">
+			<form class="mc-form">
+			  <label>Name <input class="mc-input" type="text" placeholder="Ada Lovelace"></label>
+			  <label>Email <input class="mc-input" type="email" value="ada@example" aria-invalid="true"><small>Enter a full address.</small></label>
+			  <label>Workspace <input class="mc-input" type="text" value="atlas" disabled></label>
+			  <label>Plan
+			    <select class="mc-input">
+			      <option>Personal</option>
+			      <option>Team</option>
+			    </select>
+			  </label>
+			</form>
+			<form class="mc-form">
+			  <label>Message <textarea class="mc-input" rows="3"></textarea></label>
+			  <fieldset class="mc-fieldset">
+			    <legend>Updates</legend>
+			    <label><input type="radio" name="updates" checked> Weekly</label>
+			    <label><input type="radio" name="updates"> Monthly</label>
+			    <label><input type="checkbox" role="switch" checked> Product news</label>
+			  </fieldset>
+			  <button class="mc-button mc-primary">Send</button>
+			</form>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;form class="mc-form"&gt;
+  &lt;label&gt;Name &lt;input class="mc-input" type="text" placeholder="Ada Lovelace"&gt;&lt;/label&gt;
+  &lt;label&gt;Email &lt;input class="mc-input" type="email" value="ada@example" aria-invalid="true"&gt;&lt;small&gt;Enter a full address.&lt;/small&gt;&lt;/label&gt;
+  &lt;label&gt;Workspace &lt;input class="mc-input" type="text" value="atlas" disabled&gt;&lt;/label&gt;
+  &lt;label&gt;Plan
+    &lt;select class="mc-input"&gt;
+      &lt;option&gt;Personal&lt;/option&gt;
+      &lt;option&gt;Team&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/label&gt;
+  &lt;label&gt;Message &lt;textarea class="mc-input" rows="3"&gt;&lt;/textarea&gt;&lt;/label&gt;
+  &lt;fieldset class="mc-fieldset"&gt;
+    &lt;legend&gt;Updates&lt;/legend&gt;
+    &lt;label&gt;&lt;input type="radio" name="updates" checked&gt; Weekly&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="updates"&gt; Monthly&lt;/label&gt;
+    &lt;label&gt;&lt;input type="checkbox" role="switch" checked&gt; Product news&lt;/label&gt;
+  &lt;/fieldset&gt;
+  &lt;button class="mc-button mc-primary"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+</main>
+
+</body>
+</html>

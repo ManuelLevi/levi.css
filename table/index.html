@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Table · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-list">
+					<li class="group">Start</li>
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li class="group">Components</li>
+					<li><a href="../dashboard/">Dashboard</a></li>
+					<li><a href="../navbar/">Navbar</a></li>
+					<li><a href="../sidebar/">Sidebar</a></li>
+					<li><a href="../breadcrumb/">Breadcrumb</a></li>
+					<li><a href="../toolbar/">Toolbar</a></li>
+					<li><a href="../menu/">Menu</a></li>
+					<li><a href="../tabs/">Tabs</a></li>
+					<li><a href="../daterange/">Date range</a></li>
+					<li><a href="../button/">Button</a></li>
+					<li><a href="../input/">Input</a></li>
+					<li><a href="../form/">Form</a></li>
+					<li><a href="../fieldset/">Fieldset</a></li>
+					<li><a href="../group/">Group</a></li>
+					<li><a href="../popup/">Popup</a></li>
+					<li><a href="../alert/">Alert</a></li>
+					<li><a href="../pill/">Pill</a></li>
+					<li><a href="../progress/">Progress</a></li>
+					<li><a href="../stats/">Stats</a></li>
+					<li><a href="../chart/">Chart</a></li>
+					<li class="group">Data</li>
+					<li><a href="../table/" aria-current="page">Table</a></li>
+					<li><a href="../expandable-table/">Expandable table</a></li>
+					<li><a href="../list/">List</a></li>
+					<li><a href="../tree/">Tree</a></li>
+					<li class="group">System</li>
+					<li><a href="../theme/">Theme</a></li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="tables">
+		<h1>Tables</h1>
+		<p>A header, rows and a caption. Nothing else.</p>
+		<div class="mc-group">
+			<table class="mc-table">
+			  <caption>The team, as of this quarter.</caption>
+			  <thead>
+			    <tr>
+			      <th scope="col">Name</th>
+			      <th scope="col">Role</th>
+			      <th scope="col">Status</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>Alex Morgan</td>
+			      <td>Designer</td>
+			      <td data-status="ok">Active</td>
+			    </tr>
+			    <tr>
+			      <td>Jamie Lee</td>
+			      <td>Developer</td>
+			      <td data-status="warn">Pending</td>
+			    </tr>
+			    <tr>
+			      <td>Sam Rivera</td>
+			      <td>Writer</td>
+			      <td data-status="ok">Active</td>
+			    </tr>
+			  </tbody>
+			</table>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;table class="mc-table"&gt;
+  &lt;caption&gt;The team, as of this quarter.&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Name&lt;/th&gt;
+      &lt;th scope="col"&gt;Role&lt;/th&gt;
+      &lt;th scope="col"&gt;Status&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alex Morgan&lt;/td&gt;
+      &lt;td&gt;Designer&lt;/td&gt;
+      &lt;td data-status="ok"&gt;Active&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jamie Lee&lt;/td&gt;
+      &lt;td&gt;Developer&lt;/td&gt;
+      &lt;td data-status="warn"&gt;Pending&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sam Rivera&lt;/td&gt;
+      &lt;td&gt;Writer&lt;/td&gt;
+      &lt;td data-status="ok"&gt;Active&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+</main>
+
+</body>
+</html>

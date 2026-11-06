@@ -13,52 +13,52 @@
 
 	<aside class="mc-sidebar">
 		<details open>
-			<summary><span>Levi<span class="mark">.css</span></span></summary>
+			<summary><a class="brand" href="./"><span>Levi<span class="mark">.css</span></span></a></summary>
 			<nav>
 				<ul class="mc-list">
 					<li class="group">Start</li>
-					<li><a href="#getting-started">Getting started</a></li>
-					<li><a href="#composed">Put together</a></li>
+					<li><a href="./" aria-current="page">Home</a></li>
+					<li><a href="overview/">Overview</a></li>
 					<li class="group">Components</li>
-					<li><a href="#dashboards">Dashboards</a></li>
-					<li><a href="#buttons">Buttons</a></li>
-					<li><a href="#tabs">Tabs</a></li>
-					<li><a href="#parts">Navigation and feedback</a></li>
-					<li><a href="#navbar">Navbar</a></li>
-					<li><a href="#pills">Pills</a></li>
-					<li><a href="#forms">Forms</a></li>
-					<li><a href="#progress">Progress</a></li>
-					<li><a href="#charts">Charts</a></li>
-					<li><a href="#popups">Popups</a></li>
+					<li><a href="dashboard/">Dashboard</a></li>
+					<li><a href="navbar/">Navbar</a></li>
+					<li><a href="sidebar/">Sidebar</a></li>
+					<li><a href="breadcrumb/">Breadcrumb</a></li>
+					<li><a href="toolbar/">Toolbar</a></li>
+					<li><a href="menu/">Menu</a></li>
+					<li><a href="tabs/">Tabs</a></li>
+					<li><a href="daterange/">Date range</a></li>
+					<li><a href="button/">Button</a></li>
+					<li><a href="input/">Input</a></li>
+					<li><a href="form/">Form</a></li>
+					<li><a href="fieldset/">Fieldset</a></li>
+					<li><a href="group/">Group</a></li>
+					<li><a href="popup/">Popup</a></li>
+					<li><a href="alert/">Alert</a></li>
+					<li><a href="pill/">Pill</a></li>
+					<li><a href="progress/">Progress</a></li>
+					<li><a href="stats/">Stats</a></li>
+					<li><a href="chart/">Chart</a></li>
 					<li class="group">Data</li>
-					<li><a href="#tables">Tables</a></li>
-					<li><a href="#lists">Lists</a>
-						<ul>
-							<li><a href="#list">List</a></li>
-							<li><a href="#numbered-list">Numbered list</a></li>
-						</ul>
-					</li>
-					<li><a href="#trees">Trees</a></li>
-					<li><a href="#expandable-tables">Expandable tables</a></li>
-					<li><a href="#density">Density</a></li>
+					<li><a href="table/">Table</a></li>
+					<li><a href="expandable-table/">Expandable table</a></li>
+					<li><a href="list/">List</a></li>
+					<li><a href="tree/">Tree</a></li>
 					<li class="group">System</li>
-					<li><a href="#sidebar">Sidebar</a></li>
-					<li><a href="#theming">Theming</a></li>
-					<li><a href="#schemes">Light and dark</a></li>
-					<li><a href="#alternatives">Why another one</a></li>
+					<li><a href="theme/">Theme</a></li>
 				</ul>
 			</nav>
 		</details>
 	</aside>
 
-	<main>
+<main>
 		<header>
 			<h1>Levi<span class="mark">.css</span></h1>
 			<p class="lead">CSS for the HTML you already write.</p>
 			<p>Plain HTML in, an application UI out. About 1100 lines of CSS, no JavaScript, no build step.</p>
 			<div class="row">
 				<a class="mc-button mc-primary" href="#getting-started">Getting started</a>
-				<a class="mc-button" href="#buttons">Components</a>
+				<a class="mc-button" href="#components">Components</a>
 				<fieldset class="swatches">
 					<legend>Accent</legend>
 					<label><input type="radio" name="accent" id="a-crimson" checked> Crimson</label>
@@ -73,13 +73,10 @@
 					<label><input type="radio" name="hero"> Files</label>
 				</nav>
 				<section class="split">
-					<iframe src="dashboard.html" data-accent="crimson" data-mode="light" title="The dashboard in light, crimson"></iframe>
-					<iframe src="dashboard-navy.html" data-accent="navy" data-mode="light" title="The dashboard in light, navy"></iframe>
-					<iframe src="dashboard-emerald.html" data-accent="emerald" data-mode="light" title="The dashboard in light, emerald"></iframe>
-					<iframe src="dashboard-dark.html" data-accent="crimson" data-mode="dark" title="The same dashboard in dark, crimson"></iframe>
-					<iframe src="dashboard-navy-dark.html" data-accent="navy" data-mode="dark" title="The same dashboard in dark, navy"></iframe>
-					<iframe src="dashboard-emerald-dark.html" data-accent="emerald" data-mode="dark" title="The same dashboard in dark, emerald"></iframe>
-				</section>
+						<div class="compare" data-accent="crimson"><iframe src="dashboard-dark.html" title="The dashboard in dark, crimson"></iframe><div><iframe src="dashboard.html" title="The same dashboard in light, crimson"></iframe></div></div>
+						<div class="compare" data-accent="navy"><iframe src="dashboard-navy-dark.html" title="The dashboard in dark, navy"></iframe><div><iframe src="dashboard-navy.html" title="The same dashboard in light, navy"></iframe></div></div>
+						<div class="compare" data-accent="emerald"><iframe src="dashboard-emerald-dark.html" title="The dashboard in dark, emerald"></iframe><div><iframe src="dashboard-emerald.html" title="The same dashboard in light, emerald"></iframe></div></div>
+					</section>
 				<section class="stage">
 					<iframe src="dashboard.html" title="The same dashboard with Levi"></iframe>
 					<iframe src="dashboard-navy.html" title="The same dashboard with Levi in navy"></iframe>
@@ -118,1001 +115,44 @@
 		</div>
 	</section>
 
-	<section id="composed">
-		<h2>Put together</h2>
-		<p>Nothing here is a special case. A settings page is tabs, a form, a progress bar, an alert and two buttons.</p>
-		<div class="mc-group">
-			<div class="mc-tabs">
-			  <nav>
-			    <label><input type="radio" name="settings" checked> General</label>
-			    <label><input type="radio" name="settings"> Billing</label>
-			    <label><input type="radio" name="settings"> Team</label>
-			  </nav>
-			  <section>
-			    <p class="mc-alert" role="status" data-status="warn">Your trial ends in three days. Add a payment method to keep your projects.</p>
-			    <div class="cols">
-			      <form class="mc-form">
-			        <label>Project name <input class="mc-input" type="text" value="Atlas"></label>
-			        <label>Owner <input class="mc-input" type="email" value="ada@example.com"></label>
-			        <fieldset class="mc-fieldset">
-			          <legend>Notifications</legend>
-			          <label><input type="checkbox" role="switch" checked> Weekly summary</label>
-			          <label><input type="checkbox" role="switch"> Billing emails</label>
-			        </fieldset>
-			      </form>
-			      <div class="mc-form">
-			        <label>Storage <progress class="mc-progress" max="100" value="72"></progress></label>
-			        <table class="mc-table">
-			          <thead><tr><th scope="col">Member</th><th scope="col">Role</th></tr></thead>
-			          <tbody>
-			            <tr><td>Alex Morgan</td><td data-status="ok">Owner</td></tr>
-			            <tr><td>Jamie Lee</td><td data-status="warn">Invited</td></tr>
-			            <tr><td>Sam Rivera</td><td data-status="ok">Editor</td></tr>
-			            <tr><td>Priya Nair</td><td data-status="ok">Editor</td></tr>
-			            <tr><td>Chen Wei</td><td data-status="warn">Invited</td></tr>
-			          </tbody>
-			        </table>
-			      </div>
-			    </div>
-			    <menu class="mc-toolbar">
-			      <li><button class="mc-button mc-primary">Save changes</button></li>
-			      <li><button class="mc-button">Cancel</button></li>
-			    </menu>
-			  </section>
-			  <section>Invoices and payment methods.</section>
-			  <section>Everyone with access to this project.</section>
-			</div>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;div class="mc-tabs"&gt;
-  &lt;nav&gt;
-    &lt;label&gt;&lt;input type="radio" name="settings" checked&gt; General&lt;/label&gt;
-    &lt;label&gt;&lt;input type="radio" name="settings"&gt; Billing&lt;/label&gt;
-    &lt;label&gt;&lt;input type="radio" name="settings"&gt; Team&lt;/label&gt;
-  &lt;/nav&gt;
-  &lt;section&gt;
-    &lt;p class="mc-alert" role="status" data-status="warn"&gt;Your trial ends in three days. Add a payment method to keep your projects.&lt;/p&gt;
-    &lt;div class="cols"&gt;
-      &lt;form class="mc-form"&gt;
-        &lt;label&gt;Project name &lt;input class="mc-input" type="text" value="Atlas"&gt;&lt;/label&gt;
-        &lt;label&gt;Owner &lt;input class="mc-input" type="email" value="ada@example.com"&gt;&lt;/label&gt;
-        &lt;fieldset class="mc-fieldset"&gt;
-          &lt;legend&gt;Notifications&lt;/legend&gt;
-          &lt;label&gt;&lt;input type="checkbox" role="switch" checked&gt; Weekly summary&lt;/label&gt;
-          &lt;label&gt;&lt;input type="checkbox" role="switch"&gt; Billing emails&lt;/label&gt;
-        &lt;/fieldset&gt;
-      &lt;/form&gt;
-      &lt;div class="mc-form"&gt;
-        &lt;label&gt;Storage &lt;progress class="mc-progress" max="100" value="72"&gt;&lt;/progress&gt;&lt;/label&gt;
-        &lt;table class="mc-table"&gt;
-          &lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Member&lt;/th&gt;&lt;th scope="col"&gt;Role&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;&lt;td&gt;Alex Morgan&lt;/td&gt;&lt;td data-status="ok"&gt;Owner&lt;/td&gt;&lt;/tr&gt;
-            &lt;tr&gt;&lt;td&gt;Jamie Lee&lt;/td&gt;&lt;td data-status="warn"&gt;Invited&lt;/td&gt;&lt;/tr&gt;
-            &lt;tr&gt;&lt;td&gt;Sam Rivera&lt;/td&gt;&lt;td data-status="ok"&gt;Editor&lt;/td&gt;&lt;/tr&gt;
-            &lt;tr&gt;&lt;td&gt;Priya Nair&lt;/td&gt;&lt;td data-status="ok"&gt;Editor&lt;/td&gt;&lt;/tr&gt;
-            &lt;tr&gt;&lt;td&gt;Chen Wei&lt;/td&gt;&lt;td data-status="warn"&gt;Invited&lt;/td&gt;&lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;menu class="mc-toolbar"&gt;
-      &lt;li&gt;&lt;button class="mc-button mc-primary"&gt;Save changes&lt;/button&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;button class="mc-button"&gt;Cancel&lt;/button&gt;&lt;/li&gt;
-    &lt;/menu&gt;
-  &lt;/section&gt;
-  &lt;section&gt;Invoices and payment methods.&lt;/section&gt;
-  &lt;section&gt;Everyone with access to this project.&lt;/section&gt;
-&lt;/div&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<div class="chapter">
+	<section id="components">
 		<h2>Components</h2>
-		<p>Each one does a single job, and each is one class on the element that already means it.</p>
-	</div>
-
-	<section id="dashboards">
-		<h2>Dashboards</h2>
-		<p>The page layout for applications. A sidebar on the left. On the right, breadcrumbs, a title with its actions, a row of stats and your sections. The live one is at the top of this page.</p>
-		<div class="mc-group">
-			<div class="frame"><iframe src="dashboard.html" title="The dashboard"></iframe></div>
-			<a class="mc-button mc-primary" href="dashboard.html">Open the full dashboard</a>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;main class="mc-dashboard"&gt;
-  &lt;header&gt;
-    &lt;nav class="mc-breadcrumb" aria-label="Breadcrumb"&gt;
-      &lt;ol&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Projects&lt;/a&gt;&lt;/li&gt;
-        &lt;li aria-current="page"&gt;Overview&lt;/li&gt;
-      &lt;/ol&gt;
-    &lt;/nav&gt;
-    &lt;div&gt;
-      &lt;h1&gt;Overview&lt;/h1&gt;
-      &lt;menu class="mc-toolbar"&gt;
-        &lt;li&gt;&lt;button class="mc-button"&gt;Export&lt;/button&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;button class="mc-button mc-primary"&gt;Invite&lt;/button&gt;&lt;/li&gt;
-      &lt;/menu&gt;
-    &lt;/div&gt;
-  &lt;/header&gt;
-  &lt;dl class="mc-stats"&gt;
-    &lt;div&gt;&lt;dt&gt;Revenue&lt;/dt&gt;&lt;dd&gt;$48,200&lt;/dd&gt;&lt;/div&gt;
-  &lt;/dl&gt;
-  &lt;section&gt;
-    &lt;h2&gt;Recent activity&lt;/h2&gt;
-    ...
-  &lt;/section&gt;
-&lt;/main&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-<div class="pair">
-	<section id="buttons">
-		<h2>Buttons</h2>
-		<p>One primary action per view. Everything else stays quiet.</p>
-		<div class="mc-group">
-			<div class="row">
-			  <button class="mc-button mc-primary">Save changes</button>
-			  <button class="mc-button">Cancel</button>
-			  <button class="mc-button mc-primary mc-danger">Delete</button>
-			  <button class="mc-button" disabled>Disabled</button>
-			</div>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;button class="mc-button mc-primary"&gt;Save changes&lt;/button&gt;
-&lt;button class="mc-button"&gt;Cancel&lt;/button&gt;
-&lt;button class="mc-button" disabled&gt;Disabled&lt;/button&gt;
-&lt;button class="mc-button mc-primary mc-danger"&gt;Delete&lt;/button&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<section id="tabs">
-		<h2>Tabs</h2>
-		<p>Pills in a quiet track. Radio buttons hold the state, so there is no JavaScript. Up to five tabs. A date range, two native date fields, sits on the same line and keeps the same height.</p>
-		<div class="mc-group">
-			<div class="mc-tabs">
-			  <nav>
-			    <label><input type="radio" name="view" checked> Overview</label>
-			    <label><input type="radio" name="view"> Activity</label>
-			    <label><input type="radio" name="view"> Settings</label>
-			  </nav>
-			  <div class="mc-daterange" role="group" aria-label="Date range">
-			    <label>From <input type="date" value="2026-10-01"></label>
-			    <label>To <input type="date" value="2026-10-31"></label>
-			  </div>
-			  <section>Everything at a glance.</section>
-			  <section>What changed, and when.</section>
-			  <section>Preferences for this project.</section>
-			</div>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;div class="mc-tabs"&gt;
-  &lt;nav&gt;
-    &lt;label&gt;&lt;input type="radio" name="view" checked&gt; Overview&lt;/label&gt;
-    &lt;label&gt;&lt;input type="radio" name="view"&gt; Activity&lt;/label&gt;
-    &lt;label&gt;&lt;input type="radio" name="view"&gt; Settings&lt;/label&gt;
-  &lt;/nav&gt;
-  &lt;div class="mc-daterange" role="group" aria-label="Date range"&gt;
-    &lt;label&gt;From &lt;input type="date" value="2026-10-01"&gt;&lt;/label&gt;
-    &lt;label&gt;To &lt;input type="date" value="2026-10-31"&gt;&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;section&gt;Everything at a glance.&lt;/section&gt;
-  &lt;section&gt;What changed, and when.&lt;/section&gt;
-  &lt;section&gt;Preferences for this project.&lt;/section&gt;
-&lt;/div&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-</div>
-	<section id="parts">
-		<h2>Navigation and feedback</h2>
-		<p>A breadcrumb, a toolbar, a menu and an alert. Each is one class on the element that already means it.</p>
-		<div class="mc-group">
-			<div class="cols">
-			  <div>
-			    <nav class="mc-breadcrumb" aria-label="Breadcrumb">
-			      <ol>
-			        <li><a href="#">Projects</a></li>
-			        <li><a href="#">Atlas</a></li>
-			        <li aria-current="page">Overview</li>
-			      </ol>
-			    </nav>
-			    <menu class="mc-toolbar">
-			      <li><input class="mc-input" type="search" placeholder="Search" aria-label="Search"></li>
-			      <li><button class="mc-button" popovertarget="actions">Actions</button></li>
-			      <li><button class="mc-button mc-primary">New</button></li>
-			    </menu>
-			    <div class="mc-menu" id="actions" popover>
-			      <ul class="mc-list">
-			        <li><a href="#">Rename</a></li>
-			        <li><a href="#">Duplicate</a></li>
-			        <li><a href="#">Archive</a></li>
-			      </ul>
-			    </div>
-			  </div>
-			  <div>
-			    <p class="mc-alert" role="status" data-status="ok">Changes saved.</p>
-			    <p class="mc-alert" role="status" data-status="warn">Your trial ends in three days.</p>
-			    <p class="mc-alert" role="alert" data-status="danger">The payment failed.</p>
-			  </div>
-			</div>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;nav class="mc-breadcrumb" aria-label="Breadcrumb"&gt;
-  &lt;ol&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Projects&lt;/a&gt;&lt;/li&gt;
-    &lt;li aria-current="page"&gt;Overview&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/nav&gt;
-
-&lt;menu class="mc-toolbar"&gt;
-  &lt;li&gt;&lt;input class="mc-input" type="search" aria-label="Search"&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;button class="mc-button" popovertarget="actions"&gt;Actions&lt;/button&gt;&lt;/li&gt;
-&lt;/menu&gt;
-&lt;div class="mc-menu" id="actions" popover&gt;
-  &lt;ul class="mc-list"&gt;&lt;li&gt;&lt;a href="#"&gt;Rename&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;p class="mc-alert" role="status" data-status="ok"&gt;Changes saved.&lt;/p&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<section id="navbar">
-		<h2>Navbar</h2>
-		<p>A bar across the top of the page. The brand sits on the left and the controls on the right, at the same height as every other row. In a page with a sidebar it stays on top and the sidebar sits beneath it.</p>
-		<div class="mc-group">
-			<header class="mc-navbar">
-			  <strong>Atlas</strong>
-			  <form>
-			    <label>Acting as
-			      <select class="mc-input">
-			        <option>Ada Lovelace</option>
-			        <option>Sam Rivera</option>
-			      </select>
-			    </label>
-			    <button class="mc-button mc-primary">Switch</button>
-			  </form>
-			</header>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;body class="mc-theme"&gt;
-  &lt;header class="mc-navbar"&gt;
-    &lt;strong&gt;Atlas&lt;/strong&gt;
-    &lt;form&gt;
-      &lt;label&gt;Acting as
-        &lt;select class="mc-input"&gt;…&lt;/select&gt;
-      &lt;/label&gt;
-    &lt;/form&gt;
-  &lt;/header&gt;
-  &lt;aside class="mc-sidebar"&gt;…&lt;/aside&gt;
-  &lt;main class="mc-dashboard"&gt;…&lt;/main&gt;
-&lt;/body&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<section id="pills">
-		<h2>Pills</h2>
-		<p>A status label with a colored dot, on a <code>span</code> or an <code>a</code>. The color comes from <code>data-status</code>, the same attribute as table cells and alerts.</p>
-		<div class="mc-group">
-			<p><span class="mc-pill" data-status="ok">Healthy</span> <span class="mc-pill" data-status="warn">3 need attention</span> <a class="mc-pill" href="#pills" data-status="danger">2 failed</a> <span class="mc-pill">Idle</span></p>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;span class="mc-pill" data-status="ok"&gt;Healthy&lt;/span&gt;
-&lt;a class="mc-pill" href="#" data-status="danger"&gt;2 failed&lt;/a&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<section id="forms">
-		<h2>Forms</h2>
-		<p>Labels wrap their fields, so there is no <code>for</code> and no <code>id</code>. Fields are as tall as every other row.</p>
-		<div class="mc-group">
-			<div class="cols">
-			<form class="mc-form">
-			  <label>Name <input class="mc-input" type="text" placeholder="Ada Lovelace"></label>
-			  <label>Email <input class="mc-input" type="email" value="ada@example" aria-invalid="true"><small>Enter a full address.</small></label>
-			  <label>Workspace <input class="mc-input" type="text" value="atlas" disabled></label>
-			  <label>Plan
-			    <select class="mc-input">
-			      <option>Personal</option>
-			      <option>Team</option>
-			    </select>
-			  </label>
-			</form>
-			<form class="mc-form">
-			  <label>Message <textarea class="mc-input" rows="3"></textarea></label>
-			  <fieldset class="mc-fieldset">
-			    <legend>Updates</legend>
-			    <label><input type="radio" name="updates" checked> Weekly</label>
-			    <label><input type="radio" name="updates"> Monthly</label>
-			    <label><input type="checkbox" role="switch" checked> Product news</label>
-			  </fieldset>
-			  <button class="mc-button mc-primary">Send</button>
-			</form>
-			</div>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;form class="mc-form"&gt;
-  &lt;label&gt;Name &lt;input class="mc-input" type="text" placeholder="Ada Lovelace"&gt;&lt;/label&gt;
-  &lt;label&gt;Email &lt;input class="mc-input" type="email" value="ada@example" aria-invalid="true"&gt;&lt;small&gt;Enter a full address.&lt;/small&gt;&lt;/label&gt;
-  &lt;label&gt;Workspace &lt;input class="mc-input" type="text" value="atlas" disabled&gt;&lt;/label&gt;
-  &lt;label&gt;Plan
-    &lt;select class="mc-input"&gt;
-      &lt;option&gt;Personal&lt;/option&gt;
-      &lt;option&gt;Team&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/label&gt;
-  &lt;label&gt;Message &lt;textarea class="mc-input" rows="3"&gt;&lt;/textarea&gt;&lt;/label&gt;
-  &lt;fieldset class="mc-fieldset"&gt;
-    &lt;legend&gt;Updates&lt;/legend&gt;
-    &lt;label&gt;&lt;input type="radio" name="updates" checked&gt; Weekly&lt;/label&gt;
-    &lt;label&gt;&lt;input type="radio" name="updates"&gt; Monthly&lt;/label&gt;
-    &lt;label&gt;&lt;input type="checkbox" role="switch" checked&gt; Product news&lt;/label&gt;
-  &lt;/fieldset&gt;
-  &lt;button class="mc-button mc-primary"&gt;Send&lt;/button&gt;
-&lt;/form&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-<div class="pair">
-	<section id="progress">
-		<h2>Progress</h2>
-		<p>The native <code>progress</code> element, in the accent color. A switch is a checkbox with <code>role="switch"</code>.</p>
-		<div class="mc-group">
-			<p><label>Storage <progress class="mc-progress" max="100" value="64"></progress></label></p>
-			<p><label>Bandwidth <progress class="mc-progress" max="100" value="28"></progress></label></p>
-			<p><label>Seats <progress class="mc-progress" max="100" value="90"></progress></label></p>
-			<p><label><input type="checkbox" role="switch" checked> Notifications</label></p>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;progress class="mc-progress" max="100" value="64"&gt;&lt;/progress&gt;
-&lt;label&gt;&lt;input type="checkbox" role="switch" checked&gt; Notifications&lt;/label&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<section id="popups">
-		<h2>Popups</h2>
-		<p>The browser's own modal dialog. A button opens it, Escape or a click outside closes it, and a form inside closes it on submit. No JavaScript.</p>
-		<div class="mc-group">
-			<div class="stage">
-			<dialog class="mc-popup" open aria-label="Preview">
-			  <form method="dialog">
-			    <h3>Delete this project?</h3>
-			    <p>This can't be undone.</p>
-			    <footer>
-			      <button class="mc-button">Cancel</button>
-			      <button class="mc-button mc-primary mc-danger">Delete</button>
-			    </footer>
-			  </form>
-			</dialog>
-			</div>
-			<button class="mc-button" command="show-modal" commandfor="confirm">Open it for real</button>
-			<dialog class="mc-popup" id="confirm" closedby="any">
-			  <form method="dialog">
-			    <h3>Delete this project?</h3>
-			    <p>This can't be undone.</p>
-			    <footer>
-			      <button class="mc-button">Cancel</button>
-			      <button class="mc-button mc-primary mc-danger">Delete</button>
-			    </footer>
-			  </form>
-			</dialog>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;button class="mc-button" command="show-modal" commandfor="confirm"&gt;Delete project&lt;/button&gt;
-&lt;dialog class="mc-popup" id="confirm" closedby="any"&gt;
-  &lt;form method="dialog"&gt;
-    &lt;h3&gt;Delete this project?&lt;/h3&gt;
-    &lt;p&gt;This can't be undone.&lt;/p&gt;
-    &lt;footer&gt;
-      &lt;button class="mc-button"&gt;Cancel&lt;/button&gt;
-      &lt;button class="mc-button mc-primary mc-danger"&gt;Delete&lt;/button&gt;
-    &lt;/footer&gt;
-  &lt;/form&gt;
-&lt;/dialog&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-</div>
-	<section id="charts">
-		<h2>Charts</h2>
-		<p>The data is the markup. Values are numbers in <code>--value</code> and the browser does the proportions. Colours are tones of the accent, or eight categorical hues with <code>mc-categorical</code>, or yours with <code>--c</code> on a slice, so one thing keeps one colour across charts. A donut slice also needs <code>--from</code>, the sum of the slices before it. Lines are a plain <code>svg</code>. No JavaScript.</p>
-		<div class="cols">
-		<div class="mc-group">
-			<h3>Columns</h3>
-			<ul class="mc-chart mc-columns">
-			  <li style="--value:42"><b>$42k</b><span>May</span></li>
-			  <li style="--value:58"><b>$58k</b><span>Jun</span></li>
-			  <li style="--value:51"><b>$51k</b><span>Jul</span></li>
-			  <li style="--value:74"><b>$74k</b><span>Aug</span></li>
-			  <li style="--value:66"><b>$66k</b><span>Sep</span></li>
-			  <li style="--value:92" aria-current="true"><b>$92k</b><span>Oct</span></li>
-			</ul>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;ul class="mc-chart mc-columns"&gt;
-  &lt;li style="--value:42"&gt;&lt;b&gt;$42k&lt;/b&gt;&lt;span&gt;May&lt;/span&gt;&lt;/li&gt;
-  &lt;li style="--value:58"&gt;&lt;b&gt;$58k&lt;/b&gt;&lt;span&gt;Jun&lt;/span&gt;&lt;/li&gt;
-  &lt;li style="--value:51"&gt;&lt;b&gt;$51k&lt;/b&gt;&lt;span&gt;Jul&lt;/span&gt;&lt;/li&gt;
-  &lt;li style="--value:74"&gt;&lt;b&gt;$74k&lt;/b&gt;&lt;span&gt;Aug&lt;/span&gt;&lt;/li&gt;
-  &lt;li style="--value:66"&gt;&lt;b&gt;$66k&lt;/b&gt;&lt;span&gt;Sep&lt;/span&gt;&lt;/li&gt;
-  &lt;li style="--value:92" aria-current="true"&gt;&lt;b&gt;$92k&lt;/b&gt;&lt;span&gt;Oct&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-			</details>
-		</div>
-		<div class="mc-group">
-			<h3>Line</h3>
-			<figure class="mc-chart mc-line">
-			  <svg viewBox="0 0 100 40" preserveAspectRatio="none" role="img" aria-label="Revenue, March to October">
-			    <polygon points="0,28 14.3,22 28.6,25 42.9,16 57.1,19 71.4,10 85.7,12 100,4 100,40 0,40"/>
-			    <polyline points="0,28 14.3,22 28.6,25 42.9,16 57.1,19 71.4,10 85.7,12 100,4"/>
-			  </svg>
-			  <figcaption><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></figcaption>
-			</figure>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;figure class="mc-chart mc-line"&gt;
-  &lt;svg viewBox="0 0 100 40" preserveAspectRatio="none" role="img" aria-label="Revenue, March to October"&gt;
-    &lt;polygon points="0,28 14.3,22 28.6,25 42.9,16 57.1,19 71.4,10 85.7,12 100,4 100,40 0,40"/&gt;
-    &lt;polyline points="0,28 14.3,22 28.6,25 42.9,16 57.1,19 71.4,10 85.7,12 100,4"/&gt;
-  &lt;/svg&gt;
-  &lt;figcaption&gt;&lt;span&gt;Mar&lt;/span&gt;&lt;span&gt;Apr&lt;/span&gt;&lt;span&gt;May&lt;/span&gt;&lt;span&gt;Jun&lt;/span&gt;&lt;span&gt;Jul&lt;/span&gt;&lt;span&gt;Aug&lt;/span&gt;&lt;span&gt;Sep&lt;/span&gt;&lt;span&gt;Oct&lt;/span&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
-			</details>
-		</div>
-		</div>
-		<div class="cols">
-		<div class="mc-group">
-			<h3>Donut</h3>
-			<figure class="mc-chart mc-donut mc-categorical">
-			  <ul>
-			    <li style="--from:0; --value:38">Billing <b>38%</b></li>
-			    <li style="--from:38; --value:24">Onboarding <b>24%</b></li>
-			    <li style="--from:62; --value:16">Support <b>16%</b></li>
-			    <li style="--from:78; --value:12">Reports <b>12%</b></li>
-			    <li style="--from:90; --value:6">Sync <b>6%</b></li>
-			    <li style="--from:96; --value:4">Cleanup <b>4%</b></li>
-			  </ul>
-			</figure>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;figure class="mc-chart mc-donut mc-categorical"&gt;
-  &lt;ul&gt;
-    &lt;li style="--from:0; --value:38"&gt;Billing &lt;b&gt;38%&lt;/b&gt;&lt;/li&gt;
-    &lt;li style="--from:38; --value:24"&gt;Onboarding &lt;b&gt;24%&lt;/b&gt;&lt;/li&gt;
-    &lt;li style="--from:62; --value:16"&gt;Support &lt;b&gt;16%&lt;/b&gt;&lt;/li&gt;
-    &lt;li style="--from:78; --value:12"&gt;Reports &lt;b&gt;12%&lt;/b&gt;&lt;/li&gt;
-    &lt;li style="--from:90; --value:6"&gt;Sync &lt;b&gt;6%&lt;/b&gt;&lt;/li&gt;
-    &lt;li style="--from:96; --value:4"&gt;Cleanup &lt;b&gt;4%&lt;/b&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/figure&gt;</code></pre>
-			</details>
-		</div>
-		<div class="mc-group">
-			<h3>Pie</h3>
-			<figure class="mc-chart mc-pie mc-categorical">
-			  <ul>
-			    <li style="--from:0; --value:38">Billing <b>38%</b></li>
-			    <li style="--from:38; --value:24">Onboarding <b>24%</b></li>
-			    <li style="--from:62; --value:16">Support <b>16%</b></li>
-			    <li style="--from:78; --value:12">Reports <b>12%</b></li>
-			    <li style="--from:90; --value:6">Sync <b>6%</b></li>
-			    <li style="--from:96; --value:4">Cleanup <b>4%</b></li>
-			  </ul>
-			</figure>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;figure class="mc-chart mc-pie mc-categorical"&gt;
-  &lt;ul&gt;
-    &lt;li style="--from:0; --value:38"&gt;Billing &lt;b&gt;38%&lt;/b&gt;&lt;/li&gt;
-    &lt;li style="--from:38; --value:24"&gt;Onboarding &lt;b&gt;24%&lt;/b&gt;&lt;/li&gt;
-    &lt;li style="--from:62; --value:16"&gt;Support &lt;b&gt;16%&lt;/b&gt;&lt;/li&gt;
-    &lt;li style="--from:78; --value:12"&gt;Reports &lt;b&gt;12%&lt;/b&gt;&lt;/li&gt;
-    &lt;li style="--from:90; --value:6"&gt;Sync &lt;b&gt;6%&lt;/b&gt;&lt;/li&gt;
-    &lt;li style="--from:96; --value:4"&gt;Cleanup &lt;b&gt;4%&lt;/b&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/figure&gt;</code></pre>
-			</details>
-		</div>
-		</div>
-		<div class="cols">
-		<div class="mc-group">
-			<h3>Split</h3>
-			<ul class="mc-chart mc-split">
-			  <li style="--value:46"><b>46%</b> Direct</li>
-			  <li style="--value:28"><b>28%</b> Search</li>
-			  <li style="--value:16"><b>16%</b> Referral</li>
-			  <li style="--value:10"><b>10%</b> Social</li>
-			</ul>
-			<ul class="mc-chart mc-split">
-			  <li style="--value:62"><b>62 GB</b> Projects</li>
-			  <li style="--value:24"><b>24 GB</b> Media</li>
-			  <li style="--value:14"><b>14 GB</b> Other</li>
-			</ul>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;ul class="mc-chart mc-split"&gt;
-  &lt;li style="--value:46"&gt;&lt;b&gt;46%&lt;/b&gt; Direct&lt;/li&gt;
-  &lt;li style="--value:28"&gt;&lt;b&gt;28%&lt;/b&gt; Search&lt;/li&gt;
-  &lt;li style="--value:16"&gt;&lt;b&gt;16%&lt;/b&gt; Referral&lt;/li&gt;
-  &lt;li style="--value:10"&gt;&lt;b&gt;10%&lt;/b&gt; Social&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="mc-chart mc-split"&gt;
-  &lt;li style="--value:62"&gt;&lt;b&gt;62 GB&lt;/b&gt; Projects&lt;/li&gt;
-  &lt;li style="--value:24"&gt;&lt;b&gt;24 GB&lt;/b&gt; Media&lt;/li&gt;
-  &lt;li style="--value:14"&gt;&lt;b&gt;14 GB&lt;/b&gt; Other&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-			</details>
-		</div>
-		</div>
-	</section>
-
-
-	<div class="chapter">
-		<h2>Data</h2>
-		<p>Tables, lists and trees are the same row in three arrangements.</p>
-	</div>
-
-	<section id="tables">
-		<h2>Tables</h2>
-		<p>A header, rows and a caption. Nothing else.</p>
-		<div class="mc-group">
-			<table class="mc-table">
-			  <caption>The team, as of this quarter.</caption>
-			  <thead>
-			    <tr>
-			      <th scope="col">Name</th>
-			      <th scope="col">Role</th>
-			      <th scope="col">Status</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <td>Alex Morgan</td>
-			      <td>Designer</td>
-			      <td data-status="ok">Active</td>
-			    </tr>
-			    <tr>
-			      <td>Jamie Lee</td>
-			      <td>Developer</td>
-			      <td data-status="warn">Pending</td>
-			    </tr>
-			    <tr>
-			      <td>Sam Rivera</td>
-			      <td>Writer</td>
-			      <td data-status="ok">Active</td>
-			    </tr>
-			  </tbody>
-			</table>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;table class="mc-table"&gt;
-  &lt;caption&gt;The team, as of this quarter.&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope="col"&gt;Name&lt;/th&gt;
-      &lt;th scope="col"&gt;Role&lt;/th&gt;
-      &lt;th scope="col"&gt;Status&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Alex Morgan&lt;/td&gt;
-      &lt;td&gt;Designer&lt;/td&gt;
-      &lt;td data-status="ok"&gt;Active&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Jamie Lee&lt;/td&gt;
-      &lt;td&gt;Developer&lt;/td&gt;
-      &lt;td data-status="warn"&gt;Pending&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Sam Rivera&lt;/td&gt;
-      &lt;td&gt;Writer&lt;/td&gt;
-      &lt;td data-status="ok"&gt;Active&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<section id="lists">
-		<h2>Lists</h2>
-		<p>Nested lists indent at any depth. Put the class on the outer list only.</p>
-		<div class="cols">
-		<div class="mc-group">
-			<h3 id="list">List</h3>
+		<p>One page for each. The overview uses all of them together.</p>
+		<div class="index">
+			<a class="mc-button mc-primary" href="overview/">Overview</a>
+			<h3>Components</h3>
 			<ul class="mc-list">
-			  <li>Fruit
-			    <ul>
-			      <li>Citrus
-			        <ul>
-			          <li>Lemon</li>
-			          <li>Orange</li>
-			        </ul>
-			      </li>
-			      <li>Berries</li>
-			    </ul>
-			  </li>
-			  <li>Vegetables</li>
+				<li><a href="dashboard/">Dashboard</a></li>
+				<li><a href="navbar/">Navbar</a></li>
+				<li><a href="sidebar/">Sidebar</a></li>
+				<li><a href="breadcrumb/">Breadcrumb</a></li>
+				<li><a href="toolbar/">Toolbar</a></li>
+				<li><a href="menu/">Menu</a></li>
+				<li><a href="tabs/">Tabs</a></li>
+				<li><a href="daterange/">Date range</a></li>
+				<li><a href="button/">Button</a></li>
+				<li><a href="input/">Input</a></li>
+				<li><a href="form/">Form</a></li>
+				<li><a href="fieldset/">Fieldset</a></li>
+				<li><a href="group/">Group</a></li>
+				<li><a href="popup/">Popup</a></li>
+				<li><a href="alert/">Alert</a></li>
+				<li><a href="pill/">Pill</a></li>
+				<li><a href="progress/">Progress</a></li>
+				<li><a href="stats/">Stats</a></li>
+				<li><a href="chart/">Chart</a></li>
 			</ul>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;ul class="mc-list"&gt;
-  &lt;li&gt;Fruit
-    &lt;ul&gt;
-      &lt;li&gt;Citrus
-        &lt;ul&gt;
-          &lt;li&gt;Lemon&lt;/li&gt;
-          &lt;li&gt;Orange&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Berries&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Vegetables&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-			</details>
-		</div>
-		<div class="mc-group">
-			<h3 id="numbered-list">Numbered list</h3>
-			<ol class="mc-list">
-			  <li>Fruit
-			    <ol>
-			      <li>Citrus
-			        <ol>
-			          <li>Lemon</li>
-			          <li>Orange</li>
-			        </ol>
-			      </li>
-			      <li>Berries</li>
-			    </ol>
-			  </li>
-			  <li>Vegetables</li>
-			</ol>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;ol class="mc-list"&gt;
-  &lt;li&gt;Fruit
-    &lt;ol&gt;
-      &lt;li&gt;Citrus
-        &lt;ol&gt;
-          &lt;li&gt;Lemon&lt;/li&gt;
-          &lt;li&gt;Orange&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Berries&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Vegetables&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
-			</details>
-		</div>
-		</div>
-	</section>
-
-	<section id="trees">
-		<h2>Trees</h2>
-		<p>Folders are details, files are list items. Rows run the full width, indent one chevron per level, and a current row takes the accent tint. The browser handles opening and closing.</p>
-		<div class="mc-group">
-			<ul class="mc-tree">
-			  <li>
-			    <details open>
-			      <summary>src</summary>
-			      <ul>
-			        <li>
-			          <details open>
-			            <summary>components</summary>
-			            <ul>
-			              <li>table.css</li>
-			              <li aria-current="true">list.css</li>
-			              <li>tree.css</li>
-			              <li aria-disabled="true">legacy.css</li>
-			            </ul>
-			          </details>
-			        </li>
-			        <li>
-			          <details>
-			            <summary>docs</summary>
-			            <ul>
-			              <li>index.html</li>
-			            </ul>
-			          </details>
-			        </li>
-			        <li>levi.css</li>
-			      </ul>
-			    </details>
-			  </li>
-			  <li>README.md</li>
+			<h3>Data</h3>
+			<ul class="mc-list">
+				<li><a href="table/">Table</a></li>
+				<li><a href="expandable-table/">Expandable table</a></li>
+				<li><a href="list/">List</a></li>
+				<li><a href="tree/">Tree</a></li>
 			</ul>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;ul class="mc-tree"&gt;
-  &lt;li&gt;
-    &lt;details open&gt;
-      &lt;summary&gt;src&lt;/summary&gt;
-      &lt;ul&gt;
-        &lt;li&gt;
-          &lt;details open&gt;
-            &lt;summary&gt;components&lt;/summary&gt;
-            &lt;ul&gt;
-              &lt;li&gt;table.css&lt;/li&gt;
-              &lt;li aria-current="true"&gt;list.css&lt;/li&gt;
-              &lt;li&gt;tree.css&lt;/li&gt;
-              &lt;li aria-disabled="true"&gt;legacy.css&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/details&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;details&gt;
-            &lt;summary&gt;docs&lt;/summary&gt;
-            &lt;ul&gt;
-              &lt;li&gt;index.html&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/details&gt;
-        &lt;/li&gt;
-        &lt;li&gt;levi.css&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/details&gt;
-  &lt;/li&gt;
-  &lt;li&gt;README.md&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<section id="expandable-tables">
-		<h2>Expandable tables</h2>
-		<p>A real table whose rows open. Add <code>mc-expandable</code>, give each group its own <code>tbody</code>, and put a checkbox in the first row. The rows below it appear when it is checked. No JavaScript.</p>
-		<div class="mc-group">
-			<table class="mc-table mc-expandable">
-			  <thead>
-			    <tr><th>Name</th><th>Owner</th><th>Status</th><th>Budget</th></tr>
-			  </thead>
-			  <tbody>
-			    <tr><td><label><input type="checkbox" checked aria-label="Expand"> Atlas</label></td><td>Ada Lovelace</td><td data-status="ok">Active</td><td>$48,200</td></tr>
-			    <tr><td>Web app</td><td>Sam Rivera</td><td data-status="ok">Active</td><td>$31,000</td></tr>
-			    <tr><td>Mobile app</td><td>Priya Nair</td><td data-status="warn">Delayed</td><td>$17,200</td></tr>
-			  </tbody>
-			  <tbody>
-			    <tr><td><label><input type="checkbox" aria-label="Expand"> Orion</label></td><td>Chen Wei</td><td data-status="warn">Review</td><td>$22,500</td></tr>
-			    <tr><td>Website</td><td>Chen Wei</td><td data-status="ok">Active</td><td>$9,500</td></tr>
-			    <tr><td>Billing</td><td>Jamie Lee</td><td data-status="danger">Blocked</td><td>$13,000</td></tr>
-			  </tbody>
-			  <tbody>
-			    <tr><td><label><input type="checkbox" aria-label="Expand"> Nova</label></td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
-			    <tr><td>Dashboard</td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
-			  </tbody>
-			  <tbody>
-			    <tr><td>Archive</td><td>Jamie Lee</td><td>Closed</td><td>$0</td></tr>
-			  </tbody>
-			</table>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;table class="mc-table mc-expandable"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Owner&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Budget&lt;/th&gt;&lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;td&gt;&lt;label&gt;&lt;input type="checkbox" checked aria-label="Expand"&gt; Atlas&lt;/label&gt;&lt;/td&gt;&lt;td&gt;Ada Lovelace&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$48,200&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Web app&lt;/td&gt;&lt;td&gt;Sam Rivera&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$31,000&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Mobile app&lt;/td&gt;&lt;td&gt;Priya Nair&lt;/td&gt;&lt;td data-status="warn"&gt;Delayed&lt;/td&gt;&lt;td&gt;$17,200&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;td&gt;&lt;label&gt;&lt;input type="checkbox" aria-label="Expand"&gt; Orion&lt;/label&gt;&lt;/td&gt;&lt;td&gt;Chen Wei&lt;/td&gt;&lt;td data-status="warn"&gt;Review&lt;/td&gt;&lt;td&gt;$22,500&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Website&lt;/td&gt;&lt;td&gt;Chen Wei&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$9,500&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Billing&lt;/td&gt;&lt;td&gt;Jamie Lee&lt;/td&gt;&lt;td data-status="danger"&gt;Blocked&lt;/td&gt;&lt;td&gt;$13,000&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;td&gt;&lt;label&gt;&lt;input type="checkbox" aria-label="Expand"&gt; Nova&lt;/label&gt;&lt;/td&gt;&lt;td&gt;Alex Morgan&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$8,400&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Dashboard&lt;/td&gt;&lt;td&gt;Alex Morgan&lt;/td&gt;&lt;td data-status="ok"&gt;Active&lt;/td&gt;&lt;td&gt;$8,400&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;td&gt;Archive&lt;/td&gt;&lt;td&gt;Jamie Lee&lt;/td&gt;&lt;td&gt;Closed&lt;/td&gt;&lt;td&gt;$0&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<section id="density">
-		<h2>Density</h2>
-		<p>Add <code>mc-compact</code> or <code>mc-comfortable</code> to a tree. Rows, spacing and indentation follow.</p>
-		<div class="cols">
-		<div class="mc-group">
-			<h3>mc-compact</h3>
-			<ul class="mc-tree mc-compact">
-			  <li>
-			    <details open>
-			      <summary>src</summary>
-			      <ul>
-			        <li aria-current="true">main.css</li>
-			        <li>index.html</li>
-			      </ul>
-			    </details>
-			  </li>
-			  <li>README.md</li>
+			<h3>System</h3>
+			<ul class="mc-list">
+				<li><a href="theme/">Theme</a></li>
 			</ul>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;ul class="mc-tree mc-compact"&gt;
-  &lt;li&gt;
-    &lt;details open&gt;
-      &lt;summary&gt;src&lt;/summary&gt;
-      &lt;ul&gt;
-        &lt;li aria-current="true"&gt;main.css&lt;/li&gt;
-        &lt;li&gt;index.html&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/details&gt;
-  &lt;/li&gt;
-  &lt;li&gt;README.md&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-			</details>
-		</div>
-		<div class="mc-group">
-			<h3>Default</h3>
-			<ul class="mc-tree">
-			  <li>
-			    <details open>
-			      <summary>src</summary>
-			      <ul>
-			        <li aria-current="true">main.css</li>
-			        <li>index.html</li>
-			      </ul>
-			    </details>
-			  </li>
-			  <li>README.md</li>
-			</ul>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;ul class="mc-tree"&gt;
-  &lt;li&gt;
-    &lt;details open&gt;
-      &lt;summary&gt;src&lt;/summary&gt;
-      &lt;ul&gt;
-        &lt;li aria-current="true"&gt;main.css&lt;/li&gt;
-        &lt;li&gt;index.html&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/details&gt;
-  &lt;/li&gt;
-  &lt;li&gt;README.md&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-			</details>
-		</div>
-		<div class="mc-group">
-			<h3>mc-comfortable</h3>
-			<ul class="mc-tree mc-comfortable">
-			  <li>
-			    <details open>
-			      <summary>src</summary>
-			      <ul>
-			        <li aria-current="true">main.css</li>
-			        <li>index.html</li>
-			      </ul>
-			    </details>
-			  </li>
-			  <li>README.md</li>
-			</ul>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;ul class="mc-tree mc-comfortable"&gt;
-  &lt;li&gt;
-    &lt;details open&gt;
-      &lt;summary&gt;src&lt;/summary&gt;
-      &lt;ul&gt;
-        &lt;li aria-current="true"&gt;main.css&lt;/li&gt;
-        &lt;li&gt;index.html&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/details&gt;
-  &lt;/li&gt;
-  &lt;li&gt;README.md&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-			</details>
-		</div>
-		</div>
-	</section>
-
-	<div class="chapter">
-		<h2>System</h2>
-		<p>Layout, theming and the reasoning behind both.</p>
-	</div>
-
-	<section id="sidebar">
-		<h2>Sidebar</h2>
-		<p>You are looking at it. It is a <code>details</code>, so the browser collapses it. Nest a tree inside and it becomes a file explorer.</p>
-		<div class="mc-group">
-			<div class="frame"><iframe src="workspace.html" title="A files workspace"></iframe></div>
-			<a class="mc-button" href="workspace.html">Open the workspace</a>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;aside class="mc-sidebar"&gt;
-  &lt;details open&gt;
-    &lt;summary&gt;&lt;span&gt;Atlas&lt;/span&gt;&lt;/summary&gt;
-    &lt;nav&gt;
-      &lt;ul class="mc-list"&gt;
-        &lt;li&gt;&lt;a href="#buttons"&gt;Buttons&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-  &lt;/details&gt;
-&lt;/aside&gt;
-
-&lt;main&gt;...&lt;/main&gt;</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<section id="theming" class="showcase">
-		<h2>Theming</h2>
-		<p>Three accents ship with Levi: crimson by default, navy and emerald. Add a class to <code>mc-theme</code>, or to any container. Everything else is a variable.</p>
-		<div class="mc-group quiet">
-			<div class="specimens">
-			<div class="specimen mc-light mc-crimson">
-			  <h3>Crimson</h3>
-			  <p><a href="#">A link in the accent</a></p>
-			  <div class="row">
-			    <button class="mc-button mc-primary">Save</button>
-			    <button class="mc-button">Cancel</button>
-			  </div>
-			  <progress class="mc-progress" max="100" value="72" aria-label="Crimson"></progress>
-			  <label><input type="checkbox" role="switch" checked> Notifications</label>
-			</div>
-			<div class="specimen mc-light mc-navy">
-			  <h3>Navy</h3>
-			  <p><a href="#">A link in the accent</a></p>
-			  <div class="row">
-			    <button class="mc-button mc-primary">Save</button>
-			    <button class="mc-button">Cancel</button>
-			  </div>
-			  <progress class="mc-progress" max="100" value="48" aria-label="Navy"></progress>
-			  <label><input type="checkbox" role="switch" checked> Notifications</label>
-			</div>
-			<div class="specimen mc-light mc-emerald">
-			  <h3>Emerald</h3>
-			  <p><a href="#">A link in the accent</a></p>
-			  <div class="row">
-			    <button class="mc-button mc-primary">Save</button>
-			    <button class="mc-button">Cancel</button>
-			  </div>
-			  <progress class="mc-progress" max="100" value="86" aria-label="Emerald"></progress>
-			  <label><input type="checkbox" role="switch" checked> Notifications</label>
-			</div>
-			</div>
-			<details>
-				<summary>Show code</summary>
-<pre><code>&lt;body class="mc-theme mc-emerald"&gt;
-
-.mc-theme{
-  --mc-accent: rebeccapurple;
-}</code></pre>
-			</details>
-		</div>
-	</section>
-
-	<section id="schemes">
-		<h2>Light and dark</h2>
-		<p>Both come from the same tokens and follow the system on their own. Force either one with a class.</p>
-		<div class="cols">
-			<div class="mc-group mc-light pane">
-				<h3>mc-light</h3>
-				<input class="mc-input" placeholder="Search" aria-label="Search">
-				<div class="row"><button class="mc-button mc-primary">Save</button><button class="mc-button">Cancel</button></div>
-			</div>
-			<div class="mc-group mc-dark pane">
-				<h3>mc-dark</h3>
-				<input class="mc-input" placeholder="Search" aria-label="Search">
-				<div class="row"><button class="mc-button mc-primary">Save</button><button class="mc-button">Cancel</button></div>
-			</div>
 		</div>
 	</section>
 
@@ -1152,11 +192,11 @@
 &lt;body class="mc-theme"&gt;</code></pre>
 		<div class="row">
 			<a class="mc-button mc-primary" href="dashboard.html">Open the dashboard</a>
-			<a class="mc-button" href="#buttons">Browse components</a>
+			<a class="mc-button" href="#components">Browse components</a>
 		</div>
 		<p>About 1100 lines of CSS, no JavaScript, no dependencies.</p>
 	</footer>
-	</main>
+</main>
 
 </body>
 </html>

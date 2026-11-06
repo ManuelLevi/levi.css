@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="overview.css">
+	<link rel="icon" href="data:,">
+	<title>Overview · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+<header class="mc-navbar">
+	<strong>Atlas</strong>
+	<form>
+		<label>Acting as
+			<select class="mc-input"><option>Ada Lovelace</option><option>Sam Rivera</option><option>Priya Nair</option></select>
+		</label>
+	</form>
+</header>
+
+<aside class="mc-sidebar">
+	<details open>
+		<summary><span>Menu</span></summary>
+		<nav>
+			<ul class="mc-list">
+				<li><a href="#overview" aria-current="page">Overview</a></li>
+				<li><a href="#work">Work</a></li>
+				<li><a href="#charts">Charts</a></li>
+				<li><a href="#settings">Settings</a></li>
+				<li><a href="../">All components</a></li>
+			</ul>
+		</nav>
+	</details>
+</aside>
+
+<main class="mc-dashboard">
+	<header>
+		<nav class="mc-breadcrumb" aria-label="Breadcrumb">
+			<ol><li><a href="#">Projects</a></li><li><a href="#">Atlas</a></li><li aria-current="page">Overview</li></ol>
+		</nav>
+		<div>
+			<h1>Overview</h1>
+			<menu class="mc-toolbar">
+				<li><input class="mc-input" type="search" placeholder="Search" aria-label="Search"></li>
+				<li><button class="mc-button" popovertarget="actions">Actions</button></li>
+				<li><button class="mc-button mc-primary" command="show-modal" commandfor="invite">Invite</button></li>
+			</menu>
+		</div>
+	</header>
+
+	<div class="mc-menu" id="actions" popover>
+		<ul class="mc-list"><li><a href="#">Rename</a></li><li><a href="#">Duplicate</a></li><li><a href="#">Archive</a></li></ul>
+	</div>
+
+	<p class="mc-alert" role="status" data-status="ok">Changes saved.</p>
+	<p class="mc-alert" role="alert" data-status="danger">The payment failed.</p>
+
+	<dl id="overview" class="mc-stats">
+		<div><dt>Revenue</dt><dd>$48,200<small data-trend="up">12% this month</small></dd></div>
+		<div><dt>Active users</dt><dd>2,431<small data-trend="up">4.1%</small></dd></div>
+		<div><dt>Conversion</dt><dd>3.8%<small data-trend="down">0.3 pts</small></dd></div>
+		<div data-status="danger"><dt>Open issues</dt><dd><a href="#">17</a><small>3 overdue</small></dd></div>
+	</dl>
+
+	<div id="work" class="mc-tabs">
+		<nav>
+			<label><input type="radio" name="work" checked> Activity</label>
+			<label><input type="radio" name="work"> Projects</label>
+			<label><input type="radio" name="work"> Files</label>
+		</nav>
+		<div class="mc-daterange" role="group" aria-label="Date range">
+			<label>From <input type="date" value="2026-10-01"></label>
+			<label>To <input type="date" value="2026-10-31"></label>
+		</div>
+		<section>
+				<table class="mc-table">
+				  <thead><tr><th scope="col">Name</th><th scope="col">Action</th><th scope="col">Progress</th><th scope="col">Status</th></tr></thead>
+				  <tbody>
+				    <tr><td>Alex Morgan</td><td>Published the pricing page</td><td><progress class="mc-progress" max="100" value="100" aria-label="Progress"></progress></td><td data-status="ok">Done</td></tr>
+				    <tr><td>Jamie Lee</td><td>Opened an issue on billing</td><td><progress class="mc-progress" max="100" value="35" aria-label="Progress"></progress></td><td data-status="danger">Open</td></tr>
+				    <tr><td>Sam Rivera</td><td>Invited two teammates</td><td><progress class="mc-progress" max="100" value="60" aria-label="Progress"></progress></td><td data-status="warn">Pending</td></tr>
+				    <tr><td>Priya Nair</td><td>Updated the onboarding flow</td><td><progress class="mc-progress" max="100" value="100" aria-label="Progress"></progress></td><td data-status="ok">Done</td></tr>
+				  </tbody>
+				</table>
+		</section>
+		<section>
+				<table class="mc-table mc-expandable">
+							  <thead>
+							    <tr><th>Name</th><th>Owner</th><th>Status</th><th>Budget</th></tr>
+							  </thead>
+							  <tbody>
+							    <tr><td><label><input type="checkbox" checked aria-label="Expand"> Atlas</label></td><td>Ada Lovelace</td><td data-status="ok">Active</td><td>$48,200</td></tr>
+							    <tr><td>Web app</td><td>Sam Rivera</td><td data-status="ok">Active</td><td>$31,000</td></tr>
+							    <tr><td>Mobile app</td><td>Priya Nair</td><td data-status="warn">Delayed</td><td>$17,200</td></tr>
+							  </tbody>
+							  <tbody>
+							    <tr><td><label><input type="checkbox" aria-label="Expand"> Orion</label></td><td>Chen Wei</td><td data-status="warn">Review</td><td>$22,500</td></tr>
+							    <tr><td>Website</td><td>Chen Wei</td><td data-status="ok">Active</td><td>$9,500</td></tr>
+							    <tr><td>Billing</td><td>Jamie Lee</td><td data-status="danger">Blocked</td><td>$13,000</td></tr>
+							  </tbody>
+							  <tbody>
+							    <tr><td><label><input type="checkbox" aria-label="Expand"> Nova</label></td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
+							    <tr><td>Dashboard</td><td>Alex Morgan</td><td data-status="ok">Active</td><td>$8,400</td></tr>
+							  </tbody>
+							  <tbody>
+							    <tr><td>Archive</td><td>Jamie Lee</td><td>Closed</td><td>$0</td></tr>
+							  </tbody>
+							</table>
+		</section>
+		<section>
+			<div class="cols">
+				<fieldset class="mc-fieldset">
+					<legend>Tree</legend>
+					<ul class="mc-tree">
+					  <li><details open><summary>Atlas</summary><ul><li>Web app</li><li>Mobile app</li></ul></details></li>
+					  <li><details><summary>Orion</summary><ul><li>Website</li></ul></details></li>
+					  <li><details><summary>Nova</summary><ul><li>Dashboard</li><li>Billing</li></ul></details></li>
+					</ul>
+				</fieldset>
+				<fieldset class="mc-fieldset">
+					<legend>Recent</legend>
+					<ul class="mc-list">
+					  <li><a href="#">Pricing page</a></li>
+					  <li><a href="#">Q4 budget</a></li>
+					  <li><a href="#">Onboarding flow</a></li>
+					</ul>
+				</fieldset>
+			</div>
+		</section>
+	</div>
+
+	<section id="charts">
+		<h2>Charts</h2>
+		<div class="cols">
+			<fieldset class="mc-fieldset">
+				<legend>Revenue</legend>
+				<ul class="mc-chart mc-columns">
+				  <li style="--value:42"><b>$42k</b><span>May</span></li>
+				  <li style="--value:58"><b>$58k</b><span>Jun</span></li>
+				  <li style="--value:51"><b>$51k</b><span>Jul</span></li>
+				  <li style="--value:74"><b>$74k</b><span>Aug</span></li>
+				  <li style="--value:66"><b>$66k</b><span>Sep</span></li>
+				  <li style="--value:92" aria-current="true"><b>$92k</b><span>Oct</span></li>
+				</ul>
+			</fieldset>
+			<fieldset class="mc-fieldset">
+				<legend>Trend</legend>
+				<figure class="mc-chart mc-line">
+				  <svg viewBox="0 0 100 40" preserveAspectRatio="none" role="img" aria-label="Revenue, March to October">
+				    <polygon points="0,28 14.3,22 28.6,25 42.9,16 57.1,19 71.4,10 85.7,12 100,4 100,40 0,40"/>
+				    <polyline points="0,28 14.3,22 28.6,25 42.9,16 57.1,19 71.4,10 85.7,12 100,4"/>
+				  </svg>
+				  <figcaption><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></figcaption>
+				</figure>
+			</fieldset>
+		</div>
+		<div class="cols">
+			<fieldset class="mc-fieldset">
+				<legend>Sources</legend>
+				<figure class="mc-chart mc-donut mc-categorical">
+				  <ul>
+				    <li style="--from:0; --value:38">Billing <b>38%</b></li>
+				    <li style="--from:38; --value:24">Onboarding <b>24%</b></li>
+				    <li style="--from:62; --value:16">Support <b>16%</b></li>
+				    <li style="--from:78; --value:12">Reports <b>12%</b></li>
+				    <li style="--from:90; --value:6">Sync <b>6%</b></li>
+				    <li style="--from:96; --value:4">Cleanup <b>4%</b></li>
+				  </ul>
+				</figure>
+			</fieldset>
+			<fieldset class="mc-fieldset">
+				<legend>Plans</legend>
+				<figure class="mc-chart mc-pie mc-categorical">
+				  <ul>
+				    <li style="--from:0; --value:38">Billing <b>38%</b></li>
+				    <li style="--from:38; --value:24">Onboarding <b>24%</b></li>
+				    <li style="--from:62; --value:16">Support <b>16%</b></li>
+				    <li style="--from:78; --value:12">Reports <b>12%</b></li>
+				    <li style="--from:90; --value:6">Sync <b>6%</b></li>
+				    <li style="--from:96; --value:4">Cleanup <b>4%</b></li>
+				  </ul>
+				</figure>
+			</fieldset>
+		</div>
+		<div class="cols">
+			<fieldset class="mc-fieldset">
+				<legend>Channels</legend>
+				<ul class="mc-chart mc-split">
+				  <li style="--value:62"><b>62 GB</b> Projects</li>
+				  <li style="--value:24"><b>24 GB</b> Media</li>
+				  <li style="--value:14"><b>14 GB</b> Other</li>
+				</ul>
+			</fieldset>
+			<fieldset class="mc-fieldset">
+				<legend>Services</legend>
+				<p><span class="mc-pill" data-status="ok">API</span> <span class="mc-pill" data-status="ok">Web</span> <span class="mc-pill" data-status="warn">Search</span> <a class="mc-pill" href="#" data-status="danger">Payments</a> <span class="mc-pill">Idle</span></p>
+				<progress class="mc-progress" max="100" value="72" aria-label="Storage used"></progress>
+			</fieldset>
+		</div>
+	</section>
+
+	<section id="settings">
+		<h2>Settings</h2>
+		<div class="mc-group">
+			<form class="mc-form">
+			  <label>Workspace name <input class="mc-input" type="text" value="Atlas"></label>
+			  <label>Plan <select class="mc-input"><option>Team</option><option>Personal</option></select></label>
+			  <label>Notes <textarea class="mc-input" rows="2"></textarea></label>
+			  <fieldset class="mc-fieldset">
+			    <legend>Notifications</legend>
+			    <label><input type="radio" name="notify" checked> Email</label>
+			    <label><input type="radio" name="notify"> Never</label>
+			    <label><input type="checkbox" role="switch" checked> Weekly summary</label>
+			  </fieldset>
+			  <div class="row"><button class="mc-button mc-primary">Save changes</button><button class="mc-button" type="button">Cancel</button></div>
+			</form>
+		</div>
+	</section>
+</main>
+
+<dialog class="mc-popup" id="invite" closedby="any">
+	<form method="dialog" class="mc-form">
+		<h3>Invite a teammate</h3>
+		<label>Email <input class="mc-input" type="email" placeholder="name@company.com"></label>
+		<footer>
+			<button class="mc-button">Cancel</button>
+			<button class="mc-button mc-primary">Send invite</button>
+		</footer>
+	</form>
+</dialog>
+
+</body>
+</html>

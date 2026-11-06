@@ -7,7 +7,7 @@ CSS for the HTML you already write. One stylesheet, no JavaScript, no build step
 <body class="mc-theme">
 ```
 
-Open `index.html` for the components, and `dashboard.html` for a full application page.
+Open `index.html` to start, `overview/` for every component on one page, and one folder per component (`progress/`, `table/`, `tabs/`) for its documentation.
 
 ## A note on activity
 

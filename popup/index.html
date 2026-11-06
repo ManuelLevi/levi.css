@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Popup · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-list">
+					<li class="group">Start</li>
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li class="group">Components</li>
+					<li><a href="../dashboard/">Dashboard</a></li>
+					<li><a href="../navbar/">Navbar</a></li>
+					<li><a href="../sidebar/">Sidebar</a></li>
+					<li><a href="../breadcrumb/">Breadcrumb</a></li>
+					<li><a href="../toolbar/">Toolbar</a></li>
+					<li><a href="../menu/">Menu</a></li>
+					<li><a href="../tabs/">Tabs</a></li>
+					<li><a href="../daterange/">Date range</a></li>
+					<li><a href="../button/">Button</a></li>
+					<li><a href="../input/">Input</a></li>
+					<li><a href="../form/">Form</a></li>
+					<li><a href="../fieldset/">Fieldset</a></li>
+					<li><a href="../group/">Group</a></li>
+					<li><a href="../popup/" aria-current="page">Popup</a></li>
+					<li><a href="../alert/">Alert</a></li>
+					<li><a href="../pill/">Pill</a></li>
+					<li><a href="../progress/">Progress</a></li>
+					<li><a href="../stats/">Stats</a></li>
+					<li><a href="../chart/">Chart</a></li>
+					<li class="group">Data</li>
+					<li><a href="../table/">Table</a></li>
+					<li><a href="../expandable-table/">Expandable table</a></li>
+					<li><a href="../list/">List</a></li>
+					<li><a href="../tree/">Tree</a></li>
+					<li class="group">System</li>
+					<li><a href="../theme/">Theme</a></li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="popups">
+		<h1>Popups</h1>
+		<p>The browser's own modal dialog. A button opens it, Escape or a click outside closes it, and a form inside closes it on submit. No JavaScript.</p>
+		<div class="mc-group">
+			<div class="stage">
+			<dialog class="mc-popup" open aria-label="Preview">
+			  <form method="dialog">
+			    <h3>Delete this project?</h3>
+			    <p>This can't be undone.</p>
+			    <footer>
+			      <button class="mc-button">Cancel</button>
+			      <button class="mc-button mc-primary mc-danger">Delete</button>
+			    </footer>
+			  </form>
+			</dialog>
+			</div>
+			<button class="mc-button" command="show-modal" commandfor="confirm">Open it for real</button>
+			<dialog class="mc-popup" id="confirm" closedby="any">
+			  <form method="dialog">
+			    <h3>Delete this project?</h3>
+			    <p>This can't be undone.</p>
+			    <footer>
+			      <button class="mc-button">Cancel</button>
+			      <button class="mc-button mc-primary mc-danger">Delete</button>
+			    </footer>
+			  </form>
+			</dialog>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;button class="mc-button" command="show-modal" commandfor="confirm"&gt;Delete project&lt;/button&gt;
+&lt;dialog class="mc-popup" id="confirm" closedby="any"&gt;
+  &lt;form method="dialog"&gt;
+    &lt;h3&gt;Delete this project?&lt;/h3&gt;
+    &lt;p&gt;This can't be undone.&lt;/p&gt;
+    &lt;footer&gt;
+      &lt;button class="mc-button"&gt;Cancel&lt;/button&gt;
+      &lt;button class="mc-button mc-primary mc-danger"&gt;Delete&lt;/button&gt;
+    &lt;/footer&gt;
+  &lt;/form&gt;
+&lt;/dialog&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+</main>
+
+</body>
+</html>

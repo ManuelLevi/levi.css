@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Tree · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-list">
+					<li class="group">Start</li>
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li class="group">Components</li>
+					<li><a href="../dashboard/">Dashboard</a></li>
+					<li><a href="../navbar/">Navbar</a></li>
+					<li><a href="../sidebar/">Sidebar</a></li>
+					<li><a href="../breadcrumb/">Breadcrumb</a></li>
+					<li><a href="../toolbar/">Toolbar</a></li>
+					<li><a href="../menu/">Menu</a></li>
+					<li><a href="../tabs/">Tabs</a></li>
+					<li><a href="../daterange/">Date range</a></li>
+					<li><a href="../button/">Button</a></li>
+					<li><a href="../input/">Input</a></li>
+					<li><a href="../form/">Form</a></li>
+					<li><a href="../fieldset/">Fieldset</a></li>
+					<li><a href="../group/">Group</a></li>
+					<li><a href="../popup/">Popup</a></li>
+					<li><a href="../alert/">Alert</a></li>
+					<li><a href="../pill/">Pill</a></li>
+					<li><a href="../progress/">Progress</a></li>
+					<li><a href="../stats/">Stats</a></li>
+					<li><a href="../chart/">Chart</a></li>
+					<li class="group">Data</li>
+					<li><a href="../table/">Table</a></li>
+					<li><a href="../expandable-table/">Expandable table</a></li>
+					<li><a href="../list/">List</a></li>
+					<li><a href="../tree/" aria-current="page">Tree</a></li>
+					<li class="group">System</li>
+					<li><a href="../theme/">Theme</a></li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="trees">
+		<h1>Trees</h1>
+		<p>Folders are details, files are list items. Rows run the full width, indent one chevron per level, and a current row takes the accent tint. The browser handles opening and closing.</p>
+		<div class="mc-group">
+			<ul class="mc-tree">
+			  <li>
+			    <details open>
+			      <summary>src</summary>
+			      <ul>
+			        <li>
+			          <details open>
+			            <summary>components</summary>
+			            <ul>
+			              <li>table.css</li>
+			              <li aria-current="true">list.css</li>
+			              <li>tree.css</li>
+			              <li aria-disabled="true">legacy.css</li>
+			            </ul>
+			          </details>
+			        </li>
+			        <li>
+			          <details>
+			            <summary>docs</summary>
+			            <ul>
+			              <li>index.html</li>
+			            </ul>
+			          </details>
+			        </li>
+			        <li>levi.css</li>
+			      </ul>
+			    </details>
+			  </li>
+			  <li>README.md</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-tree"&gt;
+  &lt;li&gt;
+    &lt;details open&gt;
+      &lt;summary&gt;src&lt;/summary&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;details open&gt;
+            &lt;summary&gt;components&lt;/summary&gt;
+            &lt;ul&gt;
+              &lt;li&gt;table.css&lt;/li&gt;
+              &lt;li aria-current="true"&gt;list.css&lt;/li&gt;
+              &lt;li&gt;tree.css&lt;/li&gt;
+              &lt;li aria-disabled="true"&gt;legacy.css&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/details&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;details&gt;
+            &lt;summary&gt;docs&lt;/summary&gt;
+            &lt;ul&gt;
+              &lt;li&gt;index.html&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/details&gt;
+        &lt;/li&gt;
+        &lt;li&gt;levi.css&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/details&gt;
+  &lt;/li&gt;
+  &lt;li&gt;README.md&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="density">
+		<h2>Density</h2>
+		<p>Add <code>mc-compact</code> or <code>mc-comfortable</code> to a tree. Rows, spacing and indentation follow.</p>
+		<div class="cols">
+		<div class="mc-group">
+			<h3>mc-compact</h3>
+			<ul class="mc-tree mc-compact">
+			  <li>
+			    <details open>
+			      <summary>src</summary>
+			      <ul>
+			        <li aria-current="true">main.css</li>
+			        <li>index.html</li>
+			      </ul>
+			    </details>
+			  </li>
+			  <li>README.md</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-tree mc-compact"&gt;
+  &lt;li&gt;
+    &lt;details open&gt;
+      &lt;summary&gt;src&lt;/summary&gt;
+      &lt;ul&gt;
+        &lt;li aria-current="true"&gt;main.css&lt;/li&gt;
+        &lt;li&gt;index.html&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/details&gt;
+  &lt;/li&gt;
+  &lt;li&gt;README.md&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+		<div class="mc-group">
+			<h3>Default</h3>
+			<ul class="mc-tree">
+			  <li>
+			    <details open>
+			      <summary>src</summary>
+			      <ul>
+			        <li aria-current="true">main.css</li>
+			        <li>index.html</li>
+			      </ul>
+			    </details>
+			  </li>
+			  <li>README.md</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-tree"&gt;
+  &lt;li&gt;
+    &lt;details open&gt;
+      &lt;summary&gt;src&lt;/summary&gt;
+      &lt;ul&gt;
+        &lt;li aria-current="true"&gt;main.css&lt;/li&gt;
+        &lt;li&gt;index.html&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/details&gt;
+  &lt;/li&gt;
+  &lt;li&gt;README.md&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+		<div class="mc-group">
+			<h3>mc-comfortable</h3>
+			<ul class="mc-tree mc-comfortable">
+			  <li>
+			    <details open>
+			      <summary>src</summary>
+			      <ul>
+			        <li aria-current="true">main.css</li>
+			        <li>index.html</li>
+			      </ul>
+			    </details>
+			  </li>
+			  <li>README.md</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-tree mc-comfortable"&gt;
+  &lt;li&gt;
+    &lt;details open&gt;
+      &lt;summary&gt;src&lt;/summary&gt;
+      &lt;ul&gt;
+        &lt;li aria-current="true"&gt;main.css&lt;/li&gt;
+        &lt;li&gt;index.html&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/details&gt;
+  &lt;/li&gt;
+  &lt;li&gt;README.md&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+		</div>
+	</section>
+
+</main>
+
+</body>
+</html>

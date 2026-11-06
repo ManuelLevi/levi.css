@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>Fieldset · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-list">
+					<li class="group">Start</li>
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li class="group">Components</li>
+					<li><a href="../dashboard/">Dashboard</a></li>
+					<li><a href="../navbar/">Navbar</a></li>
+					<li><a href="../sidebar/">Sidebar</a></li>
+					<li><a href="../breadcrumb/">Breadcrumb</a></li>
+					<li><a href="../toolbar/">Toolbar</a></li>
+					<li><a href="../menu/">Menu</a></li>
+					<li><a href="../tabs/">Tabs</a></li>
+					<li><a href="../daterange/">Date range</a></li>
+					<li><a href="../button/">Button</a></li>
+					<li><a href="../input/">Input</a></li>
+					<li><a href="../form/">Form</a></li>
+					<li><a href="../fieldset/" aria-current="page">Fieldset</a></li>
+					<li><a href="../group/">Group</a></li>
+					<li><a href="../popup/">Popup</a></li>
+					<li><a href="../alert/">Alert</a></li>
+					<li><a href="../pill/">Pill</a></li>
+					<li><a href="../progress/">Progress</a></li>
+					<li><a href="../stats/">Stats</a></li>
+					<li><a href="../chart/">Chart</a></li>
+					<li class="group">Data</li>
+					<li><a href="../table/">Table</a></li>
+					<li><a href="../expandable-table/">Expandable table</a></li>
+					<li><a href="../list/">List</a></li>
+					<li><a href="../tree/">Tree</a></li>
+					<li class="group">System</li>
+					<li><a href="../theme/">Theme</a></li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="fieldsets">
+		<h1>Fieldset</h1>
+		<p>A bordered group with a title. Put anything inside: a list, a table, stats, a chart. It is a card, and it needs no form.</p>
+		<div class="mc-group">
+			<div class="cols">
+			<fieldset class="mc-fieldset">
+			  <legend>Storage</legend>
+			  <progress class="mc-progress" max="100" value="72" aria-label="Storage used"></progress>
+			  <p>72 GB of 100 GB used.</p>
+			</fieldset>
+			<fieldset class="mc-fieldset">
+			  <legend>Recent</legend>
+			  <ul class="mc-list">
+			    <li><a href="#">Pricing page</a></li>
+			    <li><a href="#">Q4 budget</a></li>
+			    <li><a href="#">Onboarding flow</a></li>
+			  </ul>
+			</fieldset>
+			</div>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;fieldset class="mc-fieldset"&gt;
+  &lt;legend&gt;Recent&lt;/legend&gt;
+  &lt;ul class="mc-list"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Pricing page&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Q4 budget&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/fieldset&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+</main>
+
+</body>
+</html>

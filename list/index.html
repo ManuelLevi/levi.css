@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Levi is CSS for the HTML you already write. One stylesheet, no build step, no JavaScript.">
+	<link rel="stylesheet" href="../levi.css">
+	<link rel="stylesheet" href="../demo.css">
+	<link rel="icon" href="data:,">
+	<title>List · Levi.css</title>
+</head>
+<body class="mc-theme">
+
+	<aside class="mc-sidebar">
+		<details open>
+			<summary><a class="brand" href="../"><span>Levi<span class="mark">.css</span></span></a></summary>
+			<nav>
+				<ul class="mc-list">
+					<li class="group">Start</li>
+					<li><a href="../">Home</a></li>
+					<li><a href="../overview/">Overview</a></li>
+					<li class="group">Components</li>
+					<li><a href="../dashboard/">Dashboard</a></li>
+					<li><a href="../navbar/">Navbar</a></li>
+					<li><a href="../sidebar/">Sidebar</a></li>
+					<li><a href="../breadcrumb/">Breadcrumb</a></li>
+					<li><a href="../toolbar/">Toolbar</a></li>
+					<li><a href="../menu/">Menu</a></li>
+					<li><a href="../tabs/">Tabs</a></li>
+					<li><a href="../daterange/">Date range</a></li>
+					<li><a href="../button/">Button</a></li>
+					<li><a href="../input/">Input</a></li>
+					<li><a href="../form/">Form</a></li>
+					<li><a href="../fieldset/">Fieldset</a></li>
+					<li><a href="../group/">Group</a></li>
+					<li><a href="../popup/">Popup</a></li>
+					<li><a href="../alert/">Alert</a></li>
+					<li><a href="../pill/">Pill</a></li>
+					<li><a href="../progress/">Progress</a></li>
+					<li><a href="../stats/">Stats</a></li>
+					<li><a href="../chart/">Chart</a></li>
+					<li class="group">Data</li>
+					<li><a href="../table/">Table</a></li>
+					<li><a href="../expandable-table/">Expandable table</a></li>
+					<li><a href="../list/" aria-current="page">List</a></li>
+					<li><a href="../tree/">Tree</a></li>
+					<li class="group">System</li>
+					<li><a href="../theme/">Theme</a></li>
+				</ul>
+			</nav>
+		</details>
+	</aside>
+
+<main>
+	<section id="lists">
+		<h1>Lists</h1>
+		<p>Nested lists indent at any depth. Put the class on the outer list only.</p>
+		<div class="cols">
+		<div class="mc-group">
+			<h3 id="list">List</h3>
+			<ul class="mc-list">
+			  <li>Fruit
+			    <ul>
+			      <li>Citrus
+			        <ul>
+			          <li>Lemon</li>
+			          <li>Orange</li>
+			        </ul>
+			      </li>
+			      <li>Berries</li>
+			    </ul>
+			  </li>
+			  <li>Vegetables</li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-list"&gt;
+  &lt;li&gt;Fruit
+    &lt;ul&gt;
+      &lt;li&gt;Citrus
+        &lt;ul&gt;
+          &lt;li&gt;Lemon&lt;/li&gt;
+          &lt;li&gt;Orange&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Berries&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vegetables&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+		<div class="mc-group">
+			<h3 id="numbered-list">Numbered list</h3>
+			<ol class="mc-list">
+			  <li>Fruit
+			    <ol>
+			      <li>Citrus
+			        <ol>
+			          <li>Lemon</li>
+			          <li>Orange</li>
+			        </ol>
+			      </li>
+			      <li>Berries</li>
+			    </ol>
+			  </li>
+			  <li>Vegetables</li>
+			</ol>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ol class="mc-list"&gt;
+  &lt;li&gt;Fruit
+    &lt;ol&gt;
+      &lt;li&gt;Citrus
+        &lt;ol&gt;
+          &lt;li&gt;Lemon&lt;/li&gt;
+          &lt;li&gt;Orange&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Berries&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vegetables&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+			</details>
+		</div>
+		</div>
+	</section>
+
+</main>
+
+</body>
+</html>
