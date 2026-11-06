@@ -7,7 +7,7 @@
 }
 
 .mc-alert[data-status]{
-    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--mc-status) 45%, var(--mc-border));
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--status) 45%, var(--mc-border));
 }
 
 .mc-alert[data-status]::before{
@@ -17,19 +17,7 @@
     height: 0.5em;
     margin-inline-end: 0.5em;
     border-radius: 50%;
-    background: var(--mc-status);
-}
-
-.mc-alert[data-status="ok"]{
-    --mc-status: var(--mc-ok);
-}
-
-.mc-alert[data-status="warn"]{
-    --mc-status: var(--mc-warn);
-}
-
-.mc-alert[data-status="danger"]{
-    --mc-status: var(--mc-danger);
+    background: var(--status);
 }
 
 .mc-alert + .mc-alert{

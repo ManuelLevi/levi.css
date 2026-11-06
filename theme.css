@@ -56,6 +56,18 @@
     letter-spacing: -0.02em;
 }
 
+.mc-theme [data-status="ok"]{
+    --status: var(--mc-ok);
+}
+
+.mc-theme [data-status="warn"]{
+    --status: var(--mc-warn);
+}
+
+.mc-theme [data-status="danger"]{
+    --status: var(--mc-danger);
+}
+
 .mc-theme h3{
     font-size: 1.1rem;
 }

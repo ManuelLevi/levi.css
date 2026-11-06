@@ -45,18 +45,6 @@ table.mc-table td[data-status]::before{
     background: var(--status, var(--mc-muted));
 }
 
-table.mc-table td[data-status="ok"]{
-    --status: var(--mc-ok);
-}
-
-table.mc-table td[data-status="warn"]{
-    --status: var(--mc-warn);
-}
-
-table.mc-table td[data-status="danger"]{
-    --status: var(--mc-danger);
-}
-
 table.mc-table :is(th, td):first-child{
     padding-inline-start: 0;
 }

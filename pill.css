@@ -1,0 +1,27 @@
+.mc-pill{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    padding: 0.1em 0.65em;
+    border-radius: 999px;
+    background: var(--mc-hover);
+    color: var(--mc-text);
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+.mc-pill::before{
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background: var(--status, var(--mc-muted));
+}
+
+a.mc-pill:hover{
+    background: var(--mc-border);
+}
+
+a.mc-pill{
+    color: var(--mc-text);
+}
