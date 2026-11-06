@@ -79,6 +79,14 @@ ul.mc-chart.mc-columns{
     align-items: end;
 }
 
+ul.mc-chart.mc-columns:has(> li:nth-child(13)){
+    gap: 0.25rem;
+}
+
+ul.mc-chart.mc-columns:has(> li:nth-child(13)) li b{
+    font-size: 0.7em;
+}
+
 ul.mc-chart.mc-columns li{
     display: grid;
     justify-items: center;

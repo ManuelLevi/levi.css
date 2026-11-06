@@ -147,9 +147,49 @@
 		</div>
 	</section>
 
+	<section id="rank">
+		<h2>List with values</h2>
+		<p>A <code>data</code> at the end of an item puts its value on the right. <code>data-status</code> colors it. For lines between the rows, use a table.</p>
+		<div class="mc-group">
+			<ol class="mc-list">
+			  <li><a href="#">Invoice approval</a><data value="412">412 runs</data></li>
+			  <li><a href="#">Onboarding</a><data value="88">88 runs</data></li>
+			  <li><a href="#">Expense report</a><data value="3" data-status="danger">3 failed</data></li>
+			</ol>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ol class="mc-list"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Invoice approval&lt;/a&gt;&lt;data value="412"&gt;412 runs&lt;/data&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Onboarding&lt;/a&gt;&lt;data value="88"&gt;88 runs&lt;/data&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Expense report&lt;/a&gt;&lt;data value="3" data-status="danger"&gt;3 failed&lt;/data&gt;&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
+	<section id="list-action">
+		<h2>Action in a list</h2>
+		<p>A <code>button</code> in a list takes the same row as a link. It suits an action in a sidebar: New, Create.</p>
+		<div class="mc-group">
+			<ul class="mc-list">
+			  <li><button type="button">New workflow</button></li>
+			  <li><a href="#">Workflows</a></li>
+			  <li><a href="#">Runs</a></li>
+			</ul>
+			<details>
+				<summary>Show code</summary>
+<pre><code>&lt;ul class="mc-list"&gt;
+  &lt;li&gt;&lt;button type="button"&gt;New workflow&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Workflows&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Runs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</details>
+		</div>
+	</section>
+
 	<footer class="end">
 		<nav class="mc-pagination" aria-label="Pages"><a href="../expandable-table/" rel="prev">&larr; Expandable table</a><a href="../tree/" rel="next">Tree &rarr;</a></nav>
-		<p><a href="../">Levi.css</a> &middot; About 1300 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
+		<p><a href="../">Levi.css</a> &middot; About 1350 lines of CSS, no JavaScript &middot; <a href="https://github.com/ManuelLevi/levi.css">GitHub</a></p>
 	</footer>
 </main>
 

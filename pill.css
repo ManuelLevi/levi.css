@@ -25,3 +25,7 @@ a.mc-pill:hover{
 a.mc-pill{
     color: var(--mc-text);
 }
+
+.mc-pill[data-status="muted"]{
+    color: var(--mc-muted);
+}
